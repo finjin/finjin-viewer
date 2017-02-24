@@ -17,7 +17,6 @@
 #include "finjin/common/Allocator.hpp"
 #include "finjin/common/DebugLog.hpp"
 #include "finjin/common/JobSystem.hpp"
-#include "finjin/engine/InputBindingsSerializer.hpp"
 #include "finjin/engine/AssetCountsSettings.hpp"
 
 #define USE_TEST_SCENE_AS_FALLBACK 0

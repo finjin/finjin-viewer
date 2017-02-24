@@ -1,0 +1,70 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 14
+VisualStudioVersion = 14.0.25123.0
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "finjin-viewer", "finjin-viewer.vcxproj", "{2E2B2154-101B-4576-AD3A-79EEA322323E}"
+EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "finjin-common-lib", "..\..\..\finjin-common\cpp\library\project\windows-win32-vs\finjin-common-lib.vcxproj", "{8023878A-21D1-4634-B8DF-B1E3BF4192BE}"
+EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "finjin-engine-lib", "..\..\..\finjin-engine\cpp\library\project\windows-win32-vs\finjin-engine-lib.vcxproj", "{C13F119C-A6A5-40E2-AA6A-7471E29AAC69}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		D3D12-Win32-Debug|x64 = D3D12-Win32-Debug|x64
+		D3D12-Win32-Debug|x86 = D3D12-Win32-Debug|x86
+		D3D12-Win32-Release|x64 = D3D12-Win32-Release|x64
+		D3D12-Win32-Release|x86 = D3D12-Win32-Release|x86
+		Vulkan-Win32-Debug|x64 = Vulkan-Win32-Debug|x64
+		Vulkan-Win32-Debug|x86 = Vulkan-Win32-Debug|x86
+		Vulkan-Win32-Release|x64 = Vulkan-Win32-Release|x64
+		Vulkan-Win32-Release|x86 = Vulkan-Win32-Release|x86
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{2E2B2154-101B-4576-AD3A-79EEA322323E}.D3D12-Win32-Debug|x64.ActiveCfg = D3D12-Win32-Debug|x64
+		{2E2B2154-101B-4576-AD3A-79EEA322323E}.D3D12-Win32-Debug|x64.Build.0 = D3D12-Win32-Debug|x64
+		{2E2B2154-101B-4576-AD3A-79EEA322323E}.D3D12-Win32-Debug|x86.ActiveCfg = D3D12-Win32-Debug|x64
+		{2E2B2154-101B-4576-AD3A-79EEA322323E}.D3D12-Win32-Release|x64.ActiveCfg = D3D12-Win32-Release|x64
+		{2E2B2154-101B-4576-AD3A-79EEA322323E}.D3D12-Win32-Release|x64.Build.0 = D3D12-Win32-Release|x64
+		{2E2B2154-101B-4576-AD3A-79EEA322323E}.D3D12-Win32-Release|x86.ActiveCfg = D3D12-Win32-Release|x64
+		{2E2B2154-101B-4576-AD3A-79EEA322323E}.Vulkan-Win32-Debug|x64.ActiveCfg = Vulkan-Win32-Debug|x64
+		{2E2B2154-101B-4576-AD3A-79EEA322323E}.Vulkan-Win32-Debug|x64.Build.0 = Vulkan-Win32-Debug|x64
+		{2E2B2154-101B-4576-AD3A-79EEA322323E}.Vulkan-Win32-Debug|x86.ActiveCfg = Vulkan-Win32-Debug|x64
+		{2E2B2154-101B-4576-AD3A-79EEA322323E}.Vulkan-Win32-Release|x64.ActiveCfg = Vulkan-Win32-Release|x64
+		{2E2B2154-101B-4576-AD3A-79EEA322323E}.Vulkan-Win32-Release|x64.Build.0 = Vulkan-Win32-Release|x64
+		{2E2B2154-101B-4576-AD3A-79EEA322323E}.Vulkan-Win32-Release|x86.ActiveCfg = Vulkan-Win32-Release|x64
+		{8023878A-21D1-4634-B8DF-B1E3BF4192BE}.D3D12-Win32-Debug|x64.ActiveCfg = Debug|x64
+		{8023878A-21D1-4634-B8DF-B1E3BF4192BE}.D3D12-Win32-Debug|x64.Build.0 = Debug|x64
+		{8023878A-21D1-4634-B8DF-B1E3BF4192BE}.D3D12-Win32-Debug|x86.ActiveCfg = Debug|Win32
+		{8023878A-21D1-4634-B8DF-B1E3BF4192BE}.D3D12-Win32-Debug|x86.Build.0 = Debug|Win32
+		{8023878A-21D1-4634-B8DF-B1E3BF4192BE}.D3D12-Win32-Release|x64.ActiveCfg = Release|x64
+		{8023878A-21D1-4634-B8DF-B1E3BF4192BE}.D3D12-Win32-Release|x64.Build.0 = Release|x64
+		{8023878A-21D1-4634-B8DF-B1E3BF4192BE}.D3D12-Win32-Release|x86.ActiveCfg = Release|Win32
+		{8023878A-21D1-4634-B8DF-B1E3BF4192BE}.D3D12-Win32-Release|x86.Build.0 = Release|Win32
+		{8023878A-21D1-4634-B8DF-B1E3BF4192BE}.Vulkan-Win32-Debug|x64.ActiveCfg = Debug|x64
+		{8023878A-21D1-4634-B8DF-B1E3BF4192BE}.Vulkan-Win32-Debug|x64.Build.0 = Debug|x64
+		{8023878A-21D1-4634-B8DF-B1E3BF4192BE}.Vulkan-Win32-Debug|x86.ActiveCfg = Debug|Win32
+		{8023878A-21D1-4634-B8DF-B1E3BF4192BE}.Vulkan-Win32-Debug|x86.Build.0 = Debug|Win32
+		{8023878A-21D1-4634-B8DF-B1E3BF4192BE}.Vulkan-Win32-Release|x64.ActiveCfg = Release|x64
+		{8023878A-21D1-4634-B8DF-B1E3BF4192BE}.Vulkan-Win32-Release|x64.Build.0 = Release|x64
+		{8023878A-21D1-4634-B8DF-B1E3BF4192BE}.Vulkan-Win32-Release|x86.ActiveCfg = Release|Win32
+		{8023878A-21D1-4634-B8DF-B1E3BF4192BE}.Vulkan-Win32-Release|x86.Build.0 = Release|Win32
+		{C13F119C-A6A5-40E2-AA6A-7471E29AAC69}.D3D12-Win32-Debug|x64.ActiveCfg = D3D12-Win32-Debug|x64
+		{C13F119C-A6A5-40E2-AA6A-7471E29AAC69}.D3D12-Win32-Debug|x64.Build.0 = D3D12-Win32-Debug|x64
+		{C13F119C-A6A5-40E2-AA6A-7471E29AAC69}.D3D12-Win32-Debug|x86.ActiveCfg = D3D12-Win32-Debug|x64
+		{C13F119C-A6A5-40E2-AA6A-7471E29AAC69}.D3D12-Win32-Release|x64.ActiveCfg = D3D12-Win32-Release|x64
+		{C13F119C-A6A5-40E2-AA6A-7471E29AAC69}.D3D12-Win32-Release|x64.Build.0 = D3D12-Win32-Release|x64
+		{C13F119C-A6A5-40E2-AA6A-7471E29AAC69}.D3D12-Win32-Release|x86.ActiveCfg = D3D12-Win32-Release|x64
+		{C13F119C-A6A5-40E2-AA6A-7471E29AAC69}.Vulkan-Win32-Debug|x64.ActiveCfg = Vulkan-Win32-Debug|x64
+		{C13F119C-A6A5-40E2-AA6A-7471E29AAC69}.Vulkan-Win32-Debug|x64.Build.0 = Vulkan-Win32-Debug|x64
+		{C13F119C-A6A5-40E2-AA6A-7471E29AAC69}.Vulkan-Win32-Debug|x86.ActiveCfg = D3D12-Win32-Release|x64
+		{C13F119C-A6A5-40E2-AA6A-7471E29AAC69}.Vulkan-Win32-Debug|x86.Build.0 = D3D12-Win32-Release|x64
+		{C13F119C-A6A5-40E2-AA6A-7471E29AAC69}.Vulkan-Win32-Release|x64.ActiveCfg = Vulkan-Win32-Release|x64
+		{C13F119C-A6A5-40E2-AA6A-7471E29AAC69}.Vulkan-Win32-Release|x64.Build.0 = Vulkan-Win32-Release|x64
+		{C13F119C-A6A5-40E2-AA6A-7471E29AAC69}.Vulkan-Win32-Release|x86.ActiveCfg = D3D12-Win32-Release|x64
+		{C13F119C-A6A5-40E2-AA6A-7471E29AAC69}.Vulkan-Win32-Release|x86.Build.0 = D3D12-Win32-Release|x64
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal

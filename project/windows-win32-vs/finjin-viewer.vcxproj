@@ -1,0 +1,232 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" ToolsVersion="14.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup Label="ProjectConfigurations">
+    <ProjectConfiguration Include="D3D12-Win32-Debug|x64">
+      <Configuration>D3D12-Win32-Debug</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="D3D12-Win32-Release|x64">
+      <Configuration>D3D12-Win32-Release</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Vulkan-Win32-Debug|x64">
+      <Configuration>Vulkan-Win32-Debug</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Vulkan-Win32-Release|x64">
+      <Configuration>Vulkan-Win32-Release</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+  </ItemGroup>
+  <PropertyGroup Label="Globals">
+    <ProjectGuid>{2E2B2154-101B-4576-AD3A-79EEA322323E}</ProjectGuid>
+    <Keyword>Win32Proj</Keyword>
+    <RootNamespace>finjin-viewer</RootNamespace>
+    <WindowsTargetPlatformVersion>10.0.10586.0</WindowsTargetPlatformVersion>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Vulkan-Win32-Debug|x64'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <UseDebugLibraries>true</UseDebugLibraries>
+    <PlatformToolset>v140</PlatformToolset>
+    <CharacterSet>Unicode</CharacterSet>
+    <CLRSupport>false</CLRSupport>
+    <WholeProgramOptimization>false</WholeProgramOptimization>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='D3D12-Win32-Debug|x64'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <UseDebugLibraries>true</UseDebugLibraries>
+    <PlatformToolset>v140</PlatformToolset>
+    <CharacterSet>Unicode</CharacterSet>
+    <WholeProgramOptimization>true</WholeProgramOptimization>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Vulkan-Win32-Release|x64'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <UseDebugLibraries>false</UseDebugLibraries>
+    <PlatformToolset>v140</PlatformToolset>
+    <WholeProgramOptimization>false</WholeProgramOptimization>
+    <CharacterSet>Unicode</CharacterSet>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='D3D12-Win32-Release|x64'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <UseDebugLibraries>false</UseDebugLibraries>
+    <PlatformToolset>v140</PlatformToolset>
+    <WholeProgramOptimization>true</WholeProgramOptimization>
+    <CharacterSet>Unicode</CharacterSet>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.props" />
+  <ImportGroup Label="ExtensionSettings">
+  </ImportGroup>
+  <ImportGroup Condition="'$(Configuration)|$(Platform)'=='Vulkan-Win32-Debug|x64'" Label="PropertySheets">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Condition="'$(Configuration)|$(Platform)'=='D3D12-Win32-Debug|x64'" Label="PropertySheets">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Condition="'$(Configuration)|$(Platform)'=='Vulkan-Win32-Release|x64'" Label="PropertySheets">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Condition="'$(Configuration)|$(Platform)'=='D3D12-Win32-Release|x64'" Label="PropertySheets">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <PropertyGroup Label="UserMacros" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Vulkan-Win32-Debug|x64'">
+    <LinkIncremental>true</LinkIncremental>
+    <ExecutablePath>$(ExecutablePath)</ExecutablePath>
+    <IncludePath>$(IncludePath)</IncludePath>
+    <LibraryPath>$(LibraryPath)</LibraryPath>
+    <EmbedManifest>true</EmbedManifest>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='D3D12-Win32-Debug|x64'">
+    <LinkIncremental>true</LinkIncremental>
+    <ExecutablePath>$(ExecutablePath)</ExecutablePath>
+    <IncludePath>$(IncludePath)</IncludePath>
+    <LibraryPath>$(LibraryPath)</LibraryPath>
+    <EmbedManifest>true</EmbedManifest>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Vulkan-Win32-Release|x64'">
+    <LinkIncremental>false</LinkIncremental>
+    <ExecutablePath>$(ExecutablePath)</ExecutablePath>
+    <IncludePath>$(IncludePath)</IncludePath>
+    <LibraryPath>$(LibraryPath)</LibraryPath>
+    <EmbedManifest>true</EmbedManifest>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='D3D12-Win32-Release|x64'">
+    <LinkIncremental>false</LinkIncremental>
+    <ExecutablePath>$(ExecutablePath)</ExecutablePath>
+    <IncludePath>$(IncludePath)</IncludePath>
+    <LibraryPath>$(LibraryPath)</LibraryPath>
+    <EmbedManifest>true</EmbedManifest>
+  </PropertyGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Vulkan-Win32-Debug|x64'">
+    <ClCompile>
+      <PrecompiledHeader>
+      </PrecompiledHeader>
+      <WarningLevel>Level3</WarningLevel>
+      <Optimization>Disabled</Optimization>
+      <PreprocessorDefinitions>NOMINMAX;_ENABLE_ATOMIC_ALIGNMENT_FIX;VK_USE_PLATFORM_WIN32_KHR;VK_NO_PROTOTYPES;_MSC_PLATFORM_TOOLSET_$(PlatformToolset);_CRT_SECURE_NO_WARNINGS;_SCL_SECURE_NO_WARNINGS;_WIN32_WINNT=0x0601;WIN32;_DEBUG;_WINDOWS;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <AdditionalIncludeDirectories>.;C:\finjin-3rd-party\cpp\xaudio2-dxsdk-june2010\Include;C:\Program Files (x86)\Windows Kits\10\Include\10.0.14295.0\um;C:\Program Files (x86)\Windows Kits\10\Include\10.0.14295.0\shared;C:\steamworks_sdk\sdk\public;C:\VulkanSDK\1.0.13.0\Include;C:\finjin-3rd-party\cpp\boost;C:\finjin-3rd-party\cpp\eigen;C:\git\nedelman\finjin-common\cpp\library\include;C:\git\nedelman\finjin-engine\cpp\library\src;C:\git\nedelman\finjin-engine\cpp\library\src\finjin\engine\internal\app\win32;..\..\src</AdditionalIncludeDirectories>
+      <DisableLanguageExtensions>false</DisableLanguageExtensions>
+    </ClCompile>
+    <Link>
+      <SubSystem>Windows</SubSystem>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <AdditionalLibraryDirectories>C:\finjin-3rd-party\cpp\xaudio2-dxsdk-june2010\Lib\x64;C:\Program Files (x86)\Windows Kits\10\Lib\10.0.10586.0\um\x64;C:\git\nedelman\finjin-common\cpp\library\project\windows-win32-vs\x64\Debug;C:\finjin-3rd-party\cpp\boost/lib64-msvc-14.0;c:\finjin-3rd-party\cpp/curl/builds/libcurl-vc-x64-debug-static-ipv6-sspi-winssl\lib;C:\VulkanSDK\1.0.13.0\Bin;C:\VulkanSDK\1.0.13.0\glslang\build\glslang\Debug;C:\VulkanSDK\1.0.13.0\glslang\build\glslang\OSDependent\Windows\Debug;C:\VulkanSDK\1.0.13.0\glslang\build\OGLCompilersDLL\Debug;C:\VulkanSDK\1.0.13.0\glslang\build\SPIRV\Debug;C:\VulkanSDK\1.0.13.0\spirv-tools\build\Debug;C:\git\other\openvr\lib\win64</AdditionalLibraryDirectories>
+      <AdditionalDependencies>kernel32.lib;user32.lib;gdi32.lib;winspool.lib;comdlg32.lib;advapi32.lib;shell32.lib;ole32.lib;oleaut32.lib;uuid.lib;%(AdditionalDependencies)</AdditionalDependencies>
+      <OptimizeReferences>false</OptimizeReferences>
+    </Link>
+    <ProjectReference>
+      <UseLibraryDependencyInputs>true</UseLibraryDependencyInputs>
+    </ProjectReference>
+    <Manifest>
+      <AdditionalManifestFiles>finjin-viewer-input.exe.manifest</AdditionalManifestFiles>
+    </Manifest>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='D3D12-Win32-Debug|x64'">
+    <ClCompile>
+      <PrecompiledHeader>
+      </PrecompiledHeader>
+      <WarningLevel>Level3</WarningLevel>
+      <Optimization>Disabled</Optimization>
+      <PreprocessorDefinitions>NOMINMAX;_ENABLE_ATOMIC_ALIGNMENT_FIX;_MSC_PLATFORM_TOOLSET_$(PlatformToolset);_CRT_SECURE_NO_WARNINGS;_SCL_SECURE_NO_WARNINGS;_WIN32_WINNT=0x0A00;WIN32;_DEBUG;_WINDOWS;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <AdditionalIncludeDirectories>.;C:\Program Files (x86)\Windows Kits\10\Include\10.0.14295.0\um;C:\Program Files (x86)\Windows Kits\10\Include\10.0.14295.0\shared;C:\steamworks_sdk\sdk\public;C:\VulkanSDK\1.0.13.0\Include;C:\finjin-3rd-party\cpp\boost;C:\finjin-3rd-party\cpp\eigen;C:\git\nedelman\finjin-common\cpp\library\include;C:\git\nedelman\finjin-engine\cpp\library\src;C:\git\nedelman\finjin-engine\cpp\library\src\finjin\engine\internal\app\win32;..\..\src</AdditionalIncludeDirectories>
+      <WholeProgramOptimization>false</WholeProgramOptimization>
+      <DisableLanguageExtensions>false</DisableLanguageExtensions>
+    </ClCompile>
+    <Link>
+      <SubSystem>Windows</SubSystem>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <AdditionalLibraryDirectories>C:\Program Files (x86)\Windows Kits\10\Lib\10.0.10586.0\um\x64;C:\git\nedelman\finjin-common\cpp\library\project\windows-win32-vs\x64\Debug;C:\finjin-3rd-party\cpp\boost/lib64-msvc-14.0;c:\finjin-3rd-party\cpp/curl/builds/libcurl-vc-x64-debug-static-ipv6-sspi-winssl\lib;C:\VulkanSDK\1.0.13.0\Bin;C:\VulkanSDK\1.0.13.0\glslang\build\glslang\Debug;C:\VulkanSDK\1.0.13.0\glslang\build\glslang\OSDependent\Windows\Debug;C:\VulkanSDK\1.0.13.0\glslang\build\OGLCompilersDLL\Debug;C:\VulkanSDK\1.0.13.0\glslang\build\SPIRV\Debug;C:\VulkanSDK\1.0.13.0\spirv-tools\build\Debug;C:\git\other\openvr\lib\win64</AdditionalLibraryDirectories>
+      <AdditionalDependencies>kernel32.lib;user32.lib;gdi32.lib;winspool.lib;comdlg32.lib;advapi32.lib;shell32.lib;ole32.lib;oleaut32.lib;uuid.lib;%(AdditionalDependencies)</AdditionalDependencies>
+      <OptimizeReferences>false</OptimizeReferences>
+      <LinkTimeCodeGeneration />
+    </Link>
+    <ProjectReference>
+      <UseLibraryDependencyInputs>true</UseLibraryDependencyInputs>
+    </ProjectReference>
+    <Manifest>
+      <AdditionalManifestFiles>finjin-viewer-input.exe.manifest</AdditionalManifestFiles>
+      <InputResourceManifests>
+      </InputResourceManifests>
+    </Manifest>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Vulkan-Win32-Release|x64'">
+    <ClCompile>
+      <WarningLevel>Level3</WarningLevel>
+      <PrecompiledHeader>
+      </PrecompiledHeader>
+      <Optimization>MaxSpeed</Optimization>
+      <FunctionLevelLinking>true</FunctionLevelLinking>
+      <IntrinsicFunctions>true</IntrinsicFunctions>
+      <PreprocessorDefinitions>NOMINMAX;_ENABLE_ATOMIC_ALIGNMENT_FIX;VK_USE_PLATFORM_WIN32_KHR;VK_NO_PROTOTYPES;_MSC_PLATFORM_TOOLSET_$(PlatformToolset);_CRT_SECURE_NO_WARNINGS;_SCL_SECURE_NO_WARNINGS;_WIN32_WINNT=0x0601;WIN32;NDEBUG;_WINDOWS;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <AdditionalIncludeDirectories>.;C:\finjin-3rd-party\cpp\xaudio2-dxsdk-june2010\Include;C:\Program Files (x86)\Windows Kits\10\Include\10.0.14295.0\um;C:\Program Files (x86)\Windows Kits\10\Include\10.0.14295.0\shared;C:\steamworks_sdk\sdk\public;C:\VulkanSDK\1.0.13.0\Include;C:\finjin-3rd-party\cpp\boost;C:\finjin-3rd-party\cpp\eigen;C:\git\nedelman\finjin-common\cpp\library\include;C:\git\nedelman\finjin-engine\cpp\library\src;C:\git\nedelman\finjin-engine\cpp\library\src\finjin\engine\internal\app\win32;..\..\src</AdditionalIncludeDirectories>
+      <DisableLanguageExtensions>false</DisableLanguageExtensions>
+    </ClCompile>
+    <Link>
+      <SubSystem>Windows</SubSystem>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <EnableCOMDATFolding>true</EnableCOMDATFolding>
+      <OptimizeReferences>false</OptimizeReferences>
+      <AdditionalLibraryDirectories>C:\finjin-3rd-party\cpp\xaudio2-dxsdk-june2010\Lib\x64;C:\Program Files (x86)\Windows Kits\10\Lib\10.0.10586.0\um\x64;C:\git\nedelman\finjin-common\cpp\library\project\windows-win32-vs\x64\Release;C:\finjin-3rd-party\cpp\boost/lib64-msvc-14.0;c:\finjin-3rd-party\cpp/curl/builds/libcurl-vc-x64-release-static-ipv6-sspi-winssl\lib;C:\VulkanSDK\1.0.13.0\Bin;C:\VulkanSDK\1.0.13.0\glslang\build\glslang\Release;C:\VulkanSDK\1.0.13.0\glslang\build\glslang\OSDependent\Windows\Release;C:\VulkanSDK\1.0.13.0\glslang\build\OGLCompilersDLL\Release;C:\VulkanSDK\1.0.13.0\glslang\build\SPIRV\Release;C:\VulkanSDK\1.0.13.0\spirv-tools\build\Release;C:\git\other\openvr\lib\win64</AdditionalLibraryDirectories>
+      <AdditionalDependencies>kernel32.lib;user32.lib;gdi32.lib;winspool.lib;comdlg32.lib;advapi32.lib;shell32.lib;ole32.lib;oleaut32.lib;uuid.lib;%(AdditionalDependencies)</AdditionalDependencies>
+    </Link>
+    <ProjectReference>
+      <UseLibraryDependencyInputs>true</UseLibraryDependencyInputs>
+    </ProjectReference>
+    <Manifest>
+      <AdditionalManifestFiles>finjin-viewer-input.exe.manifest</AdditionalManifestFiles>
+    </Manifest>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='D3D12-Win32-Release|x64'">
+    <ClCompile>
+      <WarningLevel>Level3</WarningLevel>
+      <PrecompiledHeader>
+      </PrecompiledHeader>
+      <Optimization>MaxSpeed</Optimization>
+      <FunctionLevelLinking>true</FunctionLevelLinking>
+      <IntrinsicFunctions>true</IntrinsicFunctions>
+      <PreprocessorDefinitions>NOMINMAX;_ENABLE_ATOMIC_ALIGNMENT_FIX;_MSC_PLATFORM_TOOLSET_$(PlatformToolset);_CRT_SECURE_NO_WARNINGS;_SCL_SECURE_NO_WARNINGS;_WIN32_WINNT=0x0A00;WIN32;NDEBUG;_WINDOWS;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <AdditionalIncludeDirectories>.;C:\Program Files (x86)\Windows Kits\10\Include\10.0.14295.0\um;C:\Program Files (x86)\Windows Kits\10\Include\10.0.14295.0\shared;C:\steamworks_sdk\sdk\public;C:\VulkanSDK\1.0.13.0\Include;C:\finjin-3rd-party\cpp\boost;C:\finjin-3rd-party\cpp\eigen;C:\git\nedelman\finjin-common\cpp\library\include;C:\git\nedelman\finjin-engine\cpp\library\src;C:\git\nedelman\finjin-engine\cpp\library\src\finjin\engine\internal\app\win32;..\..\src</AdditionalIncludeDirectories>
+      <DisableLanguageExtensions>false</DisableLanguageExtensions>
+    </ClCompile>
+    <Link>
+      <SubSystem>Windows</SubSystem>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <EnableCOMDATFolding>true</EnableCOMDATFolding>
+      <OptimizeReferences>false</OptimizeReferences>
+      <AdditionalLibraryDirectories>C:\Program Files (x86)\Windows Kits\10\Lib\10.0.10586.0\um\x64;C:\git\nedelman\finjin-common\cpp\library\project\windows-win32-vs\x64\Release;C:\finjin-3rd-party\cpp\boost/lib64-msvc-14.0;c:\finjin-3rd-party\cpp/curl/builds/libcurl-vc-x64-release-static-ipv6-sspi-winssl\lib;C:\VulkanSDK\1.0.13.0\Bin;C:\VulkanSDK\1.0.13.0\glslang\build\glslang\Release;C:\VulkanSDK\1.0.13.0\glslang\build\glslang\OSDependent\Windows\Release;C:\VulkanSDK\1.0.13.0\glslang\build\OGLCompilersDLL\Release;C:\VulkanSDK\1.0.13.0\glslang\build\SPIRV\Release;C:\VulkanSDK\1.0.13.0\spirv-tools\build\Release;C:\git\other\openvr\lib\win64</AdditionalLibraryDirectories>
+      <AdditionalDependencies>kernel32.lib;user32.lib;gdi32.lib;winspool.lib;comdlg32.lib;advapi32.lib;shell32.lib;ole32.lib;oleaut32.lib;uuid.lib;%(AdditionalDependencies)</AdditionalDependencies>
+      <LinkTimeCodeGeneration />
+    </Link>
+    <ProjectReference>
+      <UseLibraryDependencyInputs>true</UseLibraryDependencyInputs>
+    </ProjectReference>
+    <Manifest>
+      <AdditionalManifestFiles>finjin-viewer-input.exe.manifest</AdditionalManifestFiles>
+    </Manifest>
+  </ItemDefinitionGroup>
+  <ItemGroup>
+    <ClCompile Include="..\..\src\FinjinViewerApplicationSettings.cpp" />
+    <ClCompile Include="..\..\src\FinjinPrecompiled.cpp" />
+    <ClCompile Include="..\..\src\FinjinViewerApplicationDelegate.cpp" />
+    <ClCompile Include="..\..\src\FinjinViewerApplicationViewportDelegate.cpp" />
+    <ClCompile Include="main.cpp" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\..\..\finjin-common\cpp\library\project\windows-win32-vs\finjin-common-lib.vcxproj">
+      <Project>{8023878A-21D1-4634-B8DF-B1E3BF4192BE}</Project>
+    </ProjectReference>
+    <ProjectReference Include="..\..\..\finjin-engine\cpp\library\project\windows-win32-vs\finjin-engine-lib.vcxproj">
+      <Project>{c13f119c-a6a5-40e2-aa6a-7471e29aac69}</Project>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="..\..\src\FinjinViewerApplicationSettings.hpp" />
+    <ClInclude Include="..\..\src\FinjinPrecompiled.hpp" />
+    <ClInclude Include="..\..\src\FinjinViewerApplicationDelegate.hpp" />
+    <ClInclude Include="..\..\src\FinjinViewerApplicationViewportDelegate.hpp" />
+  </ItemGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
+  <ImportGroup Label="ExtensionTargets">
+  </ImportGroup>
+</Project>

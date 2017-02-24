@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Workspace
+   version = "1.0">
+   <FileRef
+      location = "group:../../../finjin-common/cpp/library/project/macos-xcode/finjin-common-lib.xcodeproj">
+   </FileRef>
+   <FileRef
+      location = "group:../../../finjin-engine/cpp/library/project/macos-xcode/finjin-engine-lib.xcodeproj">
+   </FileRef>
+   <FileRef
+      location = "container:finjin-viewer.xcodeproj">
+   </FileRef>
+</Workspace>

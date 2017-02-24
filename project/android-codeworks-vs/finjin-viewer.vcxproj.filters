@@ -1,0 +1,88 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <Filter Include="res">
+      <UniqueIdentifier>d2f3625e-5217-4882-b3b4-1a2ef3086cbf</UniqueIdentifier>
+    </Filter>
+    <Filter Include="res\values">
+      <UniqueIdentifier>7ff6796e-a446-4d84-af6c-1311119df66f</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files">
+      <UniqueIdentifier>{9B4B0264-147A-48BC-BE9A-C14F8EECAAB2}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\java">
+      <UniqueIdentifier>{75d05471-3e59-4e33-a601-085f2d6e847d}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\java\com">
+      <UniqueIdentifier>{78ea3db1-7a2c-42ee-8b3f-a07ca92c38df}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\java\com\finjin">
+      <UniqueIdentifier>{c0e4a90f-f2d0-46c4-a86b-a1c05c858a08}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\java\com\finjin\viewer">
+      <UniqueIdentifier>{1982f072-909f-4981-afcd-19c81bc5ff8f}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\cpp">
+      <UniqueIdentifier>{c27cfb8a-9ba3-48a7-bab5-a87b156a4507}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="assets">
+      <UniqueIdentifier>{c1446b67-d5da-4ff6-90b5-02014b6eb2df}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\java\com\finjin\engine">
+      <UniqueIdentifier>{ddf8df26-ccd6-4a4d-a30a-832e0c996c36}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\cpp\finjin-viewer">
+      <UniqueIdentifier>{c9a8b966-0aae-459f-a571-ff4bc3e1c51a}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidBuild Include="AndroidManifest.xml" />
+    <AndroidBuild Include="res\values\strings.xml">
+      <Filter>res\values</Filter>
+    </AndroidBuild>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="assets\finjin-boot.cfg">
+      <Filter>assets</Filter>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <JCompile Include="src\java\com\finjin\viewer\FinjinViewer.java">
+      <Filter>Source Files\java\com\finjin\viewer</Filter>
+    </JCompile>
+    <JCompile Include="..\..\..\finjin-engine\cpp\library\src\finjin\engine\internal\app\android\java\com\finjin\engine\FinjinNativeActivity.java">
+      <Filter>Source Files\java\com\finjin\engine</Filter>
+    </JCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="src\cpp\main.cpp">
+      <Filter>Source Files\cpp</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\FinjinViewerApplicationDelegate.cpp">
+      <Filter>Source Files\cpp\finjin-viewer</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\FinjinViewerApplicationViewportDelegate.cpp">
+      <Filter>Source Files\cpp\finjin-viewer</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\FinjinPrecompiled.cpp">
+      <Filter>Source Files\cpp\finjin-viewer</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\FinjinViewerApplicationSettings.cpp">
+      <Filter>Source Files\cpp\finjin-viewer</Filter>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="..\..\src\FinjinViewerApplicationDelegate.hpp">
+      <Filter>Source Files\cpp\finjin-viewer</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\FinjinViewerApplicationViewportDelegate.hpp">
+      <Filter>Source Files\cpp\finjin-viewer</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\FinjinPrecompiled.hpp">
+      <Filter>Source Files\cpp\finjin-viewer</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\FinjinViewerApplicationSettings.hpp">
+      <Filter>Source Files\cpp\finjin-viewer</Filter>
+    </ClInclude>
+  </ItemGroup>
+</Project>

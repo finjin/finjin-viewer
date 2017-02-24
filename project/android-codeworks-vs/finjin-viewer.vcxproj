@@ -1,0 +1,150 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup Label="NsightTegraProject">
+    <NsightTegraProjectRevisionNumber>11</NsightTegraProjectRevisionNumber>
+  </PropertyGroup>
+  <ItemGroup Label="ProjectConfigurations">
+    <ProjectConfiguration Include="Debug|Tegra-Android">
+      <Configuration>Debug</Configuration>
+      <Platform>Tegra-Android</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|Tegra-Android">
+      <Configuration>Release</Configuration>
+      <Platform>Tegra-Android</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Shipping|Tegra-Android">
+      <Configuration>Shipping</Configuration>
+      <Platform>Tegra-Android</Platform>
+    </ProjectConfiguration>
+  </ItemGroup>
+  <PropertyGroup Label="Globals">
+    <ProjectGuid>{15471692-5D0D-44F3-A3E5-02C0394B0BDD}</ProjectGuid>
+    <RootNamespace>FinjinViewer</RootNamespace>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
+  <PropertyGroup Label="Configuration" Condition="'$(Configuration)|$(Platform)'=='Debug|Tegra-Android'">
+    <AndroidTargetAPI>android-23</AndroidTargetAPI>
+    <AndroidMinAPI>android-23</AndroidMinAPI>
+    <AndroidStlType>gnustl_static</AndroidStlType>
+  </PropertyGroup>
+  <PropertyGroup Label="Configuration" Condition="'$(Configuration)|$(Platform)'=='Release|Tegra-Android'">
+    <AndroidTargetAPI>android-23</AndroidTargetAPI>
+    <AndroidMinAPI>android-23</AndroidMinAPI>
+    <AndroidStlType>gnustl_static</AndroidStlType>
+  </PropertyGroup>
+  <PropertyGroup Label="Configuration" Condition="'$(Configuration)|$(Platform)'=='Shipping|Tegra-Android'">
+    <AndroidTargetAPI>android-23</AndroidTargetAPI>
+    <AndroidMinAPI>android-23</AndroidMinAPI>
+    <AndroidStlType>gnustl_static</AndroidStlType>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.props" />
+  <ImportGroup Label="ExtensionSettings">
+  </ImportGroup>
+  <PropertyGroup Label="UserMacros">
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Tegra-Android'">
+    <TargetName>lib$(ProjectName)</TargetName>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Tegra-Android'">
+    <TargetName>lib$(ProjectName)</TargetName>
+  </PropertyGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Tegra-Android'">
+    <ClCompile>
+      <CppLanguageStandard>
+      </CppLanguageStandard>
+      <AdditionalIncludeDirectories>C:\finjin-3rd-party\cpp\boost;C:\finjin-3rd-party\cpp\eigen;C:\VulkanSDK\1.0.13.0\Include;C:\git\nedelman\finjin-common\cpp\library\include;C:\git\nedelman\finjin-engine\cpp\library\src;C:\git\nedelman\finjin-engine\cpp\library\src\finjin\engine\internal\app\android\cpp;..\..\src</AdditionalIncludeDirectories>
+      <GccExceptionHandling>true</GccExceptionHandling>
+      <RuntimeTypeInfo>true</RuntimeTypeInfo>
+      <AdditionalOptions>-std=c++14 %(AdditionalOptions)</AdditionalOptions>
+      <PreprocessorDefinitions>VK_USE_PLATFORM_ANDROID_KHR;VK_NO_PROTOTYPES</PreprocessorDefinitions>
+    </ClCompile>
+    <Link>
+      <AdditionalDependencies>android;EGL;GLESv1_CM;OpenSLES;boost_regex-gcc-mt-1_59;boost_filesystem-gcc-mt-1_59;boost_system-gcc-mt-1_59;boost_context-gcc-mt-1_59</AdditionalDependencies>
+      <AdditionalLibraryDirectories>C:\finjin-3rd-party\cpp\boost\lib-androideabi</AdditionalLibraryDirectories>
+    </Link>
+    <AntBuild>
+      <SkipAntStep>False</SkipAntStep>
+      <JavaSourceDir>src;C:\git\nedelman\finjin-engine\cpp\library\src\finjin\engine\internal\app\android\java</JavaSourceDir>
+    </AntBuild>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|Tegra-Android'">
+    <ClCompile>
+      <CppLanguageStandard>
+      </CppLanguageStandard>
+      <AdditionalIncludeDirectories>C:\finjin-3rd-party\cpp\boost;C:\finjin-3rd-party\cpp\eigen;C:\VulkanSDK\1.0.13.0\Include;C:\git\nedelman\finjin-common\cpp\library\include;C:\git\nedelman\finjin-engine\cpp\library\src;C:\git\nedelman\finjin-engine\cpp\library\src\finjin\engine\internal\app\android\cpp;..\..\src</AdditionalIncludeDirectories>
+      <GccExceptionHandling>true</GccExceptionHandling>
+      <RuntimeTypeInfo>true</RuntimeTypeInfo>
+      <AdditionalOptions>-std=c++14 %(AdditionalOptions)</AdditionalOptions>
+      <PreprocessorDefinitions>VK_USE_PLATFORM_ANDROID_KHR;VK_NO_PROTOTYPES</PreprocessorDefinitions>
+    </ClCompile>
+    <Link>
+      <AdditionalDependencies>android;EGL;GLESv1_CM;OpenSLES;boost_regex-gcc-mt-1_59;boost_filesystem-gcc-mt-1_59;boost_system-gcc-mt-1_59;boost_context-gcc-mt-1_59</AdditionalDependencies>
+      <AdditionalLibraryDirectories>C:\finjin-3rd-party\cpp\boost\lib-androideabi</AdditionalLibraryDirectories>
+    </Link>
+    <AntBuild>
+      <SkipAntStep>False</SkipAntStep>
+      <JavaSourceDir>src;C:\git\nedelman\finjin-engine\cpp\library\src\finjin\engine\internal\app\android\java</JavaSourceDir>
+    </AntBuild>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Shipping|Tegra-Android'">
+    <ClCompile>
+      <CppLanguageStandard>
+      </CppLanguageStandard>
+      <AdditionalIncludeDirectories>C:\finjin-3rd-party\cpp\boost;C:\finjin-3rd-party\cpp\eigen;C:\VulkanSDK\1.0.13.0\Include;C:\git\nedelman\finjin-common\cpp\library\include;C:\git\nedelman\finjin-engine\cpp\library\src;C:\git\nedelman\finjin-engine\cpp\library\src\finjin\engine\internal\app\android\cpp;..\..\src</AdditionalIncludeDirectories>
+      <GccExceptionHandling>true</GccExceptionHandling>
+      <RuntimeTypeInfo>true</RuntimeTypeInfo>
+      <AdditionalOptions>-std=c++14 %(AdditionalOptions)</AdditionalOptions>
+      <PreprocessorDefinitions>VK_USE_PLATFORM_ANDROID_KHR;VK_NO_PROTOTYPES</PreprocessorDefinitions>
+    </ClCompile>
+    <Link>
+      <AdditionalLibraryDirectories>C:\finjin-3rd-party\cpp\boost\lib-androideabi</AdditionalLibraryDirectories>
+      <AdditionalDependencies>android;EGL;GLESv1_CM;OpenSLES;boost_regex-gcc-mt-1_59;boost_filesystem-gcc-mt-1_59;boost_system-gcc-mt-1_59;boost_context-gcc-mt-1_59</AdditionalDependencies>
+    </Link>
+    <AntBuild>
+      <SkipAntStep>False</SkipAntStep>
+      <JavaSourceDir>src;C:\git\nedelman\finjin-engine\cpp\library\src\finjin\engine\internal\app\android\java</JavaSourceDir>
+    </AntBuild>
+  </ItemDefinitionGroup>
+  <ItemGroup>
+    <AndroidBuild Include="AndroidManifest.xml" />
+    <AndroidBuild Include="res\values\strings.xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\..\..\finjin-common\cpp\library\project\android-codeworks-vs\finjin-common-lib.vcxproj">
+      <Project>{0f6664bc-37ed-4755-bccf-4bc0439904b6}</Project>
+    </ProjectReference>
+    <ProjectReference Include="..\..\..\finjin-engine\cpp\library\project\android-codeworks-vs\finjin-engine-lib.vcxproj">
+      <Project>{64afd5dd-5729-4539-b473-5debee3bfc0e}</Project>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="assets\finjin-boot.cfg">
+      <DeploymentContent Condition="'$(Configuration)|$(Platform)'=='Debug|Tegra-Android'">
+      </DeploymentContent>
+      <DeploymentContent Condition="'$(Configuration)|$(Platform)'=='Shipping|Tegra-Android'">
+      </DeploymentContent>
+      <DeploymentContent Condition="'$(Configuration)|$(Platform)'=='Release|Tegra-Android'">
+      </DeploymentContent>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <JCompile Include="..\..\..\finjin-engine\cpp\library\src\finjin\engine\internal\app\android\java\com\finjin\engine\FinjinNativeActivity.java" />
+    <JCompile Include="src\java\com\finjin\viewer\FinjinViewer.java" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="..\..\src\FinjinViewerApplicationDelegate.cpp" />
+    <ClCompile Include="..\..\src\FinjinViewerApplicationSettings.cpp" />
+    <ClCompile Include="..\..\src\FinjinViewerApplicationViewportDelegate.cpp" />
+    <ClCompile Include="..\..\src\FinjinPrecompiled.cpp" />
+    <ClCompile Include="src\cpp\main.cpp" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="..\..\src\FinjinViewerApplicationDelegate.hpp" />
+    <ClInclude Include="..\..\src\FinjinViewerApplicationSettings.hpp" />
+    <ClInclude Include="..\..\src\FinjinViewerApplicationViewportDelegate.hpp" />
+    <ClInclude Include="..\..\src\FinjinPrecompiled.hpp" />
+  </ItemGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
+  <ImportGroup Label="ExtensionTargets">
+  </ImportGroup>
+</Project>

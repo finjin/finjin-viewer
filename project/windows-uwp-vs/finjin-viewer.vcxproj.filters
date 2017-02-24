@@ -1,0 +1,79 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <Filter Include="Assets">
+      <UniqueIdentifier>66ff37f4-f238-4bb5-83fc-b7fd81721a06</UniqueIdentifier>
+      <Extensions>bmp;fbx;gif;jpg;jpeg;tga;tiff;tif;png</Extensions>
+    </Filter>
+    <Image Include="Assets\LockScreenLogo.scale-200.png">
+      <Filter>Assets</Filter>
+    </Image>
+    <Image Include="Assets\SplashScreen.scale-200.png">
+      <Filter>Assets</Filter>
+    </Image>
+    <Image Include="Assets\Square150x150Logo.scale-200.png">
+      <Filter>Assets</Filter>
+    </Image>
+    <Image Include="Assets\Square44x44Logo.scale-200.png">
+      <Filter>Assets</Filter>
+    </Image>
+    <Image Include="Assets\Square44x44Logo.targetsize-24_altform-unplated.png">
+      <Filter>Assets</Filter>
+    </Image>
+    <Image Include="Assets\StoreLogo.png">
+      <Filter>Assets</Filter>
+    </Image>
+    <Image Include="Assets\Wide310x150Logo.scale-200.png">
+      <Filter>Assets</Filter>
+    </Image>
+    <Filter Include="Source Files">
+      <UniqueIdentifier>{54df65ec-a5f0-4cb8-9c37-7be0de6c83f2}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\finjin-viewer">
+      <UniqueIdentifier>{ab7236fa-8180-4728-9070-34b8b008e94a}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+  <ItemGroup>
+    <AppxManifest Include="Package.appxmanifest" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="finjin-viewer_TemporaryKey.pfx" />
+    <None Include="assets.zip">
+      <Filter>Assets</Filter>
+    </None>
+    <None Include="finjin-boot.cfg">
+      <Filter>Assets</Filter>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="..\..\src\FinjinViewerApplicationViewportDelegate.cpp">
+      <Filter>Source Files\finjin-viewer</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\FinjinPrecompiled.cpp">
+      <Filter>Source Files\finjin-viewer</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\FinjinViewerApplicationDelegate.cpp">
+      <Filter>Source Files\finjin-viewer</Filter>
+    </ClCompile>
+    <ClCompile Include="main.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\FinjinViewerApplicationSettings.cpp">
+      <Filter>Source Files\finjin-viewer</Filter>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="..\..\src\FinjinViewerApplicationViewportDelegate.hpp">
+      <Filter>Source Files\finjin-viewer</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\FinjinPrecompiled.hpp">
+      <Filter>Source Files\finjin-viewer</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\FinjinViewerApplicationDelegate.hpp">
+      <Filter>Source Files\finjin-viewer</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\FinjinViewerApplicationSettings.hpp">
+      <Filter>Source Files\finjin-viewer</Filter>
+    </ClInclude>
+  </ItemGroup>
+</Project>

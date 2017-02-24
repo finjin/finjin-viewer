@@ -1,0 +1,412 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		65127C201CB514570041C324 /* finjin-boot.cfg in Resources */ = {isa = PBXBuildFile; fileRef = 65127C1F1CB514570041C324 /* finjin-boot.cfg */; };
+		65127D511CDC42D90041C324 /* GameController.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 65127D501CDC42D90041C324 /* GameController.framework */; };
+		65127DD31CF676B80041C324 /* AVFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 65127DD21CF676B80041C324 /* AVFoundation.framework */; };
+		65127DE31CF98FE60041C324 /* assets.zip in Resources */ = {isa = PBXBuildFile; fileRef = 65127DE21CF98FE60041C324 /* assets.zip */; };
+		651282351D090A100041C324 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 651282341D090A100041C324 /* UIKit.framework */; };
+		651282371D090AA70041C324 /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 651282361D090AA70041C324 /* QuartzCore.framework */; };
+		651284D81D0B7D2D0041C324 /* libfinjin-engine.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 651284D71D0B7D2D0041C324 /* libfinjin-engine.a */; };
+		651284E71D0B7E040041C324 /* FinjinPrecompiled.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 651284DF1D0B7E040041C324 /* FinjinPrecompiled.cpp */; };
+		6512885C1D1379730041C324 /* FinjinViewerApplicationSettings.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 6512885A1D1379720041C324 /* FinjinViewerApplicationSettings.cpp */; };
+		651289021D2B3FA20041C324 /* FinjinViewerApplicationDelegate.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 651289001D2B3FA20041C324 /* FinjinViewerApplicationDelegate.cpp */; };
+		651289031D2B3FA20041C324 /* FinjinViewerApplicationViewportDelegate.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 651289011D2B3FA20041C324 /* FinjinViewerApplicationViewportDelegate.cpp */; };
+		6599D1541C52597700278A06 /* libfinjin-common.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 6599D1531C52597700278A06 /* libfinjin-common.a */; };
+		65E4773E1C48BF1E00A1501F /* main.mm in Sources */ = {isa = PBXBuildFile; fileRef = 65E4773D1C48BF1E00A1501F /* main.mm */; };
+		65E477411C48BF1E00A1501F /* ViewerUIApplicationDelegate.mm in Sources */ = {isa = PBXBuildFile; fileRef = 65E477401C48BF1E00A1501F /* ViewerUIApplicationDelegate.mm */; };
+		65E4774C1C48BF1E00A1501F /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 65E4774B1C48BF1E00A1501F /* Assets.xcassets */; };
+		65E4774F1C48BF1E00A1501F /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 65E4774D1C48BF1E00A1501F /* LaunchScreen.storyboard */; };
+		65E477571C48CC2600A1501F /* Metal.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 65E477561C48CC2600A1501F /* Metal.framework */; };
+		65E477591C48CC2E00A1501F /* MetalKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 65E477581C48CC2E00A1501F /* MetalKit.framework */; };
+		65E4775B1C48CC4D00A1501F /* ModelIO.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 65E4775A1C48CC4D00A1501F /* ModelIO.framework */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		65127C1F1CB514570041C324 /* finjin-boot.cfg */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = "finjin-boot.cfg"; sourceTree = "<group>"; };
+		65127D501CDC42D90041C324 /* GameController.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = GameController.framework; path = System/Library/Frameworks/GameController.framework; sourceTree = SDKROOT; };
+		65127DD21CF676B80041C324 /* AVFoundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AVFoundation.framework; path = System/Library/Frameworks/AVFoundation.framework; sourceTree = SDKROOT; };
+		65127DE21CF98FE60041C324 /* assets.zip */ = {isa = PBXFileReference; lastKnownFileType = archive.zip; path = assets.zip; sourceTree = "<group>"; };
+		651282341D090A100041C324 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
+		651282361D090AA70041C324 /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = System/Library/Frameworks/QuartzCore.framework; sourceTree = SDKROOT; };
+		651284D71D0B7D2D0041C324 /* libfinjin-engine.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = "libfinjin-engine.a"; path = "../../../finjin-engine/cpp/library/project/ios-xcode/build/Debug-iphoneos/libfinjin-engine.a"; sourceTree = "<group>"; };
+		651284DA1D0B7E040041C324 /* FinjinViewerApplicationDelegate.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; name = FinjinViewerApplicationDelegate.hpp; path = ../../src/FinjinViewerApplicationDelegate.hpp; sourceTree = SOURCE_ROOT; };
+		651284DD1D0B7E040041C324 /* FinjinViewerApplicationViewportDelegate.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; name = FinjinViewerApplicationViewportDelegate.hpp; path = ../../src/FinjinViewerApplicationViewportDelegate.hpp; sourceTree = SOURCE_ROOT; };
+		651284DF1D0B7E040041C324 /* FinjinPrecompiled.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; name = FinjinPrecompiled.cpp; path = ../../src/FinjinPrecompiled.cpp; sourceTree = SOURCE_ROOT; };
+		651284E01D0B7E040041C324 /* FinjinPrecompiled.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; name = FinjinPrecompiled.hpp; path = ../../src/FinjinPrecompiled.hpp; sourceTree = SOURCE_ROOT; };
+		6512885A1D1379720041C324 /* FinjinViewerApplicationSettings.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; name = FinjinViewerApplicationSettings.cpp; path = ../../src/FinjinViewerApplicationSettings.cpp; sourceTree = SOURCE_ROOT; };
+		6512885B1D1379730041C324 /* FinjinViewerApplicationSettings.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; name = FinjinViewerApplicationSettings.hpp; path = ../../src/FinjinViewerApplicationSettings.hpp; sourceTree = SOURCE_ROOT; };
+		651289001D2B3FA20041C324 /* FinjinViewerApplicationDelegate.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; name = FinjinViewerApplicationDelegate.cpp; path = ../../src/FinjinViewerApplicationDelegate.cpp; sourceTree = SOURCE_ROOT; };
+		651289011D2B3FA20041C324 /* FinjinViewerApplicationViewportDelegate.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; name = FinjinViewerApplicationViewportDelegate.cpp; path = ../../src/FinjinViewerApplicationViewportDelegate.cpp; sourceTree = SOURCE_ROOT; };
+		6599D1531C52597700278A06 /* libfinjin-common.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; path = "libfinjin-common.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		65E477391C48BF1E00A1501F /* finjin-viewer.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "finjin-viewer.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		65E4773D1C48BF1E00A1501F /* main.mm */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.objcpp; path = main.mm; sourceTree = "<group>"; };
+		65E4773F1C48BF1E00A1501F /* ViewerUIApplicationDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewerUIApplicationDelegate.h; sourceTree = "<group>"; };
+		65E477401C48BF1E00A1501F /* ViewerUIApplicationDelegate.mm */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.objcpp; path = ViewerUIApplicationDelegate.mm; sourceTree = "<group>"; };
+		65E4774B1C48BF1E00A1501F /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		65E4774E1C48BF1E00A1501F /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		65E477501C48BF1E00A1501F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		65E477561C48CC2600A1501F /* Metal.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Metal.framework; path = System/Library/Frameworks/Metal.framework; sourceTree = SDKROOT; };
+		65E477581C48CC2E00A1501F /* MetalKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MetalKit.framework; path = System/Library/Frameworks/MetalKit.framework; sourceTree = SDKROOT; };
+		65E4775A1C48CC4D00A1501F /* ModelIO.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = ModelIO.framework; path = System/Library/Frameworks/ModelIO.framework; sourceTree = SDKROOT; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		65E477361C48BF1E00A1501F /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				6599D1541C52597700278A06 /* libfinjin-common.a in Frameworks */,
+				651284D81D0B7D2D0041C324 /* libfinjin-engine.a in Frameworks */,
+				651282371D090AA70041C324 /* QuartzCore.framework in Frameworks */,
+				651282351D090A100041C324 /* UIKit.framework in Frameworks */,
+				65127DD31CF676B80041C324 /* AVFoundation.framework in Frameworks */,
+				65127D511CDC42D90041C324 /* GameController.framework in Frameworks */,
+				65E4775B1C48CC4D00A1501F /* ModelIO.framework in Frameworks */,
+				65E477591C48CC2E00A1501F /* MetalKit.framework in Frameworks */,
+				65E477571C48CC2600A1501F /* Metal.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		65E477301C48BF1E00A1501F = {
+			isa = PBXGroup;
+			children = (
+				65E4775C1C48CFA300A1501F /* Frameworks/Libraries */,
+				65E4773A1C48BF1E00A1501F /* Products */,
+				65E4775E1C4DDE3700A1501F /* Resources */,
+				65E4775D1C4DDE2000A1501F /* Source Files */,
+			);
+			sourceTree = "<group>";
+		};
+		65E4773A1C48BF1E00A1501F /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				65E477391C48BF1E00A1501F /* finjin-viewer.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		65E4775C1C48CFA300A1501F /* Frameworks/Libraries */ = {
+			isa = PBXGroup;
+			children = (
+				6599D1531C52597700278A06 /* libfinjin-common.a */,
+				651284D71D0B7D2D0041C324 /* libfinjin-engine.a */,
+				65127DD21CF676B80041C324 /* AVFoundation.framework */,
+				65127D501CDC42D90041C324 /* GameController.framework */,
+				65E4775A1C48CC4D00A1501F /* ModelIO.framework */,
+				65E477581C48CC2E00A1501F /* MetalKit.framework */,
+				65E477561C48CC2600A1501F /* Metal.framework */,
+				651282341D090A100041C324 /* UIKit.framework */,
+				651282361D090AA70041C324 /* QuartzCore.framework */,
+			);
+			name = Frameworks/Libraries;
+			sourceTree = "<group>";
+		};
+		65E4775D1C4DDE2000A1501F /* Source Files */ = {
+			isa = PBXGroup;
+			children = (
+				65E477601C4DE46C00A1501F /* finjin-viewer */,
+				65E4773D1C48BF1E00A1501F /* main.mm */,
+				65E4773F1C48BF1E00A1501F /* ViewerUIApplicationDelegate.h */,
+				65E477401C48BF1E00A1501F /* ViewerUIApplicationDelegate.mm */,
+			);
+			name = "Source Files";
+			path = "finjin-viewer";
+			sourceTree = SOURCE_ROOT;
+		};
+		65E4775E1C4DDE3700A1501F /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				65E4774B1C48BF1E00A1501F /* Assets.xcassets */,
+				65127DE21CF98FE60041C324 /* assets.zip */,
+				65127C1F1CB514570041C324 /* finjin-boot.cfg */,
+				65E477501C48BF1E00A1501F /* Info.plist */,
+				65E4774D1C48BF1E00A1501F /* LaunchScreen.storyboard */,
+			);
+			name = Resources;
+			path = "finjin-viewer";
+			sourceTree = "<group>";
+		};
+		65E477601C4DE46C00A1501F /* finjin-viewer */ = {
+			isa = PBXGroup;
+			children = (
+				651289001D2B3FA20041C324 /* FinjinViewerApplicationDelegate.cpp */,
+				651284DA1D0B7E040041C324 /* FinjinViewerApplicationDelegate.hpp */,
+				6512885A1D1379720041C324 /* FinjinViewerApplicationSettings.cpp */,
+				6512885B1D1379730041C324 /* FinjinViewerApplicationSettings.hpp */,
+				651289011D2B3FA20041C324 /* FinjinViewerApplicationViewportDelegate.cpp */,
+				651284DD1D0B7E040041C324 /* FinjinViewerApplicationViewportDelegate.hpp */,
+				651284DF1D0B7E040041C324 /* FinjinPrecompiled.cpp */,
+				651284E01D0B7E040041C324 /* FinjinPrecompiled.hpp */,
+			);
+			name = "finjin-viewer";
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		65E477381C48BF1E00A1501F /* finjin-viewer */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 65E477531C48BF1E00A1501F /* Build configuration list for PBXNativeTarget "finjin-viewer" */;
+			buildPhases = (
+				65E477351C48BF1E00A1501F /* Sources */,
+				65E477361C48BF1E00A1501F /* Frameworks */,
+				65E477371C48BF1E00A1501F /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "finjin-viewer";
+			productName = "finjin-viewer";
+			productReference = 65E477391C48BF1E00A1501F /* finjin-viewer.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		65E477311C48BF1E00A1501F /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0810;
+				ORGANIZATIONNAME = Finjin;
+				TargetAttributes = {
+					65E477381C48BF1E00A1501F = {
+						CreatedOnToolsVersion = 7.2;
+						DevelopmentTeam = S83GJ688WE;
+					};
+				};
+			};
+			buildConfigurationList = 65E477341C48BF1E00A1501F /* Build configuration list for PBXProject "finjin-viewer" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 65E477301C48BF1E00A1501F;
+			productRefGroup = 65E4773A1C48BF1E00A1501F /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				65E477381C48BF1E00A1501F /* finjin-viewer */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		65E477371C48BF1E00A1501F /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				65127DE31CF98FE60041C324 /* assets.zip in Resources */,
+				65E4774F1C48BF1E00A1501F /* LaunchScreen.storyboard in Resources */,
+				65E4774C1C48BF1E00A1501F /* Assets.xcassets in Resources */,
+				65127C201CB514570041C324 /* finjin-boot.cfg in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		65E477351C48BF1E00A1501F /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				651289021D2B3FA20041C324 /* FinjinViewerApplicationDelegate.cpp in Sources */,
+				651289031D2B3FA20041C324 /* FinjinViewerApplicationViewportDelegate.cpp in Sources */,
+				6512885C1D1379730041C324 /* FinjinViewerApplicationSettings.cpp in Sources */,
+				651284E71D0B7E040041C324 /* FinjinPrecompiled.cpp in Sources */,
+				65E477411C48BF1E00A1501F /* ViewerUIApplicationDelegate.mm in Sources */,
+				65E4773E1C48BF1E00A1501F /* main.mm in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXVariantGroup section */
+		65E4774D1C48BF1E00A1501F /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				65E4774E1C48BF1E00A1501F /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		65E477511C48BF1E00A1501F /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "c++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				HEADER_SEARCH_PATHS = "";
+				IPHONEOS_DEPLOYMENT_TARGET = 9.2;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		65E477521C48BF1E00A1501F /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "c++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				HEADER_SEARCH_PATHS = "";
+				IPHONEOS_DEPLOYMENT_TARGET = 9.2;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		65E477541C48BF1E00A1501F /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"$(inherited)",
+					BOOST_SYSTEM_NO_DEPRECATED,
+				);
+				HEADER_SEARCH_PATHS = (
+					"~/finjin-3rd-party/cpp/boost",
+					"~/finjin-3rd-party/cpp/eigen",
+					"~/git/nedelman/finjin-common/cpp/library/include",
+					"~/git/nedelman/finjin-engine/cpp/library/src",
+					"~/git/nedelman/finjin-engine/cpp/library/src/finjin/engine/internal/app/ios",
+					../../src,
+				);
+				INFOPLIST_FILE = "finjin-viewer/Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 10.1;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.finjin.viewer;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "";
+			};
+			name = Debug;
+		};
+		65E477551C48BF1E00A1501F /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				GCC_PREPROCESSOR_DEFINITIONS = BOOST_SYSTEM_NO_DEPRECATED;
+				HEADER_SEARCH_PATHS = (
+					"~/finjin-3rd-party/cpp/boost",
+					"~/finjin-3rd-party/cpp/eigen",
+					"~/git/nedelman/finjin-common/cpp/library/include",
+					"~/git/nedelman/finjin-engine/cpp/library/src",
+					"~/git/nedelman/finjin-engine/cpp/library/src/finjin/engine/internal/app/ios",
+					../../src,
+				);
+				INFOPLIST_FILE = "finjin-viewer/Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 10.1;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.finjin.viewer;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		65E477341C48BF1E00A1501F /* Build configuration list for PBXProject "finjin-viewer" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				65E477511C48BF1E00A1501F /* Debug */,
+				65E477521C48BF1E00A1501F /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		65E477531C48BF1E00A1501F /* Build configuration list for PBXNativeTarget "finjin-viewer" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				65E477541C48BF1E00A1501F /* Debug */,
+				65E477551C48BF1E00A1501F /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 65E477311C48BF1E00A1501F /* Project object */;
+}

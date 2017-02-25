@@ -78,7 +78,7 @@ ApplicationViewportDelegate::UpdateResult FinjinViewerApplicationViewportDelegat
                 }
                 else if (readResult == FileOperationResult::NOT_FOUND)
                 {          
-                    FINJIN_SET_ERROR(error, "Failed to read asset counts file 'asset-counts.cfg'.");
+                    FINJIN_SET_ERROR(error, "Failed to read asset counts file 'scene-reader-asset-counts.cfg'.");
                     return UpdateResult::LOGIC_ONLY;
                 }
                 stateSettings.assetCountsByClass = assetCountsSettings.countsByClass;

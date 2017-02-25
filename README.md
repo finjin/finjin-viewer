@@ -1,5 +1,5 @@
 # finjin-viewer
-The Finjin Viewer is an application that loads and scene files exported by the Finjin exporters.
+The Finjin Viewer is an application that loads and displays scene files exported by the Finjin exporters.
 
 ## Project Dependencies
 * [finjin-common](https://github.com/finjin/finjin-common)

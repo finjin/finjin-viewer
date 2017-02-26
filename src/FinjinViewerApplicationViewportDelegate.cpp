@@ -81,7 +81,7 @@ ApplicationViewportDelegate::UpdateResult FinjinViewerApplicationViewportDelegat
                     FINJIN_SET_ERROR(error, "Failed to read asset counts file 'scene-reader-asset-counts.cfg'.");
                     return UpdateResult::LOGIC_ONLY;
                 }
-                stateSettings.assetCountsByClass = assetCountsSettings.countsByClass;
+                stateSettings.assetCounts = assetCountsSettings.assetCounts;
                 
                 this->sceneReaderState.Create(stateSettings, error);
                 if (error)

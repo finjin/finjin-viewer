@@ -45,10 +45,10 @@ void FinjinViewerApplicationSettings::ReadCommandLineSettings(CommandLineArgsPro
                     path.GetFileName(this->fileName.value);
                     this->fileName.isSet = true;
                     
-                    path.GoToParentPath();
+                    path.GoToParent();
                     if (path.EndsWith(AssetClassUtilities::ToDirectoryName(AssetClass::SCENE)))
                     {
-                        path.GetParentPath(this->additionalReadApplicationAssetsDirectory);
+                        path.GetParent(this->additionalReadApplicationAssetsDirectory);
                         this->additionalReadApplicationAssetsDirectory.isSet = true;
                     }
                 }

@@ -464,7 +464,6 @@ void FinjinViewerApplicationViewportDelegate::StartFrame(ApplicationViewportUpda
             //GPU
             if (AnySet(updateContext.gpuContext->GetAssetCreationCapabilities(AssetClass::MESH) & AssetCreationCapability::FRAME_THREAD))
             {
-                size_t meshIndex = 0;
                 for (auto& item : updateContext.newMeshes)
                 {
                     if (!updateContext.gpuCommands.CreateMesh(&item))
@@ -474,7 +473,6 @@ void FinjinViewerApplicationViewportDelegate::StartFrame(ApplicationViewportUpda
             }
             if (AnySet(updateContext.gpuContext->GetAssetCreationCapabilities(AssetClass::TEXTURE) & AssetCreationCapability::FRAME_THREAD))
             {
-                size_t textureIndex = 0;
                 for (auto& item : updateContext.newTextures)
                 {
                     if (!updateContext.gpuCommands.CreateTexture(&item))
@@ -484,7 +482,6 @@ void FinjinViewerApplicationViewportDelegate::StartFrame(ApplicationViewportUpda
             }
             if (AnySet(updateContext.gpuContext->GetAssetCreationCapabilities(AssetClass::MATERIAL) & AssetCreationCapability::FRAME_THREAD))
             {
-                size_t materialIndex = 0;
                 for (auto& item : updateContext.newMaterials)
                 {
                     if (!updateContext.gpuCommands.CreateMaterial(&item))
@@ -516,7 +513,7 @@ void FinjinViewerApplicationViewportDelegate::StartFrame(ApplicationViewportUpda
                             {
                                 if (obj->IsTypeOf(FINJIN_CLASS_DESCRIPTION(FinjinSceneObjectEntity)))
                                 {
-                                    auto entity = (FinjinSceneObjectEntity*)obj;
+                                    auto entity = reinterpret_cast<FinjinSceneObjectEntity*>(obj);
 
                                     auto shaderFeatureFlags = RenderShaderFeatureFlags::GetDefault();
                                     //shaderFeatureFlags.renderingFlags |= ShaderFeatureFlag::RENDERING_FILL_WIREFRAME;

@@ -11,4 +11,11 @@
 //file, You can obtain one at http://mozilla.org/MPL/2.0/.
 
 
-#include "FinjinPrecompiled.hpp"
+//Includes----------------------------------------------------------------------
+#import <finjin/engine/FinjinNSApplicationDelegate.h>
+
+
+//Types-------------------------------------------------------------------------
+@interface FinjinViewerNSApplicationDelegate : FinjinNSApplicationDelegate
+
+@end

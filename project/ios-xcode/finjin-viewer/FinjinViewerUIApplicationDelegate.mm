@@ -11,23 +11,23 @@
 //file, You can obtain one at http://mozilla.org/MPL/2.0/.
 
 
-//Includes---------------------------------------------------------------------
-#include "FinjinPrecompiled.hpp"
-#import "ViewerUIApplicationDelegate.h"
+//Includes----------------------------------------------------------------------
+#include "FinjinViewerPrecompiled.hpp"
+#import "FinjinViewerUIApplicationDelegate.h"
 #include "FinjinViewerApplicationDelegate.hpp"
 
-using namespace Finjin::Common;
+FINJIN_USE_ENGINE_NAMESPACES
 using namespace Finjin::Viewer;
 
 
-//Implementation--------------------------------------------------------------------------
-@implementation ViewerUIApplicationDelegate
+//Implementation----------------------------------------------------------------
+@implementation FinjinViewerUIApplicationDelegate
 
 - (BOOL)application:(UIApplication*)application didFinishLaunchingWithOptions:(NSDictionary*)launchOptions
 {
     //Set up Finjin application delegate
     self.engineApplicationDelegate = AllocatedClass::New<FinjinViewerApplicationDelegate>(self.engineAllocator, FINJIN_CALLER_ARGUMENTS);
-    
+
     //Call superclass method
     return [super application:application didFinishLaunchingWithOptions:launchOptions];
 }

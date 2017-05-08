@@ -11,6 +11,5 @@
 //file, You can obtain one at http://mozilla.org/MPL/2.0/.
 
 
-#pragma once
-
-#include "finjin/engine/FinjinEngineLibrary.hpp"
+//Includes----------------------------------------------------------------------
+#include "FinjinViewerPrecompiled.hpp"

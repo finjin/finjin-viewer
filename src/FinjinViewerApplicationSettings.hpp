@@ -14,12 +14,12 @@
 #pragma once
 
 
-//Includes---------------------------------------------------------------------
-#include "finjin/common/Path.hpp"
-#include "finjin/engine/ApplicationSettings.hpp"
+//Includes----------------------------------------------------------------------
+#include <finjin/common/Path.hpp>
+#include <finjin/engine/ApplicationSettings.hpp>
 
 
-//Classes----------------------------------------------------------------------
+//Types-------------------------------------------------------------------------
 namespace Finjin { namespace Viewer {
 
     FINJIN_USE_ENGINE_NAMESPACES
@@ -28,9 +28,9 @@ namespace Finjin { namespace Viewer {
     {
     public:
         FinjinViewerApplicationSettings();
-        
+
         void ReadCommandLineSettings(CommandLineArgsProcessor& argsProcessor, Error& error);
-        
+
     public:
         Setting<Utf8String> fileName; //Just the file name, such as "test.fstd-scene"
     };

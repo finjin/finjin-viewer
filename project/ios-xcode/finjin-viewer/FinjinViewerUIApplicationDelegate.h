@@ -11,9 +11,11 @@
 //file, You can obtain one at http://mozilla.org/MPL/2.0/.
 
 
-#import <Cocoa/Cocoa.h>
-#import "finjin/engine/FinjinNSApplicationDelegate.h"
+//Includes----------------------------------------------------------------------
+#import <finjin/engine/FinjinUIApplicationDelegate.h>
 
-@interface ViewerNSApplicationDelegate : FinjinNSApplicationDelegate
+
+//Types-------------------------------------------------------------------------
+@interface FinjinViewerUIApplicationDelegate : FinjinUIApplicationDelegate
 
 @end

@@ -9,14 +9,14 @@
                    displayName="Source Files"
                    projectFiles="true">
       <logicalFolder name="f4" displayName="finjin-viewer" projectFiles="true">
-        <itemPath>../../src/FinjinPrecompiled.cpp</itemPath>
-        <itemPath>../../src/FinjinPrecompiled.hpp</itemPath>
         <itemPath>../../src/FinjinViewerApplicationDelegate.cpp</itemPath>
         <itemPath>../../src/FinjinViewerApplicationDelegate.hpp</itemPath>
         <itemPath>../../src/FinjinViewerApplicationSettings.cpp</itemPath>
         <itemPath>../../src/FinjinViewerApplicationSettings.hpp</itemPath>
         <itemPath>../../src/FinjinViewerApplicationViewportDelegate.cpp</itemPath>
         <itemPath>../../src/FinjinViewerApplicationViewportDelegate.hpp</itemPath>
+        <itemPath>../../src/FinjinViewerPrecompiled.cpp</itemPath>
+        <itemPath>../../src/FinjinViewerPrecompiled.hpp</itemPath>
       </logicalFolder>
       <itemPath>main.cpp</itemPath>
     </logicalFolder>
@@ -60,6 +60,7 @@
           </preprocessorList>
         </ccTool>
         <linkerTool>
+          <output>${CND_DISTDIR}/${CND_CONF}/${CND_PLATFORM}/finjin-viewer</output>
           <linkerAddLib>
             <pElem>/home/build/finjin-3rd-party/cpp/boost/stage/lib</pElem>
             <pElem>/home/build/finjin-3rd-party/cpp/curl/lib</pElem>
@@ -112,10 +113,6 @@
           </linkerLibItems>
         </linkerTool>
       </compileType>
-      <item path="../../src/FinjinPrecompiled.cpp" ex="false" tool="1" flavor2="0">
-      </item>
-      <item path="../../src/FinjinPrecompiled.hpp" ex="false" tool="3" flavor2="0">
-      </item>
       <item path="../../src/FinjinViewerApplicationDelegate.cpp"
             ex="false"
             tool="1"
@@ -142,6 +139,16 @@
             flavor2="0">
       </item>
       <item path="../../src/FinjinViewerApplicationViewportDelegate.hpp"
+            ex="false"
+            tool="3"
+            flavor2="0">
+      </item>
+      <item path="../../src/FinjinViewerPrecompiled.cpp"
+            ex="false"
+            tool="1"
+            flavor2="0">
+      </item>
+      <item path="../../src/FinjinViewerPrecompiled.hpp"
             ex="false"
             tool="3"
             flavor2="0">
@@ -185,6 +192,7 @@
           <developmentMode>5</developmentMode>
         </asmTool>
         <linkerTool>
+          <output>${CND_DISTDIR}/${CND_CONF}/${CND_PLATFORM}/finjin-viewer</output>
           <linkerAddLib>
             <pElem>/home/build/finjin-3rd-party/cpp/boost/stage/lib</pElem>
             <pElem>/home/build/finjin-3rd-party/cpp/curl/lib</pElem>
@@ -237,10 +245,6 @@
           </linkerLibItems>
         </linkerTool>
       </compileType>
-      <item path="../../src/FinjinPrecompiled.cpp" ex="false" tool="1" flavor2="0">
-      </item>
-      <item path="../../src/FinjinPrecompiled.hpp" ex="false" tool="3" flavor2="0">
-      </item>
       <item path="../../src/FinjinViewerApplicationDelegate.cpp"
             ex="false"
             tool="1"
@@ -267,6 +271,16 @@
             flavor2="0">
       </item>
       <item path="../../src/FinjinViewerApplicationViewportDelegate.hpp"
+            ex="false"
+            tool="3"
+            flavor2="0">
+      </item>
+      <item path="../../src/FinjinViewerPrecompiled.cpp"
+            ex="false"
+            tool="1"
+            flavor2="0">
+      </item>
+      <item path="../../src/FinjinViewerPrecompiled.hpp"
             ex="false"
             tool="3"
             flavor2="0">

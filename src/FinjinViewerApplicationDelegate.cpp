@@ -11,51 +11,55 @@
 //file, You can obtain one at http://mozilla.org/MPL/2.0/.
 
 
-//Includes---------------------------------------------------------------------
-#include "FinjinPrecompiled.hpp"
+//Includes----------------------------------------------------------------------
+#include "FinjinViewerPrecompiled.hpp"
 #include "FinjinViewerApplicationDelegate.hpp"
 #include "FinjinViewerApplicationViewportDelegate.hpp"
 
 using namespace Finjin::Viewer;
 
 
-//Implementation---------------------------------------------------------------
+//Implementation----------------------------------------------------------------
 FinjinViewerApplicationDelegate::FinjinViewerApplicationDelegate(Allocator* allocator) : ApplicationDelegate(allocator)
-{    
+{
 }
 
 FinjinViewerApplicationDelegate::~FinjinViewerApplicationDelegate()
-{    
+{
 }
 
 const Utf8String& FinjinViewerApplicationDelegate::GetName(ApplicationNameFormat format) const
 {
-    static Utf8String displayName("Finjin Viewer");
-    static Utf8String camelCaseName("FinjinViewer");
-    static Utf8String dottedWithOrganizationPrefix("com.finjin.finjinviewer"); 
+    static const Utf8String displayName("Finjin Viewer");
+    static const Utf8String upperCamelCaseName("FinjinViewer");
+    static const Utf8String lowerCaseName("finjin-viewer");
+    static const Utf8String dottedWithOrganizationPrefix("com.finjin.viewer");
     switch (format)
     {
         case ApplicationNameFormat::DISPLAY: return displayName;
-        case ApplicationNameFormat::CAMEL_CASE: return camelCaseName;
+        case ApplicationNameFormat::UPPER_CAMEL_CASE: return upperCamelCaseName;
+        case ApplicationNameFormat::LOWER_CASE: return lowerCaseName;
         case ApplicationNameFormat::DOTTED_WITH_ORGANIZATION_PREFIX: return dottedWithOrganizationPrefix;
-        default: 
+        default:
         {
             assert(0 && "Invalid application name format.");
-            return camelCaseName;
+            return upperCamelCaseName;
         }
     }
 }
 
-void FinjinViewerApplicationDelegate::ReadCommandLineSettings(CommandLineArgsProcessor& argsProcessor, Error& error)
+ReadCommandLineResult FinjinViewerApplicationDelegate::ReadCommandLineSettings(CommandLineArgsProcessor& argsProcessor, Error& error)
 {
     FINJIN_ERROR_METHOD_START(error);
 
     this->commandLineSettings.ReadCommandLineSettings(argsProcessor, error);
     if (error)
     {
-        FINJIN_SET_ERROR(error, "Failed to read viewer application settings.");
-        return;
+        FINJIN_SET_ERROR(error, "Failed to read application command line settings.");
+        return ReadCommandLineResult::FAILURE;
     }
+
+    return ReadCommandLineResult::SUCCESS;
 }
 
 const ApplicationSettings& FinjinViewerApplicationDelegate::GetApplicationSettings() const
@@ -83,5 +87,10 @@ ApplicationViewportDescription& FinjinViewerApplicationDelegate::GetApplicationV
 
 ApplicationViewportDelegate* FinjinViewerApplicationDelegate::CreateApplicationViewportDelegate(Allocator* allocator, size_t index)
 {
-    return AllocatedClass::New<FinjinViewerApplicationViewportDelegate>(allocator, FINJIN_CALLER_ARGUMENTS, this->commandLineSettings.fileName);
+    return AllocatedClass::New<FinjinViewerApplicationViewportDelegate>
+        (
+        allocator,
+        FINJIN_CALLER_ARGUMENTS,
+        this->commandLineSettings.fileName
+        );
 }

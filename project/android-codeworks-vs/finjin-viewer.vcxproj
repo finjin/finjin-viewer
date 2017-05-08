@@ -52,7 +52,7 @@
     <ClCompile>
       <CppLanguageStandard>
       </CppLanguageStandard>
-      <AdditionalIncludeDirectories>C:\finjin-3rd-party\cpp\boost;C:\finjin-3rd-party\cpp\eigen;C:\VulkanSDK\1.0.13.0\Include;C:\git\nedelman\finjin-common\cpp\library\include;C:\git\nedelman\finjin-engine\cpp\library\src;C:\git\nedelman\finjin-engine\cpp\library\src\finjin\engine\internal\app\android\cpp;..\..\src</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>C:\finjin-3rd-party\cpp\boost;C:\finjin-3rd-party\cpp\eigen;C:\VulkanSDK\1.0.42.1\Include;C:\git\nedelman\finjin-common\cpp\library\include;C:\git\nedelman\finjin-engine\cpp\library\src;C:\git\nedelman\finjin-engine\cpp\library\src\finjin\engine\internal\app\android\cpp;..\..\src</AdditionalIncludeDirectories>
       <GccExceptionHandling>true</GccExceptionHandling>
       <RuntimeTypeInfo>true</RuntimeTypeInfo>
       <AdditionalOptions>-std=c++14 %(AdditionalOptions)</AdditionalOptions>
@@ -71,7 +71,7 @@
     <ClCompile>
       <CppLanguageStandard>
       </CppLanguageStandard>
-      <AdditionalIncludeDirectories>C:\finjin-3rd-party\cpp\boost;C:\finjin-3rd-party\cpp\eigen;C:\VulkanSDK\1.0.13.0\Include;C:\git\nedelman\finjin-common\cpp\library\include;C:\git\nedelman\finjin-engine\cpp\library\src;C:\git\nedelman\finjin-engine\cpp\library\src\finjin\engine\internal\app\android\cpp;..\..\src</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>C:\finjin-3rd-party\cpp\boost;C:\finjin-3rd-party\cpp\eigen;C:\VulkanSDK\1.0.42.1\Include;C:\git\nedelman\finjin-common\cpp\library\include;C:\git\nedelman\finjin-engine\cpp\library\src;C:\git\nedelman\finjin-engine\cpp\library\src\finjin\engine\internal\app\android\cpp;..\..\src</AdditionalIncludeDirectories>
       <GccExceptionHandling>true</GccExceptionHandling>
       <RuntimeTypeInfo>true</RuntimeTypeInfo>
       <AdditionalOptions>-std=c++14 %(AdditionalOptions)</AdditionalOptions>
@@ -90,7 +90,7 @@
     <ClCompile>
       <CppLanguageStandard>
       </CppLanguageStandard>
-      <AdditionalIncludeDirectories>C:\finjin-3rd-party\cpp\boost;C:\finjin-3rd-party\cpp\eigen;C:\VulkanSDK\1.0.13.0\Include;C:\git\nedelman\finjin-common\cpp\library\include;C:\git\nedelman\finjin-engine\cpp\library\src;C:\git\nedelman\finjin-engine\cpp\library\src\finjin\engine\internal\app\android\cpp;..\..\src</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>C:\finjin-3rd-party\cpp\boost;C:\finjin-3rd-party\cpp\eigen;C:\VulkanSDK\1.0.42.1\Include;C:\git\nedelman\finjin-common\cpp\library\include;C:\git\nedelman\finjin-engine\cpp\library\src;C:\git\nedelman\finjin-engine\cpp\library\src\finjin\engine\internal\app\android\cpp;..\..\src</AdditionalIncludeDirectories>
       <GccExceptionHandling>true</GccExceptionHandling>
       <RuntimeTypeInfo>true</RuntimeTypeInfo>
       <AdditionalOptions>-std=c++14 %(AdditionalOptions)</AdditionalOptions>
@@ -135,14 +135,14 @@
     <ClCompile Include="..\..\src\FinjinViewerApplicationDelegate.cpp" />
     <ClCompile Include="..\..\src\FinjinViewerApplicationSettings.cpp" />
     <ClCompile Include="..\..\src\FinjinViewerApplicationViewportDelegate.cpp" />
-    <ClCompile Include="..\..\src\FinjinPrecompiled.cpp" />
+    <ClCompile Include="..\..\src\FinjinViewerPrecompiled.cpp" />
     <ClCompile Include="src\cpp\main.cpp" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="..\..\src\FinjinViewerApplicationDelegate.hpp" />
     <ClInclude Include="..\..\src\FinjinViewerApplicationSettings.hpp" />
     <ClInclude Include="..\..\src\FinjinViewerApplicationViewportDelegate.hpp" />
-    <ClInclude Include="..\..\src\FinjinPrecompiled.hpp" />
+    <ClInclude Include="..\..\src\FinjinViewerPrecompiled.hpp" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">

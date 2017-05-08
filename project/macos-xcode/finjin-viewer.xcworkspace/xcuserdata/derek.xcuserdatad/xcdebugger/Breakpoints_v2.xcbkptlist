@@ -953,12 +953,12 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "../../../finjin-engine/cpp/library/src/finjin/engine/internal/gpu/metal/MetalGpuContext.mm"
-            timestampString = "489856283.748203"
+            timestampString = "515374618.028592"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "229"
-            endingLineNumber = "229"
-            landmarkName = "MetalGpuContext::AcquireJobPipelineStage(size_t i, SimpleTimeDelta elapsedTime)"
+            startingLineNumber = "226"
+            endingLineNumber = "226"
+            landmarkName = "MetalGpuContext::FinishBackFrameBufferRender(JobPipelineStage&amp; frameStage, bool continueRendering, bool modifyingRenderTarget, size_t presentSyncIntervalOverride, Error&amp; error)"
             landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>
@@ -1052,7 +1052,7 @@
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "77"
             endingLineNumber = "77"
-            landmarkName = "AVAudioEngineSoundContext::Update(SimpleTimeDelta elapsedTime)"
+            landmarkName = "AVAudioEngineSoundContext::GetExternalAssetFileExtensions(StaticVector&lt;Utf8String, EngineConstants::MAX_EXTERNAL_ASSET_FILE_EXTENSIONS&gt;&amp; extensions, AssetClass assetClass, Error&amp; error)"
             landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>
@@ -1095,12 +1095,12 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "../../../finjin-engine/cpp/library/src/finjin/engine/internal/gpu/metal/MetalGpuContext.mm"
-            timestampString = "489856283.748203"
+            timestampString = "515374618.028592"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "228"
-            endingLineNumber = "228"
-            landmarkName = "MetalGpuContext::AcquireJobPipelineStage(size_t i, SimpleTimeDelta elapsedTime)"
+            startingLineNumber = "225"
+            endingLineNumber = "225"
+            landmarkName = "MetalGpuContext::FinishBackFrameBufferRender(JobPipelineStage&amp; frameStage, bool continueRendering, bool modifyingRenderTarget, size_t presentSyncIntervalOverride, Error&amp; error)"
             landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>
@@ -1111,12 +1111,12 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "../../../finjin-engine/cpp/library/src/finjin/engine/internal/gpu/metal/MetalGpuContext.mm"
-            timestampString = "489856283.748203"
+            timestampString = "515374618.028592"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "227"
-            endingLineNumber = "227"
-            landmarkName = "MetalGpuContext::AcquireJobPipelineStage(size_t i, SimpleTimeDelta elapsedTime)"
+            startingLineNumber = "224"
+            endingLineNumber = "224"
+            landmarkName = "MetalGpuContext::FinishBackFrameBufferRender(JobPipelineStage&amp; frameStage, bool continueRendering, bool modifyingRenderTarget, size_t presentSyncIntervalOverride, Error&amp; error)"
             landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>
@@ -1205,12 +1205,12 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "../../../finjin-engine/cpp/library/src/finjin/engine/internal/gpu/metal/MetalGpuContext.mm"
-            timestampString = "489856283.748203"
+            timestampString = "515374618.028592"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "225"
-            endingLineNumber = "225"
-            landmarkName = "MetalGpuContext::AcquireJobPipelineStage(size_t i, SimpleTimeDelta elapsedTime)"
+            startingLineNumber = "222"
+            endingLineNumber = "222"
+            landmarkName = "MetalGpuContext::FinishBackFrameBufferRender(JobPipelineStage&amp; frameStage, bool continueRendering, bool modifyingRenderTarget, size_t presentSyncIntervalOverride, Error&amp; error)"
             landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>
@@ -1301,11 +1301,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "../../../finjin-engine/cpp/library/src/finjin/engine/Application_General.cpp"
-            timestampString = "506832989.94762"
+            timestampString = "515552746.605031"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "599"
-            endingLineNumber = "599"
+            startingLineNumber = "611"
+            endingLineNumber = "611"
             landmarkName = "Application::Initialize(Error&amp; error)"
             landmarkType = "7">
          </BreakpointContent>
@@ -1349,11 +1349,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "../../../finjin-engine/cpp/library/src/finjin/engine/Application_General.cpp"
-            timestampString = "493171255.232685"
+            timestampString = "515370015.383178"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "406"
-            endingLineNumber = "406"
+            startingLineNumber = "411"
+            endingLineNumber = "411"
             landmarkName = "Application::Initialize(Error&amp; error)"
             landmarkType = "7">
          </BreakpointContent>
@@ -1365,11 +1365,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "../../../finjin-engine/cpp/library/src/finjin/engine/Application_General.cpp"
-            timestampString = "493171255.232685"
+            timestampString = "515370015.383178"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "410"
-            endingLineNumber = "410"
+            startingLineNumber = "415"
+            endingLineNumber = "415"
             landmarkName = "Application::Initialize(Error&amp; error)"
             landmarkType = "7">
          </BreakpointContent>
@@ -1381,11 +1381,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "../../../finjin-engine/cpp/library/src/finjin/engine/Application_General.cpp"
-            timestampString = "493171255.232685"
+            timestampString = "515370015.383178"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "407"
-            endingLineNumber = "407"
+            startingLineNumber = "412"
+            endingLineNumber = "412"
             landmarkName = "Application::Initialize(Error&amp; error)"
             landmarkType = "7">
          </BreakpointContent>
@@ -1429,11 +1429,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "../../../finjin-engine/cpp/library/src/finjin/engine/Application_General.cpp"
-            timestampString = "506832989.94762"
+            timestampString = "515552746.605031"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "775"
-            endingLineNumber = "775"
+            startingLineNumber = "787"
+            endingLineNumber = "787"
             landmarkName = "Application::Initialize(Error&amp; error)"
             landmarkType = "7">
          </BreakpointContent>
@@ -1525,11 +1525,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "../../../finjin-engine/cpp/library/src/finjin/engine/internal/app/macos/finjin/engine/FinjinNSApplicationDelegate.mm"
-            timestampString = "493173007.740446"
+            timestampString = "515625287.577743"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "94"
-            endingLineNumber = "94"
+            startingLineNumber = "113"
+            endingLineNumber = "113"
             landmarkName = "-applicationDidBecomeActive:"
             landmarkType = "7">
          </BreakpointContent>
@@ -1541,11 +1541,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "../../../finjin-engine/cpp/library/src/finjin/engine/Application_General.cpp"
-            timestampString = "493173069.031449"
+            timestampString = "515370015.383178"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "339"
-            endingLineNumber = "339"
+            startingLineNumber = "344"
+            endingLineNumber = "344"
             landmarkName = "Application::Tick(Error&amp; error)"
             landmarkType = "7">
          </BreakpointContent>
@@ -1557,11 +1557,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "../../../finjin-engine/cpp/library/src/finjin/engine/Application_General.cpp"
-            timestampString = "493173070.8339"
+            timestampString = "515370015.383178"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "344"
-            endingLineNumber = "344"
+            startingLineNumber = "349"
+            endingLineNumber = "349"
             landmarkName = "Application::Tick(Error&amp; error)"
             landmarkType = "7">
          </BreakpointContent>
@@ -1653,11 +1653,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "../../../finjin-common/cpp/library/src/GeneralAllocator.cpp"
-            timestampString = "493185609.502505"
+            timestampString = "515293414.57933"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "451"
-            endingLineNumber = "451"
+            startingLineNumber = "453"
+            endingLineNumber = "453"
             landmarkName = "GeneralAllocator::_Init()"
             landmarkType = "7">
          </BreakpointContent>
@@ -1669,11 +1669,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "../../../finjin-common/cpp/library/src/GeneralAllocator.cpp"
-            timestampString = "493185609.502505"
+            timestampString = "515293414.57933"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "305"
-            endingLineNumber = "305"
+            startingLineNumber = "307"
+            endingLineNumber = "307"
             landmarkName = "GeneralAllocator::Deallocate(void* mem)"
             landmarkType = "7">
          </BreakpointContent>
@@ -1685,11 +1685,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "../../../finjin-common/cpp/library/src/GeneralAllocator.cpp"
-            timestampString = "493185609.502505"
+            timestampString = "515293414.57933"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "255"
-            endingLineNumber = "255"
+            startingLineNumber = "257"
+            endingLineNumber = "257"
             landmarkName = "GeneralAllocator::Deallocate(void* mem)"
             landmarkType = "7">
          </BreakpointContent>
@@ -1701,11 +1701,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "../../../finjin-common/cpp/library/src/GeneralAllocator.cpp"
-            timestampString = "493185609.502505"
+            timestampString = "515293414.57933"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "148"
-            endingLineNumber = "148"
+            startingLineNumber = "150"
+            endingLineNumber = "150"
             landmarkName = "GeneralAllocator::Allocate(size_t byteCount, FINJIN_CALLER_PARAMETERS_DECLARATION)"
             landmarkType = "7">
          </BreakpointContent>
@@ -1717,11 +1717,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "../../../finjin-engine/cpp/library/src/finjin/engine/Application_General.cpp"
-            timestampString = "506832621.639139"
+            timestampString = "515370015.383178"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "257"
-            endingLineNumber = "257"
+            startingLineNumber = "262"
+            endingLineNumber = "262"
             landmarkName = "Application::Run(CommandLineArgsProcessor&amp; argsProcessor, Error&amp; error)"
             landmarkType = "7">
          </BreakpointContent>
@@ -1733,11 +1733,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "../../../finjin-engine/cpp/library/src/finjin/engine/Application_General.cpp"
-            timestampString = "506832997.139139"
+            timestampString = "515370015.383178"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "437"
-            endingLineNumber = "437"
+            startingLineNumber = "442"
+            endingLineNumber = "442"
             landmarkName = "Application::Initialize(Error&amp; error)"
             landmarkType = "7">
             <Locations>
@@ -1804,6 +1804,820 @@
             endingLineNumber = "46"
             landmarkName = "Enumerate(const Path&amp; rootDirectory, const Path&amp; path, FileSystemEntry&amp; fileSystemEntry, FileSystemEntries&amp; items)"
             landmarkType = "9">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "../../../finjin-engine/cpp/library/src/finjin/engine/internal/gpu/metal/MetalSystem.mm"
+            timestampString = "515440428.38529"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "133"
+            endingLineNumber = "133"
+            landmarkName = "MetalSystem::Create(const Settings&amp; settings, Error&amp; error)"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "../../../finjin-engine/cpp/library/src/finjin/engine/internal/gpu/metal/MetalSystem.mm"
+            timestampString = "515275296.591442"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "84"
+            endingLineNumber = "84"
+            landmarkName = "MetalSystem::Create(const Settings&amp; settings, Error&amp; error)"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "../../../finjin-engine/cpp/library/src/finjin/engine/internal/gpu/metal/MetalSystem.mm"
+            timestampString = "515275502.271373"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "121"
+            endingLineNumber = "121"
+            landmarkName = "MetalSystem::Create(const Settings&amp; settings, Error&amp; error)"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "../../../finjin-engine/cpp/library/src/finjin/engine/internal/gpu/metal/MetalGpuContextImpl.mm"
+            timestampString = "515571248.420037"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "445"
+            endingLineNumber = "445"
+            landmarkName = "MetalGpuContextImpl::CreateDeviceSupportObjects(Error&amp; error)"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "../../../finjin-engine/cpp/library/src/finjin/engine/internal/gpu/metal/MetalGpuContextImpl.mm"
+            timestampString = "515571248.420037"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "334"
+            endingLineNumber = "334"
+            landmarkName = "MetalGpuContextImpl::CreateDevice(Error&amp; error)"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "../../../finjin-engine/cpp/library/src/finjin/engine/internal/gpu/metal/MetalSystem.mm"
+            timestampString = "515440428.38529"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "204"
+            endingLineNumber = "204"
+            landmarkName = "MetalSystem::CreateContext(const MetalGpuContext::Settings&amp; settings, Error&amp; error)"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "../../../finjin-engine/cpp/library/src/finjin/engine/internal/gpu/metal/MetalSystem.mm"
+            timestampString = "515440428.38529"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "147"
+            endingLineNumber = "147"
+            landmarkName = "MetalSystem::Destroy()"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "../../../finjin-common/cpp/library/src/Path.cpp"
+            timestampString = "515370519.308594"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "2240"
+            endingLineNumber = "2240"
+            landmarkName = "Path::ExpandUserHomeDirectory()"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "../../../finjin-common/cpp/library/src/Path.cpp"
+            timestampString = "515370341.295551"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "2223"
+            endingLineNumber = "2223"
+            landmarkName = "Path::ExpandUserHomeDirectory()"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "../../../finjin-common/cpp/library/src/Path.cpp"
+            timestampString = "515370584.578551"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "2239"
+            endingLineNumber = "2239"
+            landmarkName = "Path::ExpandUserHomeDirectory()"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "../../../finjin-engine/cpp/library/src/finjin/engine/internal/gpu/metal/MetalGpuContextImpl.mm"
+            timestampString = "515571248.420037"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "47"
+            endingLineNumber = "47"
+            landmarkName = "IsSupportedColorFormat(MetalFeatureSet::Capabilities&amp; caps, MTLPixelFormat format)"
+            landmarkType = "9">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "../../../finjin-engine/cpp/library/src/finjin/engine/internal/gpu/metal/MetalGpuContextImpl.mm"
+            timestampString = "515571248.420037"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "41"
+            endingLineNumber = "41"
+            landmarkName = "IsSupportedColorFormat(MetalFeatureSet::Capabilities&amp; caps, MTLPixelFormat format)"
+            landmarkType = "9">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "../../../finjin-engine/cpp/library/src/finjin/engine/internal/gpu/metal/MetalGpuContextImpl.mm"
+            timestampString = "515571248.420037"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "40"
+            endingLineNumber = "40"
+            landmarkName = "IsSupportedColorFormat(MetalFeatureSet::Capabilities&amp; caps, MTLPixelFormat format)"
+            landmarkType = "9">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "../../../finjin-engine/cpp/library/src/finjin/engine/internal/gpu/metal/MetalGpuContextImpl.mm"
+            timestampString = "515571248.420037"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "44"
+            endingLineNumber = "44"
+            landmarkName = "IsSupportedColorFormat(MetalFeatureSet::Capabilities&amp; caps, MTLPixelFormat format)"
+            landmarkType = "9">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "../../../finjin-engine/cpp/library/src/finjin/engine/internal/gpu/metal/MetalGpuContextImpl.mm"
+            timestampString = "515571248.420037"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "42"
+            endingLineNumber = "42"
+            landmarkName = "IsSupportedColorFormat(MetalFeatureSet::Capabilities&amp; caps, MTLPixelFormat format)"
+            landmarkType = "9">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "../../../finjin-engine/cpp/library/src/finjin/engine/internal/gpu/metal/MetalStaticMeshRenderer.mm"
+            timestampString = "515440412.091862"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "63"
+            endingLineNumber = "63"
+            landmarkName = "MetalStaticMeshRenderer::Settings::ParseSettings(const ByteBufferReader&amp; configFileBuffer, const Path&amp; assetFilePath, Error&amp; error)"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "../../../finjin-engine/cpp/library/src/finjin/engine/internal/gpu/metal/MetalStaticMeshRenderer.mm"
+            timestampString = "515703260.594315"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "91"
+            endingLineNumber = "91"
+            landmarkName = "MetalStaticMeshRenderer::Settings::ParseSettings(const ByteBufferReader&amp; configFileBuffer, const Path&amp; assetFilePath, Error&amp; error)"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "../../../finjin-engine/cpp/library/src/finjin/engine/internal/gpu/metal/MetalStaticMeshRenderer.mm"
+            timestampString = "515735559.818476"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "159"
+            endingLineNumber = "159"
+            landmarkName = "MetalStaticMeshRenderer::Create(Settings&amp;&amp; settings, Error&amp; error)"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "../../../finjin-engine/cpp/library/src/finjin/engine/internal/gpu/metal/MetalStaticMeshRenderer.mm"
+            timestampString = "515735559.818476"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "289"
+            endingLineNumber = "289"
+            landmarkName = "MetalStaticMeshRenderer::Create(Settings&amp;&amp; settings, Error&amp; error)"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "../../../finjin-engine/cpp/library/src/finjin/engine/internal/gpu/metal/MetalGpuContextImpl.mm"
+            timestampString = "515571248.420037"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "466"
+            endingLineNumber = "466"
+            landmarkName = "MetalGpuContextImpl::CreateDeviceSupportObjects(Error&amp; error)"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "../../../finjin-engine/cpp/library/src/finjin/engine/internal/gpu/metal/MetalGpuContextImpl.mm"
+            timestampString = "515571248.420037"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "484"
+            endingLineNumber = "484"
+            landmarkName = "MetalGpuContextImpl::CreateDeviceSupportObjects(Error&amp; error)"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "../../../finjin-engine/cpp/library/src/finjin/engine/internal/gpu/metal/MetalGpuContextImpl.mm"
+            timestampString = "515571248.420037"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "480"
+            endingLineNumber = "480"
+            landmarkName = "MetalGpuContextImpl::CreateDeviceSupportObjects(Error&amp; error)"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "../../../finjin-engine/cpp/library/src/finjin/engine/internal/gpu/metal/MetalGpuContextImpl.mm"
+            timestampString = "515571248.420037"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "475"
+            endingLineNumber = "475"
+            landmarkName = "MetalGpuContextImpl::CreateDeviceSupportObjects(Error&amp; error)"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "../../../finjin-engine/cpp/library/src/finjin/engine/internal/gpu/metal/MetalStaticMeshRenderer.mm"
+            timestampString = "515735559.818476"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "704"
+            endingLineNumber = "704"
+            landmarkName = "MetalStaticMeshRenderer::RenderQueued(MetalStaticMeshRendererFrameState&amp; frameState, id&lt;MTLCommandBuffer&gt; commandBuffer, id&lt;MTLRenderCommandEncoder&gt; renderCommandEncoder)"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "../../../finjin-engine/cpp/library/src/finjin/engine/internal/gpu/metal/MetalGpuContextImpl.mm"
+            timestampString = "515672092.1053"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "1000"
+            endingLineNumber = "1000"
+            landmarkName = "MetalGpuContextImpl::CreateTextureFromMainThread(FinjinTexture* texture, Error&amp; error)"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "../../../finjin-engine/cpp/library/src/finjin/engine/internal/gpu/metal/MetalGpuContextImpl.mm"
+            timestampString = "515672092.1053"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "1012"
+            endingLineNumber = "1012"
+            landmarkName = "MetalGpuContextImpl::CreateTextureFromMainThread(FinjinTexture* texture, Error&amp; error)"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "../../../finjin-engine/cpp/library/src/finjin/engine/internal/gpu/metal/MetalGpuContextImpl.mm"
+            timestampString = "515672092.1053"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "1394"
+            endingLineNumber = "1394">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "../../src/FinjinViewerApplicationViewportDelegate.cpp"
+            timestampString = "515526072.745542"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "404"
+            endingLineNumber = "404"
+            landmarkName = "FinjinViewerApplicationViewportDelegate::StartFrame(ApplicationViewportUpdateContext&amp; updateContext, FlyingCameraEvents&amp; flyingCameraActions)"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "../../../finjin-engine/cpp/library/src/finjin/engine/internal/app/macos/finjin/engine/OSWindow.mm"
+            timestampString = "515470619.299465"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "189"
+            endingLineNumber = "189"
+            landmarkName = "-handleKeyEvent:pressed:"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "../../../finjin-engine/cpp/library/src/finjin/engine/InputSource.hpp"
+            timestampString = "515471093.650158"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "292"
+            endingLineNumber = "292"
+            landmarkName = "CheckKeyboard(Device* keyboard, size_t deviceIndex, const ChangedInputSourceFilter&amp; filter)"
+            landmarkType = "9">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "../../../finjin-engine/cpp/library/src/finjin/engine/internal/app/macos/finjin/engine/OSWindow.mm"
+            timestampString = "515470655.575269"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "198"
+            endingLineNumber = "198"
+            landmarkName = "-handleKeyEvent:pressed:"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "../../../finjin-engine/cpp/library/src/finjin/engine/internal/gpu/metal/MetalGpuContextImpl.mm"
+            timestampString = "515571248.420037"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "404"
+            endingLineNumber = "404"
+            landmarkName = "MetalGpuContextImpl::CreateDevice(Error&amp; error)"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "../../../finjin-engine/cpp/library/src/finjin/engine/internal/gpu/metal/MetalGpuContextImpl.mm"
+            timestampString = "515672092.1053"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "964"
+            endingLineNumber = "964"
+            landmarkName = "MetalGpuContextImpl::CreateScreenSizeDependentResources(Error&amp; error)"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "../../../finjin-engine/cpp/library/src/finjin/engine/internal/gpu/metal/MetalGpuContextImpl.mm"
+            timestampString = "515571248.420037"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "597"
+            endingLineNumber = "597"
+            landmarkName = "MetalGpuContextImpl::StartFrameStage(size_t index, SimpleTimeDelta elapsedTime, SimpleTimeCounter totalElapsedTime)"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "../../../finjin-engine/cpp/library/src/finjin/engine/internal/input/macosinput/MacOSInputContext.mm"
+            timestampString = "515523905.501323"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "258"
+            endingLineNumber = "258"
+            landmarkName = "MacOSInputContext::Update(SimpleTimeDelta elapsedTime, InputDevicePollFlag flags)"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "../../src/FinjinViewerApplicationViewportDelegate.cpp"
+            timestampString = "515526072.745542"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "655"
+            endingLineNumber = "655"
+            landmarkName = "FinjinViewerApplicationViewportDelegate::HandleEventsAndInputs(ApplicationViewportUpdateContext&amp; updateContext, FlyingCameraEvents&amp; flyingCameraActions)"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "../../../finjin-engine/cpp/library/src/finjin/engine/internal/input/gcinput/GCInputGameController.mm"
+            timestampString = "515525272.074869"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "115"
+            endingLineNumber = "115"
+            landmarkName = "Create(GCInputGameController&amp; gameController, size_t index, GCController* gcController)"
+            landmarkType = "9">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "../../../finjin-engine/cpp/library/src/finjin/engine/internal/input/gcinput/GCInputGameController.mm"
+            timestampString = "515525367.418129"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "114"
+            endingLineNumber = "114"
+            landmarkName = "Create(GCInputGameController&amp; gameController, size_t index, GCController* gcController)"
+            landmarkType = "9">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "../../../finjin-common/cpp/library/src/StandardPaths_macOS.mm"
+            timestampString = "515556630.869251"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "130"
+            endingLineNumber = "130"
+            landmarkName = "StandardPaths::Create(const Utf8String&amp; _applicationName, void* applicationHandle, Error&amp; error)"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "../../../finjin-engine/cpp/library/src/finjin/engine/internal/gpu/metal/MetalStaticMeshRenderer.mm"
+            timestampString = "515735559.818476"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "759"
+            endingLineNumber = "759"
+            landmarkName = "MetalStaticMeshRenderer::RenderQueued(MetalStaticMeshRendererFrameState&amp; frameState, id&lt;MTLCommandBuffer&gt; commandBuffer, id&lt;MTLRenderCommandEncoder&gt; renderCommandEncoder)"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "../../../finjin-engine/cpp/library/src/finjin/engine/internal/gpu/metal/MetalTexture.mm"
+            timestampString = "515573091.879739"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "48"
+            endingLineNumber = "48"
+            landmarkName = "MetalTexture::CreateFromPNG ( const PNGReader&amp; reader, id&lt;MTLDevice&gt; device, const void* bytes, size_t byteCount, size_t maxDimension, Error&amp; error )"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "../../../finjin-engine/cpp/library/src/finjin/engine/internal/gpu/metal/MetalTexture.mm"
+            timestampString = "515573308.052478"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "47"
+            endingLineNumber = "47"
+            landmarkName = "MetalTexture::CreateFromPNG ( const PNGReader&amp; reader, id&lt;MTLDevice&gt; device, const void* bytes, size_t byteCount, size_t maxDimension, Error&amp; error )"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "../../../finjin-engine/cpp/library/src/finjin/engine/internal/app/macos/finjin/engine/FinjinNSApplicationDelegate.mm"
+            timestampString = "515625287.577743"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "142"
+            endingLineNumber = "142"
+            landmarkName = "-applicationWillTerminate:"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "../../../finjin-engine/cpp/library/src/finjin/engine/internal/app/macos/finjin/engine/FinjinNSWindowController.mm"
+            timestampString = "515669817.285848"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "54"
+            endingLineNumber = "54"
+            landmarkName = "+createFromWindowFrame:withTitle:withWindowStyle:withScreen:"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "../../../finjin-engine/cpp/library/src/finjin/engine/Application_General.cpp"
+            timestampString = "515669906.278543"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "1131"
+            endingLineNumber = "1131"
+            landmarkName = "Application::GetConfiguredApplicationViewportSize(WindowSize&amp; windowSize, const Setting&lt;OSWindowRect&gt;&amp; windowFrame)"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "../../../finjin-engine/cpp/library/src/finjin/engine/Application_General.cpp"
+            timestampString = "515669907.779663"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "1132"
+            endingLineNumber = "1132"
+            landmarkName = "Application::GetConfiguredApplicationViewportSize(WindowSize&amp; windowSize, const Setting&lt;OSWindowRect&gt;&amp; windowFrame)"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "../../../finjin-engine/cpp/library/src/finjin/engine/internal/gpu/metal/MetalGpuContextImpl.mm"
+            timestampString = "515670330.068022"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "962"
+            endingLineNumber = "962"
+            landmarkName = "MetalGpuContextImpl::CreateScreenSizeDependentResources(Error&amp; error)"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "../../../finjin-engine/cpp/library/src/finjin/engine/internal/gpu/metal/MetalGpuContextImpl.mm"
+            timestampString = "515671975.100035"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "961"
+            endingLineNumber = "961"
+            landmarkName = "MetalGpuContextImpl::CreateScreenSizeDependentResources(Error&amp; error)"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "../../../finjin-engine/cpp/library/src/finjin/engine/InputComponents.cpp"
+            timestampString = "515698682.458169"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "904"
+            endingLineNumber = "904"
+            landmarkName = "InputButton::ClearChanged()"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "../../../finjin-engine/cpp/library/src/finjin/engine/InputComponents.cpp"
+            timestampString = "515698682.458169"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "905"
+            endingLineNumber = "905"
+            landmarkName = "InputButton::ClearChanged()"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "../../../finjin-engine/cpp/library/src/finjin/engine/InputComponents.cpp"
+            timestampString = "515698682.458169"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "907"
+            endingLineNumber = "907"
+            landmarkName = "InputButton::ClearChanged()"
+            landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>
    </Breakpoints>

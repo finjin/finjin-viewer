@@ -22,7 +22,7 @@
     <ProjectGuid>{2E2B2154-101B-4576-AD3A-79EEA322323E}</ProjectGuid>
     <Keyword>Win32Proj</Keyword>
     <RootNamespace>finjin-viewer</RootNamespace>
-    <WindowsTargetPlatformVersion>10.0.10586.0</WindowsTargetPlatformVersion>
+    <WindowsTargetPlatformVersion>10.0.14393.0</WindowsTargetPlatformVersion>
   </PropertyGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Vulkan-Win32-Debug|x64'" Label="Configuration">
@@ -105,13 +105,13 @@
       <WarningLevel>Level3</WarningLevel>
       <Optimization>Disabled</Optimization>
       <PreprocessorDefinitions>NOMINMAX;_ENABLE_ATOMIC_ALIGNMENT_FIX;VK_USE_PLATFORM_WIN32_KHR;VK_NO_PROTOTYPES;_MSC_PLATFORM_TOOLSET_$(PlatformToolset);_CRT_SECURE_NO_WARNINGS;_SCL_SECURE_NO_WARNINGS;_WIN32_WINNT=0x0601;WIN32;_DEBUG;_WINDOWS;%(PreprocessorDefinitions)</PreprocessorDefinitions>
-      <AdditionalIncludeDirectories>.;C:\finjin-3rd-party\cpp\xaudio2-dxsdk-june2010\Include;C:\Program Files (x86)\Windows Kits\10\Include\10.0.14295.0\um;C:\Program Files (x86)\Windows Kits\10\Include\10.0.14295.0\shared;C:\steamworks_sdk\sdk\public;C:\VulkanSDK\1.0.13.0\Include;C:\finjin-3rd-party\cpp\boost;C:\finjin-3rd-party\cpp\eigen;C:\git\nedelman\finjin-common\cpp\library\include;C:\git\nedelman\finjin-engine\cpp\library\src;C:\git\nedelman\finjin-engine\cpp\library\src\finjin\engine\internal\app\win32;..\..\src</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>.;C:\finjin-3rd-party\cpp\xaudio2-dxsdk-june2010\Include;C:\Program Files (x86)\Windows Kits\10\Include\10.0.14393.0\um;C:\Program Files (x86)\Windows Kits\10\Include\10.0.14393.0\shared;C:\steamworks_sdk\sdk\public;C:\finjin-3rd-party\cpp\boost;C:\finjin-3rd-party\cpp\eigen;C:\git\nedelman\finjin-common\cpp\library\include;C:\git\nedelman\finjin-engine\cpp\library\src;C:\git\nedelman\finjin-engine\cpp\library\src\finjin\engine\internal\app\win32;..\..\src</AdditionalIncludeDirectories>
       <DisableLanguageExtensions>false</DisableLanguageExtensions>
     </ClCompile>
     <Link>
       <SubSystem>Windows</SubSystem>
       <GenerateDebugInformation>true</GenerateDebugInformation>
-      <AdditionalLibraryDirectories>C:\finjin-3rd-party\cpp\xaudio2-dxsdk-june2010\Lib\x64;C:\Program Files (x86)\Windows Kits\10\Lib\10.0.10586.0\um\x64;C:\git\nedelman\finjin-common\cpp\library\project\windows-win32-vs\x64\Debug;C:\finjin-3rd-party\cpp\boost/lib64-msvc-14.0;c:\finjin-3rd-party\cpp/curl/builds/libcurl-vc-x64-debug-static-ipv6-sspi-winssl\lib;C:\VulkanSDK\1.0.13.0\Bin;C:\VulkanSDK\1.0.13.0\glslang\build\glslang\Debug;C:\VulkanSDK\1.0.13.0\glslang\build\glslang\OSDependent\Windows\Debug;C:\VulkanSDK\1.0.13.0\glslang\build\OGLCompilersDLL\Debug;C:\VulkanSDK\1.0.13.0\glslang\build\SPIRV\Debug;C:\VulkanSDK\1.0.13.0\spirv-tools\build\Debug;C:\git\other\openvr\lib\win64</AdditionalLibraryDirectories>
+      <AdditionalLibraryDirectories>C:\finjin-3rd-party\cpp\xaudio2-dxsdk-june2010\Lib\x64;C:\Program Files (x86)\Windows Kits\10\Lib\10.0.14393.0\um\x64;C:\git\nedelman\finjin-common\cpp\library\project\windows-win32-vs\x64\Debug;C:\finjin-3rd-party\cpp\boost/lib64-msvc-14.0;c:\finjin-3rd-party\cpp/curl/builds/libcurl-vc-x64-debug-static-ipv6-sspi-winssl\lib;C:\VulkanSDK\1.0.42.1\Bin;C:\VulkanSDK\1.0.42.1\glslang\build\glslang\Debug;C:\VulkanSDK\1.0.42.1\glslang\build\glslang\OSDependent\Windows\Debug;C:\VulkanSDK\1.0.42.1\glslang\build\OGLCompilersDLL\Debug;C:\VulkanSDK\1.0.42.1\glslang\build\SPIRV\Debug;C:\VulkanSDK\1.0.42.1\spirv-tools\build\Debug;C:\git\other\openvr\lib\win64</AdditionalLibraryDirectories>
       <AdditionalDependencies>kernel32.lib;user32.lib;gdi32.lib;winspool.lib;comdlg32.lib;advapi32.lib;shell32.lib;ole32.lib;oleaut32.lib;uuid.lib;%(AdditionalDependencies)</AdditionalDependencies>
       <OptimizeReferences>false</OptimizeReferences>
     </Link>
@@ -129,14 +129,14 @@
       <WarningLevel>Level3</WarningLevel>
       <Optimization>Disabled</Optimization>
       <PreprocessorDefinitions>NOMINMAX;_ENABLE_ATOMIC_ALIGNMENT_FIX;_MSC_PLATFORM_TOOLSET_$(PlatformToolset);_CRT_SECURE_NO_WARNINGS;_SCL_SECURE_NO_WARNINGS;_WIN32_WINNT=0x0A00;WIN32;_DEBUG;_WINDOWS;%(PreprocessorDefinitions)</PreprocessorDefinitions>
-      <AdditionalIncludeDirectories>.;C:\Program Files (x86)\Windows Kits\10\Include\10.0.14295.0\um;C:\Program Files (x86)\Windows Kits\10\Include\10.0.14295.0\shared;C:\steamworks_sdk\sdk\public;C:\VulkanSDK\1.0.13.0\Include;C:\finjin-3rd-party\cpp\boost;C:\finjin-3rd-party\cpp\eigen;C:\git\nedelman\finjin-common\cpp\library\include;C:\git\nedelman\finjin-engine\cpp\library\src;C:\git\nedelman\finjin-engine\cpp\library\src\finjin\engine\internal\app\win32;..\..\src</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>.;C:\Program Files (x86)\Windows Kits\10\Include\10.0.14393.0\um;C:\Program Files (x86)\Windows Kits\10\Include\10.0.14393.0\shared;C:\steamworks_sdk\sdk\public;C:\finjin-3rd-party\cpp\boost;C:\finjin-3rd-party\cpp\eigen;C:\git\nedelman\finjin-common\cpp\library\include;C:\git\nedelman\finjin-engine\cpp\library\src;C:\git\nedelman\finjin-engine\cpp\library\src\finjin\engine\internal\app\win32;..\..\src</AdditionalIncludeDirectories>
       <WholeProgramOptimization>false</WholeProgramOptimization>
       <DisableLanguageExtensions>false</DisableLanguageExtensions>
     </ClCompile>
     <Link>
       <SubSystem>Windows</SubSystem>
       <GenerateDebugInformation>true</GenerateDebugInformation>
-      <AdditionalLibraryDirectories>C:\Program Files (x86)\Windows Kits\10\Lib\10.0.10586.0\um\x64;C:\git\nedelman\finjin-common\cpp\library\project\windows-win32-vs\x64\Debug;C:\finjin-3rd-party\cpp\boost/lib64-msvc-14.0;c:\finjin-3rd-party\cpp/curl/builds/libcurl-vc-x64-debug-static-ipv6-sspi-winssl\lib;C:\VulkanSDK\1.0.13.0\Bin;C:\VulkanSDK\1.0.13.0\glslang\build\glslang\Debug;C:\VulkanSDK\1.0.13.0\glslang\build\glslang\OSDependent\Windows\Debug;C:\VulkanSDK\1.0.13.0\glslang\build\OGLCompilersDLL\Debug;C:\VulkanSDK\1.0.13.0\glslang\build\SPIRV\Debug;C:\VulkanSDK\1.0.13.0\spirv-tools\build\Debug;C:\git\other\openvr\lib\win64</AdditionalLibraryDirectories>
+      <AdditionalLibraryDirectories>C:\Program Files (x86)\Windows Kits\10\Lib\10.0.14393.0\um\x64;C:\git\nedelman\finjin-common\cpp\library\project\windows-win32-vs\x64\Debug;C:\finjin-3rd-party\cpp\boost/lib64-msvc-14.0;c:\finjin-3rd-party\cpp/curl/builds/libcurl-vc-x64-debug-static-ipv6-sspi-winssl\lib;C:\VulkanSDK\1.0.42.1\Bin;C:\VulkanSDK\1.0.42.1\glslang\build\glslang\Debug;C:\VulkanSDK\1.0.42.1\glslang\build\glslang\OSDependent\Windows\Debug;C:\VulkanSDK\1.0.42.1\glslang\build\OGLCompilersDLL\Debug;C:\VulkanSDK\1.0.42.1\glslang\build\SPIRV\Debug;C:\VulkanSDK\1.0.42.1\spirv-tools\build\Debug;C:\git\other\openvr\lib\win64</AdditionalLibraryDirectories>
       <AdditionalDependencies>kernel32.lib;user32.lib;gdi32.lib;winspool.lib;comdlg32.lib;advapi32.lib;shell32.lib;ole32.lib;oleaut32.lib;uuid.lib;%(AdditionalDependencies)</AdditionalDependencies>
       <OptimizeReferences>false</OptimizeReferences>
       <LinkTimeCodeGeneration />
@@ -159,7 +159,7 @@
       <FunctionLevelLinking>true</FunctionLevelLinking>
       <IntrinsicFunctions>true</IntrinsicFunctions>
       <PreprocessorDefinitions>NOMINMAX;_ENABLE_ATOMIC_ALIGNMENT_FIX;VK_USE_PLATFORM_WIN32_KHR;VK_NO_PROTOTYPES;_MSC_PLATFORM_TOOLSET_$(PlatformToolset);_CRT_SECURE_NO_WARNINGS;_SCL_SECURE_NO_WARNINGS;_WIN32_WINNT=0x0601;WIN32;NDEBUG;_WINDOWS;%(PreprocessorDefinitions)</PreprocessorDefinitions>
-      <AdditionalIncludeDirectories>.;C:\finjin-3rd-party\cpp\xaudio2-dxsdk-june2010\Include;C:\Program Files (x86)\Windows Kits\10\Include\10.0.14295.0\um;C:\Program Files (x86)\Windows Kits\10\Include\10.0.14295.0\shared;C:\steamworks_sdk\sdk\public;C:\VulkanSDK\1.0.13.0\Include;C:\finjin-3rd-party\cpp\boost;C:\finjin-3rd-party\cpp\eigen;C:\git\nedelman\finjin-common\cpp\library\include;C:\git\nedelman\finjin-engine\cpp\library\src;C:\git\nedelman\finjin-engine\cpp\library\src\finjin\engine\internal\app\win32;..\..\src</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>.;C:\finjin-3rd-party\cpp\xaudio2-dxsdk-june2010\Include;C:\Program Files (x86)\Windows Kits\10\Include\10.0.14393.0\um;C:\Program Files (x86)\Windows Kits\10\Include\10.0.14393.0\shared;C:\steamworks_sdk\sdk\public;C:\finjin-3rd-party\cpp\boost;C:\finjin-3rd-party\cpp\eigen;C:\git\nedelman\finjin-common\cpp\library\include;C:\git\nedelman\finjin-engine\cpp\library\src;C:\git\nedelman\finjin-engine\cpp\library\src\finjin\engine\internal\app\win32;..\..\src</AdditionalIncludeDirectories>
       <DisableLanguageExtensions>false</DisableLanguageExtensions>
     </ClCompile>
     <Link>
@@ -167,7 +167,7 @@
       <GenerateDebugInformation>true</GenerateDebugInformation>
       <EnableCOMDATFolding>true</EnableCOMDATFolding>
       <OptimizeReferences>false</OptimizeReferences>
-      <AdditionalLibraryDirectories>C:\finjin-3rd-party\cpp\xaudio2-dxsdk-june2010\Lib\x64;C:\Program Files (x86)\Windows Kits\10\Lib\10.0.10586.0\um\x64;C:\git\nedelman\finjin-common\cpp\library\project\windows-win32-vs\x64\Release;C:\finjin-3rd-party\cpp\boost/lib64-msvc-14.0;c:\finjin-3rd-party\cpp/curl/builds/libcurl-vc-x64-release-static-ipv6-sspi-winssl\lib;C:\VulkanSDK\1.0.13.0\Bin;C:\VulkanSDK\1.0.13.0\glslang\build\glslang\Release;C:\VulkanSDK\1.0.13.0\glslang\build\glslang\OSDependent\Windows\Release;C:\VulkanSDK\1.0.13.0\glslang\build\OGLCompilersDLL\Release;C:\VulkanSDK\1.0.13.0\glslang\build\SPIRV\Release;C:\VulkanSDK\1.0.13.0\spirv-tools\build\Release;C:\git\other\openvr\lib\win64</AdditionalLibraryDirectories>
+      <AdditionalLibraryDirectories>C:\finjin-3rd-party\cpp\xaudio2-dxsdk-june2010\Lib\x64;C:\Program Files (x86)\Windows Kits\10\Lib\10.0.14393.0\um\x64;C:\git\nedelman\finjin-common\cpp\library\project\windows-win32-vs\x64\Release;C:\finjin-3rd-party\cpp\boost/lib64-msvc-14.0;c:\finjin-3rd-party\cpp/curl/builds/libcurl-vc-x64-release-static-ipv6-sspi-winssl\lib;C:\VulkanSDK\1.0.42.1\Bin;C:\VulkanSDK\1.0.42.1\glslang\build\glslang\Release;C:\VulkanSDK\1.0.42.1\glslang\build\glslang\OSDependent\Windows\Release;C:\VulkanSDK\1.0.42.1\glslang\build\OGLCompilersDLL\Release;C:\VulkanSDK\1.0.42.1\glslang\build\SPIRV\Release;C:\VulkanSDK\1.0.42.1\spirv-tools\build\Release;C:\git\other\openvr\lib\win64</AdditionalLibraryDirectories>
       <AdditionalDependencies>kernel32.lib;user32.lib;gdi32.lib;winspool.lib;comdlg32.lib;advapi32.lib;shell32.lib;ole32.lib;oleaut32.lib;uuid.lib;%(AdditionalDependencies)</AdditionalDependencies>
     </Link>
     <ProjectReference>
@@ -186,7 +186,7 @@
       <FunctionLevelLinking>true</FunctionLevelLinking>
       <IntrinsicFunctions>true</IntrinsicFunctions>
       <PreprocessorDefinitions>NOMINMAX;_ENABLE_ATOMIC_ALIGNMENT_FIX;_MSC_PLATFORM_TOOLSET_$(PlatformToolset);_CRT_SECURE_NO_WARNINGS;_SCL_SECURE_NO_WARNINGS;_WIN32_WINNT=0x0A00;WIN32;NDEBUG;_WINDOWS;%(PreprocessorDefinitions)</PreprocessorDefinitions>
-      <AdditionalIncludeDirectories>.;C:\Program Files (x86)\Windows Kits\10\Include\10.0.14295.0\um;C:\Program Files (x86)\Windows Kits\10\Include\10.0.14295.0\shared;C:\steamworks_sdk\sdk\public;C:\VulkanSDK\1.0.13.0\Include;C:\finjin-3rd-party\cpp\boost;C:\finjin-3rd-party\cpp\eigen;C:\git\nedelman\finjin-common\cpp\library\include;C:\git\nedelman\finjin-engine\cpp\library\src;C:\git\nedelman\finjin-engine\cpp\library\src\finjin\engine\internal\app\win32;..\..\src</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>.;C:\Program Files (x86)\Windows Kits\10\Include\10.0.14393.0\um;C:\Program Files (x86)\Windows Kits\10\Include\10.0.14393.0\shared;C:\steamworks_sdk\sdk\public;C:\finjin-3rd-party\cpp\boost;C:\finjin-3rd-party\cpp\eigen;C:\git\nedelman\finjin-common\cpp\library\include;C:\git\nedelman\finjin-engine\cpp\library\src;C:\git\nedelman\finjin-engine\cpp\library\src\finjin\engine\internal\app\win32;..\..\src</AdditionalIncludeDirectories>
       <DisableLanguageExtensions>false</DisableLanguageExtensions>
     </ClCompile>
     <Link>
@@ -194,7 +194,7 @@
       <GenerateDebugInformation>true</GenerateDebugInformation>
       <EnableCOMDATFolding>true</EnableCOMDATFolding>
       <OptimizeReferences>false</OptimizeReferences>
-      <AdditionalLibraryDirectories>C:\Program Files (x86)\Windows Kits\10\Lib\10.0.10586.0\um\x64;C:\git\nedelman\finjin-common\cpp\library\project\windows-win32-vs\x64\Release;C:\finjin-3rd-party\cpp\boost/lib64-msvc-14.0;c:\finjin-3rd-party\cpp/curl/builds/libcurl-vc-x64-release-static-ipv6-sspi-winssl\lib;C:\VulkanSDK\1.0.13.0\Bin;C:\VulkanSDK\1.0.13.0\glslang\build\glslang\Release;C:\VulkanSDK\1.0.13.0\glslang\build\glslang\OSDependent\Windows\Release;C:\VulkanSDK\1.0.13.0\glslang\build\OGLCompilersDLL\Release;C:\VulkanSDK\1.0.13.0\glslang\build\SPIRV\Release;C:\VulkanSDK\1.0.13.0\spirv-tools\build\Release;C:\git\other\openvr\lib\win64</AdditionalLibraryDirectories>
+      <AdditionalLibraryDirectories>C:\Program Files (x86)\Windows Kits\10\Lib\10.0.14393.0\um\x64;C:\git\nedelman\finjin-common\cpp\library\project\windows-win32-vs\x64\Release;C:\finjin-3rd-party\cpp\boost/lib64-msvc-14.0;c:\finjin-3rd-party\cpp/curl/builds/libcurl-vc-x64-release-static-ipv6-sspi-winssl\lib;C:\VulkanSDK\1.0.42.1\Bin;C:\VulkanSDK\1.0.42.1\glslang\build\glslang\Release;C:\VulkanSDK\1.0.42.1\glslang\build\glslang\OSDependent\Windows\Release;C:\VulkanSDK\1.0.42.1\glslang\build\OGLCompilersDLL\Release;C:\VulkanSDK\1.0.42.1\glslang\build\SPIRV\Release;C:\VulkanSDK\1.0.42.1\spirv-tools\build\Release;C:\git\other\openvr\lib\win64</AdditionalLibraryDirectories>
       <AdditionalDependencies>kernel32.lib;user32.lib;gdi32.lib;winspool.lib;comdlg32.lib;advapi32.lib;shell32.lib;ole32.lib;oleaut32.lib;uuid.lib;%(AdditionalDependencies)</AdditionalDependencies>
       <LinkTimeCodeGeneration />
     </Link>
@@ -207,7 +207,7 @@
   </ItemDefinitionGroup>
   <ItemGroup>
     <ClCompile Include="..\..\src\FinjinViewerApplicationSettings.cpp" />
-    <ClCompile Include="..\..\src\FinjinPrecompiled.cpp" />
+    <ClCompile Include="..\..\src\FinjinViewerPrecompiled.cpp" />
     <ClCompile Include="..\..\src\FinjinViewerApplicationDelegate.cpp" />
     <ClCompile Include="..\..\src\FinjinViewerApplicationViewportDelegate.cpp" />
     <ClCompile Include="main.cpp" />
@@ -222,7 +222,7 @@
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="..\..\src\FinjinViewerApplicationSettings.hpp" />
-    <ClInclude Include="..\..\src\FinjinPrecompiled.hpp" />
+    <ClInclude Include="..\..\src\FinjinViewerPrecompiled.hpp" />
     <ClInclude Include="..\..\src\FinjinViewerApplicationDelegate.hpp" />
     <ClInclude Include="..\..\src\FinjinViewerApplicationViewportDelegate.hpp" />
   </ItemGroup>

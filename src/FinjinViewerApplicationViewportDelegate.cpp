@@ -11,20 +11,22 @@
 //file, You can obtain one at http://mozilla.org/MPL/2.0/.
 
 
-//Includes---------------------------------------------------------------------
-#include "FinjinPrecompiled.hpp"
+//Includes----------------------------------------------------------------------
+#include "FinjinViewerPrecompiled.hpp"
 #include "FinjinViewerApplicationViewportDelegate.hpp"
-#include "finjin/common/Allocator.hpp"
-#include "finjin/common/DebugLog.hpp"
-#include "finjin/common/JobSystem.hpp"
-#include "finjin/engine/AssetCountsSettings.hpp"
-
-#define USE_TEST_SCENE_AS_FALLBACK 0
+#include <finjin/common/Allocator.hpp>
+#include <finjin/common/DebugLog.hpp>
+#include <finjin/common/JobSystem.hpp>
+#include <finjin/engine/AssetCountsSettings.hpp>
 
 using namespace Finjin::Viewer;
 
 
-//Implementation---------------------------------------------------------------
+//Macros------------------------------------------------------------------------
+#define USE_TEST_SCENE_AS_FALLBACK 1
+
+
+//Implementation----------------------------------------------------------------
 FinjinViewerApplicationViewportDelegate::FinjinViewerApplicationViewportDelegate(Allocator* allocator, const Utf8String& loadFileName) :
     ApplicationViewportDelegate(allocator),
     sceneReader(allocator),
@@ -33,10 +35,12 @@ FinjinViewerApplicationViewportDelegate::FinjinViewerApplicationViewportDelegate
 {
     this->totalElapsedTime = 0;
     this->runState = RunState::STARTING;
-    this->loadFileName = loadFileName;    
+    this->loadFileName = loadFileName;
     this->clearColor = MathVector4(0, 0, 0, 1);
     this->moveUnitsPerSecond = 30.0f;
     this->rotateUnitsPerSecond = 1.0f;
+    this->lifetimeFrameSequenceIndex = 0;
+    this->flyingCameraGameControllerIndex = (size_t)-1;
 }
 
 ApplicationViewportDelegate::UpdateResult FinjinViewerApplicationViewportDelegate::Update(ApplicationViewportUpdateContext& updateContext, Error& error)
@@ -63,7 +67,7 @@ ApplicationViewportDelegate::UpdateResult FinjinViewerApplicationViewportDelegat
 
             {
                 const size_t fileCount = 100;
-                
+
                 FinjinSceneReader::State::Settings stateSettings;
                 stateSettings.maxFileCount = fileCount;
                 stateSettings.allocator = GetAllocator();
@@ -77,12 +81,12 @@ ApplicationViewportDelegate::UpdateResult FinjinViewerApplicationViewportDelegat
                     return UpdateResult::LOGIC_ONLY;
                 }
                 else if (readResult == FileOperationResult::NOT_FOUND)
-                {          
+                {
                     FINJIN_SET_ERROR(error, "Failed to read asset counts file 'scene-reader-asset-counts.cfg'.");
                     return UpdateResult::LOGIC_ONLY;
                 }
                 stateSettings.assetCounts = assetCountsSettings.assetCounts;
-                
+
                 this->sceneReaderState.Create(stateSettings, error);
                 if (error)
                 {
@@ -96,21 +100,21 @@ ApplicationViewportDelegate::UpdateResult FinjinViewerApplicationViewportDelegat
                 readerSettings.assetReadQueue = updateContext.assetReadQueue;
                 readerSettings.assetClassFileReaders = updateContext.assetClassFileReaders;
                 readerSettings.maxQueuedFiles = fileCount;
-                
+
                 updateContext.gpuContext->GetExternalAssetFileExtensions(readerSettings.externalTextureExtensions, AssetClass::TEXTURE, error);
                 if (error)
                 {
                     FINJIN_SET_ERROR(error, "Failed to get supported texture extensions.");
                     return UpdateResult::LOGIC_ONLY;
                 }
-                
+
                 updateContext.soundContext->GetExternalAssetFileExtensions(readerSettings.externalSoundExtensions, AssetClass::SOUND, error);
                 if (error)
                 {
                     FINJIN_SET_ERROR(error, "Failed to get supported sound extensions.");
                     return UpdateResult::LOGIC_ONLY;
                 }
-                
+
                 this->sceneReader.Create(readerSettings, error);
                 if (error)
                 {
@@ -120,15 +124,23 @@ ApplicationViewportDelegate::UpdateResult FinjinViewerApplicationViewportDelegat
             }
 
             {
-                this->tempAssetRef.ForLocalFile(FlyingCameraInputBindings::DEFAULT_BINDINGS_FILE_NAME);
-                auto result = this->inputBindings.GetFromConfiguration(updateContext.inputContext, InputBindingsConfigurationSearchCriteria(InputDeviceClass::GAME_CONTROLLER, Utf8String::Empty(), 0, InputBindingsConfigurationFlag::CONNECTED_ONLY, InputDeviceSemantic::NONE), this->tempAssetRef, this->tempBuffer);
+                this->tempAssetRef.ForLocalFile(FlyingCameraInputBindings::GetDefaultBindingsFileName());
+                auto result = this->flyingCameraInputBindings.GetFromConfiguration(updateContext.inputContext, InputBindingsConfigurationSearchCriteria(InputDeviceClass::GAME_CONTROLLER, Utf8String::Empty(), (size_t)-1, InputBindingsConfigurationFlag::CONNECTED_ONLY, InputDeviceSemantic::NONE), this->tempAssetRef, this->tempBuffer);
                 if (result.IsSuccess())
                 {
-                    this->inputBindings.SetInputBindingsDeviceIndex(result.deviceIndex);
-                    FINJIN_DEBUG_LOG_INFO("Game controller successfully configured.")
-                }                
-                result = this->inputBindings.GetFromConfiguration(updateContext.inputContext, InputBindingsConfigurationSearchCriteria(InputDeviceClass::KEYBOARD, 0), this->tempAssetRef, this->tempBuffer);
-                result = this->inputBindings.GetFromConfiguration(updateContext.inputContext, InputBindingsConfigurationSearchCriteria(InputDeviceClass::MOUSE, 0), this->tempAssetRef, this->tempBuffer);
+                    FINJIN_DEBUG_LOG_INFO("Game controller successfully configured.");
+                    this->flyingCameraGameControllerIndex = result.deviceIndex;
+                }
+                result = this->flyingCameraInputBindings.GetFromConfiguration(updateContext.inputContext, InputBindingsConfigurationSearchCriteria(InputDeviceClass::KEYBOARD, (size_t)-1), this->tempAssetRef, this->tempBuffer);
+                if (result.IsSuccess())
+                {
+                    FINJIN_DEBUG_LOG_INFO("Keyboard successfully configured.");
+                }
+                result = this->flyingCameraInputBindings.GetFromConfiguration(updateContext.inputContext, InputBindingsConfigurationSearchCriteria(InputDeviceClass::MOUSE, (size_t)-1), this->tempAssetRef, this->tempBuffer);
+                if (result.IsSuccess())
+                {
+                    FINJIN_DEBUG_LOG_INFO("Mouse successfully configured.");
+                }
             }
 
             if (!this->loadFileName.empty())
@@ -151,7 +163,7 @@ ApplicationViewportDelegate::UpdateResult FinjinViewerApplicationViewportDelegat
                     FINJIN_SET_ERROR(error, "Failed to add scene read request.");
                     return UpdateResult::LOGIC_ONLY;
                 }
-                
+
                 this->runState = RunState::LOADING_SCENE;
             #else
                 this->runState = RunState::RUNNING;
@@ -174,9 +186,9 @@ ApplicationViewportDelegate::UpdateResult FinjinViewerApplicationViewportDelegat
         }
         default: break;
     }
-    
+
     if (this->runState == RunState::RUNNING)
-    {   
+    {
         HandleNewAssets(updateContext, error);
         if (error)
         {
@@ -189,7 +201,7 @@ ApplicationViewportDelegate::UpdateResult FinjinViewerApplicationViewportDelegat
 
         StartFrame(updateContext, flyingCameraActions);
         return UpdateResult::STARTED_FRAME;
-    }   
+    }
     else
         return UpdateResult::LOGIC_ONLY;
 }
@@ -204,15 +216,15 @@ void FinjinViewerApplicationViewportDelegate::HandleNewAssets(ApplicationViewpor
         if (!updateContext.newScenes.empty())
         {
             auto& scene = *updateContext.newScenes.begin();
-            
+
             auto result = scene.Get<FinjinSceneObjectLight>();
             if (!result.empty())
-            {  
+            {
                 this->sceneData.lights.CreateEmpty(result.size(), GetAllocator());
                 FINJIN_DEBUG_LOG_INFO("Light count: %1%", result.size());
                 for (auto& item : result)
                 {
-                    FINJIN_DEBUG_LOG_INFO("  Light: %1%, type: %2%, light type: %3%", item.name, item.GetClassDescription().GetName(), (int)item.lightType);
+                    FINJIN_DEBUG_LOG_INFO("  Light: %1%, type: %2%, light type: %3%", item.name, item.GetTypeDescription().GetName(), (int)item.lightType);
                     updateContext.gpuContext->CreateLightFromMainThread(item, error);
                     if (error)
                     {
@@ -227,7 +239,7 @@ void FinjinViewerApplicationViewportDelegate::HandleNewAssets(ApplicationViewpor
                 FINJIN_DEBUG_LOG_INFO("Node count: %1%", result.size());
                 for (auto& item : result)
                 {
-                    FINJIN_DEBUG_LOG_INFO("  Node: %1%, type: %2%", item.name, item.GetClassDescription().GetName());
+                    FINJIN_DEBUG_LOG_INFO("  Node: %1%, type: %2%", item.name, item.GetTypeDescription().GetName());
                 }
             }
 
@@ -236,7 +248,7 @@ void FinjinViewerApplicationViewportDelegate::HandleNewAssets(ApplicationViewpor
                 FINJIN_DEBUG_LOG_INFO("Entity count: %1%", result.size());
                 for (auto& item : result)
                 {
-                    FINJIN_DEBUG_LOG_INFO("  Entity: %1%, type: %2%", item.name, item.GetClassDescription().GetName());
+                    FINJIN_DEBUG_LOG_INFO("  Entity: %1%, type: %2%", item.name, item.GetTypeDescription().GetName());
                 }
             }
 
@@ -245,13 +257,13 @@ void FinjinViewerApplicationViewportDelegate::HandleNewAssets(ApplicationViewpor
                 FINJIN_DEBUG_LOG_INFO("Camera count: %1%", result.size());
                 for (auto& item : result)
                 {
-                    FINJIN_DEBUG_LOG_INFO("  Active camera: %1%, type: %2%", item.name, item.GetClassDescription().GetName());
+                    FINJIN_DEBUG_LOG_INFO("  Active camera: %1%, type: %2%", item.name, item.GetTypeDescription().GetName());
 
                     auto& sceneNodeState = item.parentNodePointer->Evaluate(0, 0);
                     auto& cameraState = item.Evaluate(0, 0, sceneNodeState);
                     this->camera.Set(cameraState);
                     this->camera.Update();
-                    
+
                     break;
                 }
             }
@@ -272,7 +284,7 @@ void FinjinViewerApplicationViewportDelegate::HandleNewAssets(ApplicationViewpor
         {
             if (NoneSet(updateContext.gpuContext->GetAssetCreationCapabilities(AssetClass::MESH) & AssetCreationCapability::FRAME_THREAD))
                 updateContext.newMeshes = this->sceneReaderState.GetNewAssets<FinjinMesh>();
-            
+
             for (auto& mesh : updateContext.newMeshes)
             {
                 updateContext.gpuContext->CreateMeshFromMainThread(mesh, error);
@@ -293,7 +305,7 @@ void FinjinViewerApplicationViewportDelegate::HandleNewAssets(ApplicationViewpor
         {
             if (NoneSet(updateContext.gpuContext->GetAssetCreationCapabilities(AssetClass::TEXTURE) & AssetCreationCapability::FRAME_THREAD))
                 updateContext.newTextures = this->sceneReaderState.GetNewAssets<FinjinTexture>();
-            
+
             for (auto& texture : updateContext.newTextures)
             {
                 updateContext.gpuContext->CreateTextureFromMainThread(texture, error);
@@ -303,7 +315,7 @@ void FinjinViewerApplicationViewportDelegate::HandleNewAssets(ApplicationViewpor
                     return;
                 }
             }
-        }        
+        }
 
         if (AnySet(updateContext.gpuContext->GetAssetCreationCapabilities(AssetClass::MATERIAL) & AssetCreationCapability::FRAME_THREAD))
         {
@@ -314,7 +326,7 @@ void FinjinViewerApplicationViewportDelegate::HandleNewAssets(ApplicationViewpor
         {
             if (NoneSet(updateContext.gpuContext->GetAssetCreationCapabilities(AssetClass::TEXTURE) & AssetCreationCapability::FRAME_THREAD))
                 updateContext.newMaterials = this->sceneReaderState.GetNewAssets<FinjinMaterial>();
-            
+
             for (auto& material : updateContext.newMaterials)
             {
                 updateContext.gpuContext->CreateMaterialFromMainThread(material, error);
@@ -324,23 +336,25 @@ void FinjinViewerApplicationViewportDelegate::HandleNewAssets(ApplicationViewpor
                     return;
                 }
             }
-        }        
+        }
     }
 }
 
 void FinjinViewerApplicationViewportDelegate::StartFrame(ApplicationViewportUpdateContext& updateContext, FlyingCameraEvents& flyingCameraActions)
 {
     this->totalElapsedTime += updateContext.elapsedTime;
-    
+
     //Kick off jobs for the frame
-    auto& frameStage = updateContext.gpuContext->StartFrameStage(updateContext.jobPipelineStage->index, updateContext.elapsedTime, this->totalElapsedTime, &updateContext.jobPipelineStage->frameSequenceIndex);
-    
+    auto& frameStage = updateContext.gpuContext->StartFrameStage(updateContext.jobPipelineStage->index, updateContext.elapsedTime, this->totalElapsedTime);
+
+    auto frameSequenceIndex = this->lifetimeFrameSequenceIndex++;
+
     updateContext.jobSystem->StartGroupFromMainThread();
-    updateContext.jobPipelineStage->simulateAndRenderFuture = updateContext.jobSystem->Submit([this, &updateContext, flyingCameraActions, &frameStage]()
+    updateContext.jobPipelineStage->simulateAndRenderFuture = updateContext.jobSystem->Submit([this, &updateContext, flyingCameraActions, &frameStage, frameSequenceIndex]()
     {
         //Simulate----------------------------
         auto cameraChanged = false;
-        {                
+        {
             if (flyingCameraActions.Contains(FlyingCameraEvents::TAP))
             {
                 FINJIN_DEBUG_LOG_INFO("Tap");
@@ -456,7 +470,7 @@ void FinjinViewerApplicationViewportDelegate::StartFrame(ApplicationViewportUpda
 
             if (cameraChanged)
                 this->camera.Update();
-            
+
             if (!updateContext.gpuCommands.StartGraphicsCommandList())
             {
             }
@@ -498,20 +512,21 @@ void FinjinViewerApplicationViewportDelegate::StartFrame(ApplicationViewportUpda
 
                 updateContext.gpuCommands.SetCamera(this->camera);
                 updateContext.gpuCommands.SetClearColor(this->clearColor);
+                //updateContext.gpuCommands.SetClearColor(MathVector4(1, 0, 0, 1));
 
                 if (this->sceneData.scene != nullptr)
                 {
                     for (auto& subscene : this->sceneData.scene->subscenes)
                     {
-                        auto& ambientLightState = subscene.environment.ambientLight.Evaluate(updateContext.jobPipelineStage->index, updateContext.jobPipelineStage->frameSequenceIndex);
+                        auto& ambientLightState = subscene.environment.ambientLight.Evaluate(updateContext.jobPipelineStage->index, frameSequenceIndex);
 
                         for (auto sceneNode : subscene.sceneNodes)
                         {
-                            auto& sceneNodeState = sceneNode->Evaluate(updateContext.jobPipelineStage->index, updateContext.jobPipelineStage->frameSequenceIndex);
+                            auto& sceneNodeState = sceneNode->Evaluate(updateContext.jobPipelineStage->index, frameSequenceIndex);
 
                             for (auto obj : sceneNode->objects)
                             {
-                                if (obj->IsTypeOf(FINJIN_CLASS_DESCRIPTION(FinjinSceneObjectEntity)))
+                                if (obj->IsTypeOf(FINJIN_TYPE_DESCRIPTION(FinjinSceneObjectEntity)))
                                 {
                                     auto entity = reinterpret_cast<FinjinSceneObjectEntity*>(obj);
 
@@ -523,8 +538,8 @@ void FinjinViewerApplicationViewportDelegate::StartFrame(ApplicationViewportUpda
                                     {
                                         if (light->isActive)
                                         {
-                                            auto& lightSceneNodeState = light->parentNodePointer->Evaluate(updateContext.jobPipelineStage->index, updateContext.jobPipelineStage->frameSequenceIndex);
-                                            lights.push_back(GpuCommandLight(light, &light->Evaluate(updateContext.jobPipelineStage->index, updateContext.jobPipelineStage->frameSequenceIndex, lightSceneNodeState)));
+                                            auto& lightSceneNodeState = light->parentNodePointer->Evaluate(updateContext.jobPipelineStage->index, frameSequenceIndex);
+                                            lights.push_back(GpuCommandLight(light, &light->Evaluate(updateContext.jobPipelineStage->index, frameSequenceIndex, lightSceneNodeState)));
                                             if (lights.full())
                                             {
                                                 break;
@@ -563,14 +578,14 @@ void FinjinViewerApplicationViewportDelegate::StartFrame(ApplicationViewportUpda
         //Render----------------------------
         {
             FINJIN_DECLARE_ERROR(error);
-            
+
             updateContext.gpuContext->StartBackFrameBufferRender(frameStage);
 
             updateContext.Execute(frameStage, error);
             if (error)
             {
             }
-        
+
             updateContext.gpuContext->FinishFrameStage(frameStage);
         }
     });
@@ -595,7 +610,7 @@ void FinjinViewerApplicationViewportDelegate::FinishFrame(ApplicationViewportRen
 
         if (!error)
         {
-            renderContext.gpuContext->FinishBackFrameBufferRender(frameStage, renderContext.continueRendering, renderContext.presentSyncIntervalOverride, error);
+            renderContext.gpuContext->FinishBackFrameBufferRender(frameStage, renderContext.continueRendering, renderContext.modifyingRenderTarget, renderContext.presentSyncIntervalOverride, error);
             if (error)
             {
                 FINJIN_SET_ERROR(error, "Failed to present back buffer.");
@@ -613,7 +628,7 @@ void FinjinViewerApplicationViewportDelegate::HandleEventsAndInputs(ApplicationV
     {
     }*/
 #endif
-    
+
     //Input events
     /*for (auto& event : updateContext.inputEvents)
     {
@@ -621,18 +636,37 @@ void FinjinViewerApplicationViewportDelegate::HandleEventsAndInputs(ApplicationV
 
     //Sound events
     /*for (auto& event : updateContext.soundEvents)
-    {        
+    {
     }*/
 
     //GPU events
     /*for (auto& event : updateContext.gpuEvents)
-    {        
+    {
     }*/
 
-    updateContext.ClearEvents();
-    
     //Poll subsystems that require it
-    updateContext.Poll();
+    updateContext.StartPoll();
+
+    //If no game controller has ever been detected, try to detect one
+#if FINJIN_TARGET_PLATFORM_IS_APPLE || FINJIN_TARGET_PLATFORM_IS_LINUX
+    if (this->flyingCameraGameControllerIndex == (size_t)-1)
+    {
+        for (auto i = 0; i < updateContext.inputContext->GetGameControllerCount(); i++)
+        {
+            auto gameController = updateContext.inputContext->GetGameController(i);
+            if (gameController->IsNewConnection())
+            {
+                this->tempAssetRef.ForLocalFile(FlyingCameraInputBindings::GetDefaultBindingsFileName());
+                auto result = this->flyingCameraInputBindings.GetFromConfiguration(updateContext.inputContext, InputBindingsConfigurationSearchCriteria(InputDeviceClass::GAME_CONTROLLER, Utf8String::Empty(), i, InputBindingsConfigurationFlag::CONNECTED_ONLY, InputDeviceSemantic::NONE), this->tempAssetRef, this->tempBuffer);
+                if (result.IsSuccess())
+                {
+                    FINJIN_DEBUG_LOG_INFO("Game controller successfully configured.");
+                    this->flyingCameraGameControllerIndex = i;
+                }
+            }
+        }
+    }
+#endif
 
 #if FINJIN_DEBUG
     ChangedInputSources<1> pressedItems;
@@ -646,6 +680,8 @@ void FinjinViewerApplicationViewportDelegate::HandleEventsAndInputs(ApplicationV
     }
 #endif
 
-    //Update input    
-    updateContext.inputContext->GetActions(flyingCameraActions, this->inputBindings, updateContext.elapsedTime);    
+    //Update input
+    updateContext.inputContext->GetActions(flyingCameraActions, this->flyingCameraInputBindings, updateContext.elapsedTime);
+
+    updateContext.FinishPoll();
 }

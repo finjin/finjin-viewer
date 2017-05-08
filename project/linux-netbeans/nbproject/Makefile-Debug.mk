@@ -35,10 +35,10 @@ OBJECTDIR=${CND_BUILDDIR}/${CND_CONF}/${CND_PLATFORM}
 
 # Object Files
 OBJECTFILES= \
-	${OBJECTDIR}/_ext/56252444/FinjinPrecompiled.o \
 	${OBJECTDIR}/_ext/56252444/FinjinViewerApplicationDelegate.o \
 	${OBJECTDIR}/_ext/56252444/FinjinViewerApplicationSettings.o \
 	${OBJECTDIR}/_ext/56252444/FinjinViewerApplicationViewportDelegate.o \
+	${OBJECTDIR}/_ext/56252444/FinjinViewerPrecompiled.o \
 	${OBJECTDIR}/main.o
 
 
@@ -60,20 +60,15 @@ LDLIBSOPTIONS=-L/home/build/finjin-3rd-party/cpp/boost/stage/lib -L/home/build/f
 
 # Build Targets
 .build-conf: ${BUILD_SUBPROJECTS}
-	"${MAKE}"  -f nbproject/Makefile-${CND_CONF}.mk ${CND_DISTDIR}/${CND_CONF}/${CND_PLATFORM}/linux-netbeans
+	"${MAKE}"  -f nbproject/Makefile-${CND_CONF}.mk ${CND_DISTDIR}/${CND_CONF}/${CND_PLATFORM}/finjin-viewer
 
-${CND_DISTDIR}/${CND_CONF}/${CND_PLATFORM}/linux-netbeans: ../../../finjin-engine/cpp/library/project/linux-netbeans/dist/Debug/GNU-Linux/libfinjin-engine.a
+${CND_DISTDIR}/${CND_CONF}/${CND_PLATFORM}/finjin-viewer: ../../../finjin-engine/cpp/library/project/linux-netbeans/dist/Debug/GNU-Linux/libfinjin-engine.a
 
-${CND_DISTDIR}/${CND_CONF}/${CND_PLATFORM}/linux-netbeans: ../../../finjin-common/cpp/library/project/linux-netbeans/dist/Debug/GNU-Linux/libfinjin-common.a
+${CND_DISTDIR}/${CND_CONF}/${CND_PLATFORM}/finjin-viewer: ../../../finjin-common/cpp/library/project/linux-netbeans/dist/Debug/GNU-Linux/libfinjin-common.a
 
-${CND_DISTDIR}/${CND_CONF}/${CND_PLATFORM}/linux-netbeans: ${OBJECTFILES}
+${CND_DISTDIR}/${CND_CONF}/${CND_PLATFORM}/finjin-viewer: ${OBJECTFILES}
 	${MKDIR} -p ${CND_DISTDIR}/${CND_CONF}/${CND_PLATFORM}
-	${LINK.cc} -o ${CND_DISTDIR}/${CND_CONF}/${CND_PLATFORM}/linux-netbeans ${OBJECTFILES} ${LDLIBSOPTIONS}
-
-${OBJECTDIR}/_ext/56252444/FinjinPrecompiled.o: ../../src/FinjinPrecompiled.cpp 
-	${MKDIR} -p ${OBJECTDIR}/_ext/56252444
-	${RM} "$@.d"
-	$(COMPILE.cc) -g -DVK_NO_PROTOTYPES -DVK_USE_PLATFORM_XCB_KHR -D_DEBUG -I/home/build/finjin-3rd-party/cpp/include -I/home/build/finjin-3rd-party/cpp/boost -I/home/build/finjin-3rd-party/cpp/eigen -I/home/derek/git/nedelman/finjin-common/cpp/library/include -I/home/derek/git/nedelman/finjin-engine/cpp/library/src -I/home/derek/git/nedelman/finjin-engine/cpp/library/src/finjin/engine/internal/app/linux -I../../src -std=c++14 -MMD -MP -MF "$@.d" -o ${OBJECTDIR}/_ext/56252444/FinjinPrecompiled.o ../../src/FinjinPrecompiled.cpp
+	${LINK.cc} -o ${CND_DISTDIR}/${CND_CONF}/${CND_PLATFORM}/finjin-viewer ${OBJECTFILES} ${LDLIBSOPTIONS}
 
 ${OBJECTDIR}/_ext/56252444/FinjinViewerApplicationDelegate.o: ../../src/FinjinViewerApplicationDelegate.cpp 
 	${MKDIR} -p ${OBJECTDIR}/_ext/56252444
@@ -90,6 +85,11 @@ ${OBJECTDIR}/_ext/56252444/FinjinViewerApplicationViewportDelegate.o: ../../src/
 	${RM} "$@.d"
 	$(COMPILE.cc) -g -DVK_NO_PROTOTYPES -DVK_USE_PLATFORM_XCB_KHR -D_DEBUG -I/home/build/finjin-3rd-party/cpp/include -I/home/build/finjin-3rd-party/cpp/boost -I/home/build/finjin-3rd-party/cpp/eigen -I/home/derek/git/nedelman/finjin-common/cpp/library/include -I/home/derek/git/nedelman/finjin-engine/cpp/library/src -I/home/derek/git/nedelman/finjin-engine/cpp/library/src/finjin/engine/internal/app/linux -I../../src -std=c++14 -MMD -MP -MF "$@.d" -o ${OBJECTDIR}/_ext/56252444/FinjinViewerApplicationViewportDelegate.o ../../src/FinjinViewerApplicationViewportDelegate.cpp
 
+${OBJECTDIR}/_ext/56252444/FinjinViewerPrecompiled.o: ../../src/FinjinViewerPrecompiled.cpp 
+	${MKDIR} -p ${OBJECTDIR}/_ext/56252444
+	${RM} "$@.d"
+	$(COMPILE.cc) -g -DVK_NO_PROTOTYPES -DVK_USE_PLATFORM_XCB_KHR -D_DEBUG -I/home/build/finjin-3rd-party/cpp/include -I/home/build/finjin-3rd-party/cpp/boost -I/home/build/finjin-3rd-party/cpp/eigen -I/home/derek/git/nedelman/finjin-common/cpp/library/include -I/home/derek/git/nedelman/finjin-engine/cpp/library/src -I/home/derek/git/nedelman/finjin-engine/cpp/library/src/finjin/engine/internal/app/linux -I../../src -std=c++14 -MMD -MP -MF "$@.d" -o ${OBJECTDIR}/_ext/56252444/FinjinViewerPrecompiled.o ../../src/FinjinViewerPrecompiled.cpp
+
 ${OBJECTDIR}/main.o: main.cpp 
 	${MKDIR} -p ${OBJECTDIR}
 	${RM} "$@.d"
@@ -103,7 +103,7 @@ ${OBJECTDIR}/main.o: main.cpp
 # Clean Targets
 .clean-conf: ${CLEAN_SUBPROJECTS}
 	${RM} -r ${CND_BUILDDIR}/${CND_CONF}
-	${RM} ${CND_DISTDIR}/${CND_CONF}/${CND_PLATFORM}/linux-netbeans
+	${RM} ${CND_DISTDIR}/${CND_CONF}/${CND_PLATFORM}/finjin-viewer
 
 # Subprojects
 .clean-subprojects:

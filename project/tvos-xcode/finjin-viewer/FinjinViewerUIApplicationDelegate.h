@@ -12,8 +12,8 @@
 
 
 #import <UIKit/UIKit.h>
-#import "finjin/engine/FinjinUIApplicationDelegate.h"
+#import <finjin/engine/FinjinUIApplicationDelegate.h>
 
-@interface ViewerUIApplicationDelegate : FinjinUIApplicationDelegate
+@interface FinjinViewerUIApplicationDelegate : FinjinUIApplicationDelegate
 
 @end

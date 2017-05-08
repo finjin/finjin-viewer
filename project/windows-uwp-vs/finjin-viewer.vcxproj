@@ -34,8 +34,8 @@
     <MinimumVisualStudioVersion>14.0</MinimumVisualStudioVersion>
     <AppContainerApplication>true</AppContainerApplication>
     <ApplicationType>Windows Store</ApplicationType>
-    <WindowsTargetPlatformVersion>10.0.14295.0</WindowsTargetPlatformVersion>
-    <WindowsTargetPlatformMinVersion>10.0.10240.0</WindowsTargetPlatformMinVersion>
+    <WindowsTargetPlatformVersion>10.0.14393.0</WindowsTargetPlatformVersion>
+    <WindowsTargetPlatformMinVersion>10.0.14393.0</WindowsTargetPlatformMinVersion>
     <ApplicationTypeRevision>10.0</ApplicationTypeRevision>
   </PropertyGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
@@ -106,12 +106,12 @@
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|ARM'">
     <Link>
       <AdditionalDependencies>mincore.lib;d3d12.lib;dxgi.lib;windowscodecs.lib;%(AdditionalDependencies)</AdditionalDependencies>
-      <AdditionalLibraryDirectories>C:\Program Files (x86)\Windows Kits\10\Lib\10.0.10586.0\um\arm;C:\git\nedelman\finjin-common\cpp\library\project\windows-uwp-vs\arm\Debug;C:\finjin-3rd-party\cpp\boost/libarm-msvc-14.0</AdditionalLibraryDirectories>
+      <AdditionalLibraryDirectories>C:\Program Files (x86)\Windows Kits\10\Lib\10.0.14393.0\um\arm;C:\git\nedelman\finjin-common\cpp\library\project\windows-uwp-vs\arm\Debug;C:\finjin-3rd-party\cpp\boost/libarm-msvc-14.0</AdditionalLibraryDirectories>
     </Link>
     <ClCompile>
       <PrecompiledHeaderFile>pch.h</PrecompiledHeaderFile>
       <PrecompiledHeaderOutputFile>$(IntDir)$(TargetName).pch</PrecompiledHeaderOutputFile>
-      <AdditionalIncludeDirectories>.;C:\Program Files (x86)\Windows Kits\10\Include\10.0.14295.0\um;C:\Program Files (x86)\Windows Kits\10\Include\10.0.14295.0\shared;C:\finjin-3rd-party\cpp\boost;C:\finjin-3rd-party\cpp\eigen;C:\git\nedelman\finjin-common\cpp\library\include;C:\git\nedelman\finjin-engine\cpp\library\src;C:\git\nedelman\finjin-engine\cpp\library\src\finjin\engine\internal\app\uwp;..\..\src</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>.;C:\Program Files (x86)\Windows Kits\10\Include\10.0.14393.0\um;C:\Program Files (x86)\Windows Kits\10\Include\10.0.14393.0\shared;C:\finjin-3rd-party\cpp\boost;C:\finjin-3rd-party\cpp\eigen;C:\git\nedelman\finjin-common\cpp\library\include;C:\git\nedelman\finjin-engine\cpp\library\src;C:\git\nedelman\finjin-engine\cpp\library\src\finjin\engine\internal\app\uwp;..\..\src</AdditionalIncludeDirectories>
       <AdditionalOptions>/bigobj %(AdditionalOptions)</AdditionalOptions>
       <DisableSpecificWarnings>4453;28204</DisableSpecificWarnings>
       <PreprocessorDefinitions>NOMINMAX;_ENABLE_ATOMIC_ALIGNMENT_FIX;_MSC_PLATFORM_TOOLSET_$(PlatformToolset);_CRT_SECURE_NO_WARNINGS;_SCL_SECURE_NO_WARNINGS;FINJIN_COMMON_STATIC_LIBRARY;_WIN32_WINNT=0x0A00;WIN32;_DEBUG;_WINDOWS;%(PreprocessorDefinitions)</PreprocessorDefinitions>
@@ -121,12 +121,12 @@
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|ARM'">
     <Link>
       <AdditionalDependencies>mincore.lib;d3d12.lib;dxgi.lib;windowscodecs.lib;%(AdditionalDependencies)</AdditionalDependencies>
-      <AdditionalLibraryDirectories>C:\Program Files (x86)\Windows Kits\10\Lib\10.0.10586.0\um\arm;C:\git\nedelman\finjin-common\cpp\library\project\windows-uwp-vs\arm\Debug;C:\finjin-3rd-party\cpp\boost/libarm-msvc-14.0</AdditionalLibraryDirectories>
+      <AdditionalLibraryDirectories>C:\Program Files (x86)\Windows Kits\10\Lib\10.0.14393.0\um\arm;C:\git\nedelman\finjin-common\cpp\library\project\windows-uwp-vs\arm\Debug;C:\finjin-3rd-party\cpp\boost/libarm-msvc-14.0</AdditionalLibraryDirectories>
     </Link>
     <ClCompile>
       <PrecompiledHeaderFile>pch.h</PrecompiledHeaderFile>
       <PrecompiledHeaderOutputFile>$(IntDir)$(TargetName).pch</PrecompiledHeaderOutputFile>
-      <AdditionalIncludeDirectories>.;C:\Program Files (x86)\Windows Kits\10\Include\10.0.14295.0\um;C:\Program Files (x86)\Windows Kits\10\Include\10.0.14295.0\shared;C:\finjin-3rd-party\cpp\boost;C:\finjin-3rd-party\cpp\eigen;C:\git\nedelman\finjin-common\cpp\library\include;C:\git\nedelman\finjin-engine\cpp\library\src;C:\git\nedelman\finjin-engine\cpp\library\src\finjin\engine\internal\app\uwp;..\..\src</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>.;C:\Program Files (x86)\Windows Kits\10\Include\10.0.14393.0\um;C:\Program Files (x86)\Windows Kits\10\Include\10.0.14393.0\shared;C:\finjin-3rd-party\cpp\boost;C:\finjin-3rd-party\cpp\eigen;C:\git\nedelman\finjin-common\cpp\library\include;C:\git\nedelman\finjin-engine\cpp\library\src;C:\git\nedelman\finjin-engine\cpp\library\src\finjin\engine\internal\app\uwp;..\..\src</AdditionalIncludeDirectories>
       <AdditionalOptions>/bigobj %(AdditionalOptions)</AdditionalOptions>
       <DisableSpecificWarnings>4453;28204</DisableSpecificWarnings>
       <PreprocessorDefinitions>NOMINMAX;_ENABLE_ATOMIC_ALIGNMENT_FIX;_MSC_PLATFORM_TOOLSET_$(PlatformToolset);_CRT_SECURE_NO_WARNINGS;_SCL_SECURE_NO_WARNINGS;FINJIN_COMMON_STATIC_LIBRARY;_WIN32_WINNT=0x0A00;WIN32;_WINDOWS;%(PreprocessorDefinitions)</PreprocessorDefinitions>
@@ -136,12 +136,12 @@
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
     <Link>
       <AdditionalDependencies>mincore.lib;d3d12.lib;dxgi.lib;windowscodecs.lib;%(AdditionalDependencies)</AdditionalDependencies>
-      <AdditionalLibraryDirectories>C:\Program Files (x86)\Windows Kits\10\Lib\10.0.10586.0\um\x86;C:\git\nedelman\finjin-common\cpp\library\project\windows-uwp-vs\x86\Debug;C:\finjin-3rd-party\cpp\boost/lib-msvc-14.0</AdditionalLibraryDirectories>
+      <AdditionalLibraryDirectories>C:\Program Files (x86)\Windows Kits\10\Lib\10.0.14393.0\um\x86;C:\git\nedelman\finjin-common\cpp\library\project\windows-uwp-vs\x86\Debug;C:\finjin-3rd-party\cpp\boost/lib-msvc-14.0</AdditionalLibraryDirectories>
     </Link>
     <ClCompile>
       <PrecompiledHeaderFile>pch.h</PrecompiledHeaderFile>
       <PrecompiledHeaderOutputFile>$(IntDir)$(TargetName).pch</PrecompiledHeaderOutputFile>
-      <AdditionalIncludeDirectories>.;C:\Program Files (x86)\Windows Kits\10\Include\10.0.14295.0\um;C:\Program Files (x86)\Windows Kits\10\Include\10.0.14295.0\shared;C:\finjin-3rd-party\cpp\boost;C:\finjin-3rd-party\cpp\eigen;C:\git\nedelman\finjin-common\cpp\library\include;C:\git\nedelman\finjin-engine\cpp\library\src;C:\git\nedelman\finjin-engine\cpp\library\src\finjin\engine\internal\app\uwp;..\..\src</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>.;C:\Program Files (x86)\Windows Kits\10\Include\10.0.14393.0\um;C:\Program Files (x86)\Windows Kits\10\Include\10.0.14393.0\shared;C:\finjin-3rd-party\cpp\boost;C:\finjin-3rd-party\cpp\eigen;C:\git\nedelman\finjin-common\cpp\library\include;C:\git\nedelman\finjin-engine\cpp\library\src;C:\git\nedelman\finjin-engine\cpp\library\src\finjin\engine\internal\app\uwp;..\..\src</AdditionalIncludeDirectories>
       <AdditionalOptions>/bigobj %(AdditionalOptions)</AdditionalOptions>
       <DisableSpecificWarnings>4453;28204</DisableSpecificWarnings>
       <PreprocessorDefinitions>NOMINMAX;_ENABLE_ATOMIC_ALIGNMENT_FIX;_MSC_PLATFORM_TOOLSET_$(PlatformToolset);_CRT_SECURE_NO_WARNINGS;_SCL_SECURE_NO_WARNINGS;FINJIN_COMMON_STATIC_LIBRARY;_WIN32_WINNT=0x0A00;WIN32;_DEBUG;_WINDOWS;%(PreprocessorDefinitions)</PreprocessorDefinitions>
@@ -151,12 +151,12 @@
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
     <Link>
       <AdditionalDependencies>mincore.lib;d3d12.lib;dxgi.lib;windowscodecs.lib;%(AdditionalDependencies)</AdditionalDependencies>
-      <AdditionalLibraryDirectories>C:\Program Files (x86)\Windows Kits\10\Lib\10.0.10586.0\um\x86;C:\git\nedelman\finjin-common\cpp\library\project\windows-uwp-vs\x86\Release;C:\finjin-3rd-party\cpp\boost/lib-msvc-14.0</AdditionalLibraryDirectories>
+      <AdditionalLibraryDirectories>C:\Program Files (x86)\Windows Kits\10\Lib\10.0.14393.0\um\x86;C:\git\nedelman\finjin-common\cpp\library\project\windows-uwp-vs\x86\Release;C:\finjin-3rd-party\cpp\boost/lib-msvc-14.0</AdditionalLibraryDirectories>
     </Link>
     <ClCompile>
       <PrecompiledHeaderFile>pch.h</PrecompiledHeaderFile>
       <PrecompiledHeaderOutputFile>$(IntDir)$(TargetName).pch</PrecompiledHeaderOutputFile>
-      <AdditionalIncludeDirectories>.;C:\Program Files (x86)\Windows Kits\10\Include\10.0.14295.0\um;C:\Program Files (x86)\Windows Kits\10\Include\10.0.14295.0\shared;C:\finjin-3rd-party\cpp\boost;C:\finjin-3rd-party\cpp\eigen;C:\git\nedelman\finjin-common\cpp\library\include;C:\git\nedelman\finjin-engine\cpp\library\src;C:\git\nedelman\finjin-engine\cpp\library\src\finjin\engine\internal\app\uwp;..\..\src</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>.;C:\Program Files (x86)\Windows Kits\10\Include\10.0.14393.0\um;C:\Program Files (x86)\Windows Kits\10\Include\10.0.14393.0\shared;C:\finjin-3rd-party\cpp\boost;C:\finjin-3rd-party\cpp\eigen;C:\git\nedelman\finjin-common\cpp\library\include;C:\git\nedelman\finjin-engine\cpp\library\src;C:\git\nedelman\finjin-engine\cpp\library\src\finjin\engine\internal\app\uwp;..\..\src</AdditionalIncludeDirectories>
       <AdditionalOptions>/bigobj %(AdditionalOptions)</AdditionalOptions>
       <DisableSpecificWarnings>4453;28204</DisableSpecificWarnings>
       <PreprocessorDefinitions>NOMINMAX;_ENABLE_ATOMIC_ALIGNMENT_FIX;_MSC_PLATFORM_TOOLSET_$(PlatformToolset);_CRT_SECURE_NO_WARNINGS;_SCL_SECURE_NO_WARNINGS;FINJIN_COMMON_STATIC_LIBRARY;_WIN32_WINNT=0x0A00;WIN32;_WINDOWS;%(PreprocessorDefinitions)</PreprocessorDefinitions>
@@ -166,12 +166,12 @@
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
     <Link>
       <AdditionalDependencies>d3d12.lib;dxgi.lib;%(AdditionalDependencies)</AdditionalDependencies>
-      <AdditionalLibraryDirectories>C:\Program Files (x86)\Windows Kits\10\Lib\10.0.10586.0\um\x64;C:\git\nedelman\finjin-common\cpp\library\project\windows-uwp-vs\x64\Debug;C:\finjin-3rd-party\cpp\boost/lib64-msvc-14.0</AdditionalLibraryDirectories>
+      <AdditionalLibraryDirectories>C:\Program Files (x86)\Windows Kits\10\Lib\10.0.14393.0\um\x64;C:\git\nedelman\finjin-common\cpp\library\project\windows-uwp-vs\x64\Debug;C:\finjin-3rd-party\cpp\boost/lib64-msvc-14.0</AdditionalLibraryDirectories>
     </Link>
     <ClCompile>
       <PrecompiledHeaderFile>pch.h</PrecompiledHeaderFile>
       <PrecompiledHeaderOutputFile>$(IntDir)$(TargetName).pch</PrecompiledHeaderOutputFile>
-      <AdditionalIncludeDirectories>.;C:\Program Files (x86)\Windows Kits\10\Include\10.0.14295.0\um;C:\Program Files (x86)\Windows Kits\10\Include\10.0.14295.0\shared;C:\finjin-3rd-party\cpp\boost;C:\finjin-3rd-party\cpp\eigen;C:\git\nedelman\finjin-common\cpp\library\include;C:\git\nedelman\finjin-engine\cpp\library\src;C:\git\nedelman\finjin-engine\cpp\library\src\finjin\engine\internal\app\uwp;..\..\src</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>.;C:\Program Files (x86)\Windows Kits\10\Include\10.0.14393.0\um;C:\Program Files (x86)\Windows Kits\10\Include\10.0.14393.0\shared;C:\finjin-3rd-party\cpp\boost;C:\finjin-3rd-party\cpp\eigen;C:\git\nedelman\finjin-common\cpp\library\include;C:\git\nedelman\finjin-engine\cpp\library\src;C:\git\nedelman\finjin-engine\cpp\library\src\finjin\engine\internal\app\uwp;..\..\src</AdditionalIncludeDirectories>
       <AdditionalOptions>/bigobj %(AdditionalOptions)</AdditionalOptions>
       <DisableSpecificWarnings>4453;28204</DisableSpecificWarnings>
       <PreprocessorDefinitions>NOMINMAX;_ENABLE_ATOMIC_ALIGNMENT_FIX;_MSC_PLATFORM_TOOLSET_$(PlatformToolset);_CRT_SECURE_NO_WARNINGS;_SCL_SECURE_NO_WARNINGS;FINJIN_COMMON_STATIC_LIBRARY;_WIN32_WINNT=0x0A00;WIN32;_DEBUG;_WINDOWS;%(PreprocessorDefinitions)</PreprocessorDefinitions>
@@ -181,12 +181,12 @@
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
     <Link>
       <AdditionalDependencies>mincore.lib;d3d12.lib;dxgi.lib;windowscodecs.lib;%(AdditionalDependencies)</AdditionalDependencies>
-      <AdditionalLibraryDirectories>C:\Program Files (x86)\Windows Kits\10\Lib\10.0.10586.0\um\x64;C:\git\nedelman\finjin-common\cpp\library\project\windows-uwp-vs\x64\Release;C:\finjin-3rd-party\cpp\boost/lib64-msvc-14.0</AdditionalLibraryDirectories>
+      <AdditionalLibraryDirectories>C:\Program Files (x86)\Windows Kits\10\Lib\10.0.14393.0\um\x64;C:\git\nedelman\finjin-common\cpp\library\project\windows-uwp-vs\x64\Release;C:\finjin-3rd-party\cpp\boost/lib64-msvc-14.0</AdditionalLibraryDirectories>
     </Link>
     <ClCompile>
       <PrecompiledHeaderFile>pch.h</PrecompiledHeaderFile>
       <PrecompiledHeaderOutputFile>$(IntDir)$(TargetName).pch</PrecompiledHeaderOutputFile>
-      <AdditionalIncludeDirectories>.;C:\Program Files (x86)\Windows Kits\10\Include\10.0.14295.0\um;C:\Program Files (x86)\Windows Kits\10\Include\10.0.14295.0\shared;C:\finjin-3rd-party\cpp\boost;C:\finjin-3rd-party\cpp\eigen;C:\git\nedelman\finjin-common\cpp\library\include;C:\git\nedelman\finjin-engine\cpp\library\src;C:\git\nedelman\finjin-engine\cpp\library\src\finjin\engine\internal\app\uwp;..\..\src</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>.;C:\Program Files (x86)\Windows Kits\10\Include\10.0.14393.0\um;C:\Program Files (x86)\Windows Kits\10\Include\10.0.14393.0\shared;C:\finjin-3rd-party\cpp\boost;C:\finjin-3rd-party\cpp\eigen;C:\git\nedelman\finjin-common\cpp\library\include;C:\git\nedelman\finjin-engine\cpp\library\src;C:\git\nedelman\finjin-engine\cpp\library\src\finjin\engine\internal\app\uwp;..\..\src</AdditionalIncludeDirectories>
       <AdditionalOptions>/bigobj %(AdditionalOptions)</AdditionalOptions>
       <DisableSpecificWarnings>4453;28204</DisableSpecificWarnings>
       <PreprocessorDefinitions>NOMINMAX;_ENABLE_ATOMIC_ALIGNMENT_FIX;_MSC_PLATFORM_TOOLSET_$(PlatformToolset);_CRT_SECURE_NO_WARNINGS;_SCL_SECURE_NO_WARNINGS;FINJIN_COMMON_STATIC_LIBRARY;_WIN32_WINNT=0x0A00;WIN32;_WINDOWS;%(PreprocessorDefinitions)</PreprocessorDefinitions>
@@ -236,14 +236,14 @@
     <ClCompile Include="..\..\src\FinjinViewerApplicationDelegate.cpp" />
     <ClCompile Include="..\..\src\FinjinViewerApplicationSettings.cpp" />
     <ClCompile Include="..\..\src\FinjinViewerApplicationViewportDelegate.cpp" />
-    <ClCompile Include="..\..\src\FinjinPrecompiled.cpp" />
+    <ClCompile Include="..\..\src\FinjinViewerPrecompiled.cpp" />
     <ClCompile Include="main.cpp" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="..\..\src\FinjinViewerApplicationDelegate.hpp" />
     <ClInclude Include="..\..\src\FinjinViewerApplicationSettings.hpp" />
     <ClInclude Include="..\..\src\FinjinViewerApplicationViewportDelegate.hpp" />
-    <ClInclude Include="..\..\src\FinjinPrecompiled.hpp" />
+    <ClInclude Include="..\..\src\FinjinViewerPrecompiled.hpp" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">

@@ -15,7 +15,7 @@
 #define TOTAL_LIGHT_COUNT DIRECTIONAL_LIGHT_COUNT + POINT_LIGHT_COUNT + SPOT_LIGHT_COUNT
 
 
-//Structs----------------------------------------------------------------------
+//Types------------------------------------------------------------------------
 struct PassData
 {
     float4x4 viewMatrix;    
@@ -45,6 +45,17 @@ struct ObjectData
     uint materialIndex;
 };
 
+struct LightData
+{
+    float4 color;
+    float3 direction;
+    float3 position;    
+    float2 range;
+    float2 coneRange;
+    float2 sinConeRange;    
+    float power;
+};
+
 struct MaterialData
 {
     float4 diffuseColor;
@@ -66,17 +77,6 @@ struct MaterialData
     float opacity;
     float reflectionTextureAmount;
     float environmentTextureAmount;
-};
-
-struct LightData
-{
-    float4 color;
-    float3 direction;
-    float3 position;    
-    float2 range;
-    float2 coneRange;
-    float2 sinConeRange;    
-    float power;
 };
 
 

@@ -11,13 +11,13 @@
 //file, You can obtain one at http://mozilla.org/MPL/2.0/.
 
 
-//Includes---------------------------------------------------------------------
-#include "FinjinPrecompiled.hpp"
+//Includes----------------------------------------------------------------------
+#include "FinjinViewerPrecompiled.hpp"
 #include "FinjinViewerApplicationDelegate.hpp"
-#include "finjin/engine/FinjinMain.hpp"
+#include <finjin/engine/FinjinMain.hpp>
 
 using namespace Finjin::Viewer;
 
 
-//Implementation---------------------------------------------------------------
-FINJIN_ENGINE_IMPLEMENT_MAIN(FinjinViewerApplicationDelegate)
+//Implementation----------------------------------------------------------------
+FINJIN_ENGINE_MAIN(FinjinViewerApplicationDelegate)

@@ -13,7 +13,7 @@
 #endif
 
 
-//Globals----------------------------------------------------------------------
+//Bindings---------------------------------------------------------------------
 ConstantBuffer<ObjectData> objectData : register(b0, space0);
 
 ConstantBuffer<PassData> passData : register(b1, space0);
@@ -56,7 +56,7 @@ float4 GetCubeFaceColor(float3 position, float3 normal, uint textureIndex)
 
 
 //Entry points-----------------------------------------------------------------
-struct VertexIn
+struct VertexInput
 {
     float3 localPosition : POSITION;
     float3 localNormal : NORMAL;
@@ -64,7 +64,7 @@ struct VertexIn
     float2 localTextureCoordinate0 : TEXCOORD0;
 };
 
-struct PixelIn
+struct VertexOutput
 {
     float4 homogeneousPosition : SV_Position;
     float3 worldPosition : POSITION;
@@ -73,9 +73,10 @@ struct PixelIn
     float2 textureCoordinate0 : TEXCOORD0;
 };
 
-PixelIn VSMain(VertexIn vin)
+#if COMPILING_VS
+VertexOutput VSMain(VertexInput vin)
 {
-    PixelIn vout;
+    VertexOutput vout;
     
     float4 worldPosition = mul(float4(vin.localPosition, 1.0f), objectData.worldMatrix); //Transform position from local to world space
     
@@ -87,8 +88,10 @@ PixelIn VSMain(VertexIn vin)
     
     return vout;
 }
+#endif
 
-float4 PSMain(PixelIn pin, bool isFrontFace : SV_IsFrontFace) : SV_Target
+#if COMPILING_PS
+float4 PSMain(VertexOutput pin, bool isFrontFace : SV_IsFrontFace) : SV_Target
 {
     //Get some initial data
     MaterialData material = materials[objectData.materialIndex];    
@@ -160,3 +163,4 @@ float4 PSMain(PixelIn pin, bool isFrontFace : SV_IsFrontFace) : SV_Target
 
     return finalColor;
 }
+#endif

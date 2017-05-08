@@ -14,15 +14,15 @@
 #pragma once
 
 
-//Includes---------------------------------------------------------------------
-#include "finjin/common/ByteBuffer.hpp"
-#include "finjin/engine/ApplicationViewport.hpp"
-#include "finjin/engine/Camera.hpp"
-#include "finjin/engine/FlyingCameraInputBindings.hpp"
-#include "finjin/engine/FinjinSceneReader.hpp"
+//Includes----------------------------------------------------------------------
+#include <finjin/common/ByteBuffer.hpp>
+#include <finjin/engine/ApplicationViewport.hpp>
+#include <finjin/engine/Camera.hpp>
+#include <finjin/engine/FlyingCameraInputBindings.hpp>
+#include <finjin/engine/FinjinSceneReader.hpp>
 
 
-//Classes----------------------------------------------------------------------
+//Types-------------------------------------------------------------------------
 namespace Finjin { namespace Viewer {
 
     FINJIN_USE_ENGINE_NAMESPACES
@@ -34,7 +34,7 @@ namespace Finjin { namespace Viewer {
 
         UpdateResult Update(ApplicationViewportUpdateContext& updateContext, Error& error) override;
         void FinishFrame(ApplicationViewportRenderContext& renderContext, Error& error) override;
-        
+
     private:
         void HandleEventsAndInputs(ApplicationViewportUpdateContext& updateContext, FlyingCameraEvents& flyingCameraActions);
         void HandleNewAssets(ApplicationViewportUpdateContext& updateContext, Error& error);
@@ -42,10 +42,10 @@ namespace Finjin { namespace Viewer {
 
     private:
         Utf8String loadFileName;
-        
+
         FinjinSceneReader::State sceneReaderState;
         FinjinSceneReader sceneReader;
-                
+
         ByteBuffer tempBuffer;
 
         AssetReference tempAssetRef;
@@ -60,7 +60,8 @@ namespace Finjin { namespace Viewer {
         };
         RunState runState;
 
-        FlyingCameraInputBindings inputBindings;
+        FlyingCameraInputBindings flyingCameraInputBindings;
+        size_t flyingCameraGameControllerIndex;
 
         Camera camera;
         MathVector4 clearColor;
@@ -73,12 +74,14 @@ namespace Finjin { namespace Viewer {
             }
 
             FinjinScene* scene;
-            AllocatedVector<FinjinSceneObjectLight*> lights;
+            DynamicVector<FinjinSceneObjectLight*> lights;
         };
         SceneData sceneData;
 
         float moveUnitsPerSecond;
         float rotateUnitsPerSecond;
+
+        size_t lifetimeFrameSequenceIndex;
     };
 
 } }

@@ -14,28 +14,28 @@
 #pragma once
 
 
-//Includes---------------------------------------------------------------------
-#include "finjin/engine/ApplicationDelegate.hpp"
+//Includes----------------------------------------------------------------------
+#include <finjin/engine/ApplicationDelegate.hpp>
 #include "FinjinViewerApplicationSettings.hpp"
 
 
-//Classes----------------------------------------------------------------------
+//Types-------------------------------------------------------------------------
 namespace Finjin { namespace Viewer {
 
     FINJIN_USE_ENGINE_NAMESPACES
 
     class FinjinViewerApplicationDelegate : public ApplicationDelegate
-    {   
+    {
     public:
         FinjinViewerApplicationDelegate(Allocator* allocator);
         ~FinjinViewerApplicationDelegate();
 
         const Utf8String& GetName(ApplicationNameFormat format) const override;
 
-        void ReadCommandLineSettings(CommandLineArgsProcessor& argsProcessor, Error& error) override;
-        
+        ReadCommandLineResult ReadCommandLineSettings(CommandLineArgsProcessor& argsProcessor, Error& error) override;
+
         const ApplicationSettings& GetApplicationSettings() const override;
-        
+
         void OnStart() override;
         void OnStop() override;
 
@@ -43,10 +43,10 @@ namespace Finjin { namespace Viewer {
         ApplicationViewportDescription& GetApplicationViewportDescription(size_t index) override;
 
         ApplicationViewportDelegate* CreateApplicationViewportDelegate(Allocator* allocator, size_t index) override;
-        
+
     private:
         FinjinViewerApplicationSettings commandLineSettings;
-        
+
         std::array<ApplicationViewportDescription, 1> appViewportDescriptions;
     };
 

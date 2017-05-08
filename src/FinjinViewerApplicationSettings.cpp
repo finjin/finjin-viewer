@@ -11,15 +11,15 @@
 //file, You can obtain one at http://mozilla.org/MPL/2.0/.
 
 
-//Includes---------------------------------------------------------------------
-#include "FinjinPrecompiled.hpp"
+//Includes----------------------------------------------------------------------
+#include "FinjinViewerPrecompiled.hpp"
 #include "FinjinViewerApplicationSettings.hpp"
-#include "finjin/engine/AssetClass.hpp"
+#include <finjin/engine/AssetClass.hpp>
 
 using namespace Finjin::Viewer;
 
 
-//Implementation---------------------------------------------------------------
+//Implementation----------------------------------------------------------------
 FinjinViewerApplicationSettings::FinjinViewerApplicationSettings()
 {
 }
@@ -28,15 +28,14 @@ void FinjinViewerApplicationSettings::ReadCommandLineSettings(CommandLineArgsPro
 {
     FINJIN_ERROR_METHOD_START(error);
 
-    Utf8String arg;
     for (size_t index = 0; index < argsProcessor.GetCount(); index++)
     {
-        arg = argsProcessor[index];
-        
+        auto& arg = argsProcessor[index];
+
         if (arg == "-file" && index < argsProcessor.GetCount() - 1)
         {
             auto& argValue = argsProcessor[index + 1];
-            
+
             Path path(argValue);
             if (path.IsAbsolute())
             {
@@ -44,7 +43,7 @@ void FinjinViewerApplicationSettings::ReadCommandLineSettings(CommandLineArgsPro
                 {
                     path.GetFileName(this->fileName.value);
                     this->fileName.isSet = true;
-                    
+
                     path.GoToParent();
                     if (path.EndsWith(AssetClassUtilities::ToDirectoryName(AssetClass::SCENE)))
                     {

@@ -49,7 +49,7 @@
     <ClCompile Include="..\..\src\FinjinViewerApplicationViewportDelegate.cpp">
       <Filter>Source Files\finjin-viewer</Filter>
     </ClCompile>
-    <ClCompile Include="..\..\src\FinjinPrecompiled.cpp">
+    <ClCompile Include="..\..\src\FinjinViewerPrecompiled.cpp">
       <Filter>Source Files\finjin-viewer</Filter>
     </ClCompile>
     <ClCompile Include="..\..\src\FinjinViewerApplicationDelegate.cpp">
@@ -66,7 +66,7 @@
     <ClInclude Include="..\..\src\FinjinViewerApplicationViewportDelegate.hpp">
       <Filter>Source Files\finjin-viewer</Filter>
     </ClInclude>
-    <ClInclude Include="..\..\src\FinjinPrecompiled.hpp">
+    <ClInclude Include="..\..\src\FinjinViewerPrecompiled.hpp">
       <Filter>Source Files\finjin-viewer</Filter>
     </ClInclude>
     <ClInclude Include="..\..\src\FinjinViewerApplicationDelegate.hpp">

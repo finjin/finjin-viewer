@@ -9,16 +9,16 @@ CND_DISTDIR=dist
 # Debug configuration
 CND_PLATFORM_Debug=GNU-Linux
 CND_ARTIFACT_DIR_Debug=dist/Debug/GNU-Linux
-CND_ARTIFACT_NAME_Debug=linux-netbeans
-CND_ARTIFACT_PATH_Debug=dist/Debug/GNU-Linux/linux-netbeans
+CND_ARTIFACT_NAME_Debug=finjin-viewer
+CND_ARTIFACT_PATH_Debug=dist/Debug/GNU-Linux/finjin-viewer
 CND_PACKAGE_DIR_Debug=dist/Debug/GNU-Linux/package
 CND_PACKAGE_NAME_Debug=linux-netbeans.tar
 CND_PACKAGE_PATH_Debug=dist/Debug/GNU-Linux/package/linux-netbeans.tar
 # Release configuration
 CND_PLATFORM_Release=GNU-Linux
 CND_ARTIFACT_DIR_Release=dist/Release/GNU-Linux
-CND_ARTIFACT_NAME_Release=linux-netbeans
-CND_ARTIFACT_PATH_Release=dist/Release/GNU-Linux/linux-netbeans
+CND_ARTIFACT_NAME_Release=finjin-viewer
+CND_ARTIFACT_PATH_Release=dist/Release/GNU-Linux/finjin-viewer
 CND_PACKAGE_DIR_Release=dist/Release/GNU-Linux/package
 CND_PACKAGE_NAME_Release=linux-netbeans.tar
 CND_PACKAGE_PATH_Release=dist/Release/GNU-Linux/package/linux-netbeans.tar

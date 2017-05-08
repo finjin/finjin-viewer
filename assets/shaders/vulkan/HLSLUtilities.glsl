@@ -18,5 +18,5 @@
 //Functions--------------------------------------------------------------------
 float saturate(float value)
 {
-    return clamp(value, 0.0f, 1.0);
+    return clamp(value, 0.0f, 1.0f);
 }

@@ -138,11 +138,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "../../../finjin-engine/cpp/library/src/finjin/engine/Application_General.cpp"
-            timestampString = "515544823.221207"
+            timestampString = "517325134.165686"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "523"
-            endingLineNumber = "523"
+            startingLineNumber = "527"
+            endingLineNumber = "527"
             landmarkName = "Application::Initialize(Error&amp; error)"
             landmarkType = "7">
          </BreakpointContent>
@@ -186,11 +186,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "../../../finjin-engine/cpp/library/src/finjin/engine/Application_General.cpp"
-            timestampString = "515544823.221207"
+            timestampString = "517325134.165686"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "501"
-            endingLineNumber = "501"
+            startingLineNumber = "505"
+            endingLineNumber = "505"
             landmarkName = "Application::Initialize(Error&amp; error)"
             landmarkType = "7">
          </BreakpointContent>
@@ -302,9 +302,7 @@
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "54"
-            endingLineNumber = "54"
-            landmarkName = "IsSupportedDepthStencilFormat(MetalFeatureSet::Capabilities&amp; caps, MTLPixelFormat format)"
-            landmarkType = "9">
+            endingLineNumber = "54">
          </BreakpointContent>
       </BreakpointProxy>
       <BreakpointProxy
@@ -330,11 +328,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "../../../finjin-engine/cpp/library/src/finjin/engine/internal/gpu/metal/MetalStaticMeshRenderer.mm"
-            timestampString = "515736934.693406"
+            timestampString = "516844037.678366"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "719"
-            endingLineNumber = "719"
+            startingLineNumber = "700"
+            endingLineNumber = "700"
             landmarkName = "MetalStaticMeshRenderer::RenderQueued(MetalStaticMeshRendererFrameState&amp; frameState, id&lt;MTLCommandBuffer&gt; commandBuffer, id&lt;MTLRenderCommandEncoder&gt; renderCommandEncoder)"
             landmarkType = "7">
          </BreakpointContent>

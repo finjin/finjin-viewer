@@ -15,7 +15,6 @@
 
 
 //Includes----------------------------------------------------------------------
-#include <finjin/common/Path.hpp>
 #include <finjin/engine/ApplicationSettings.hpp>
 
 

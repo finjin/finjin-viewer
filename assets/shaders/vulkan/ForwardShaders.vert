@@ -7,6 +7,12 @@
 
 //Bindings---------------------------------------------------------------------
 
+//Push constants
+layout (push_constant) uniform PushConstantsBlock
+{
+	int objectIndex;
+};
+
 //Uniform buffers
 layout (std140, set=0, binding=0) uniform PassDataBlock 
 {
@@ -25,16 +31,12 @@ layout (std140, set=0, binding=3) uniform MaterialDataBlock
 	MaterialData materials[MAX_MATERIALS];
 };
 
+
 //Input
 layout (location=0) in vec3 inLocalPosition;
 layout (location=1) in vec3 inLocalNormal;
 layout (location=2) in vec4 inLocalTangent;
 layout (location=3) in vec2 inLocalTextureCoordinate0;
-
-layout (push_constant) uniform PushConstantsBlock
-{
-	int objectIndex;
-};
 
 //Output
 layout (location=0) out vec3 outWorldPosition;
@@ -47,7 +49,7 @@ out gl_PerVertex
 };
 
 
-//Entry points-----------------------------------------------------------------
+//Entry point------------------------------------------------------------------
 void main() 
 {
 	ObjectData objectData = objects[objectIndex];

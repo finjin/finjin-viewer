@@ -22,6 +22,7 @@ using namespace Finjin::Viewer;
 //Implementation----------------------------------------------------------------
 FinjinViewerApplicationSettings::FinjinViewerApplicationSettings()
 {
+    this->checkSystemMemoryFree = false;
 }
 
 void FinjinViewerApplicationSettings::ReadCommandLineSettings(CommandLineArgsProcessor& argsProcessor, Error& error)
@@ -41,13 +42,15 @@ void FinjinViewerApplicationSettings::ReadCommandLineSettings(CommandLineArgsPro
             {
                 if (path.IsFile())
                 {
+                    //Hold onto just the file name
                     path.GetFileName(this->fileName.value);
                     this->fileName.isSet = true;
 
                     path.GoToParent();
-                    if (path.EndsWith(AssetClassUtilities::ToDirectoryName(AssetClass::SCENE)))
+                    if (AssetClassUtilities::IsDirectoryName(path, AssetClass::SCENE))
                     {
-                        path.GetParent(this->additionalReadApplicationAssetsDirectory);
+                        //Hold onto the path that contains the scene directory
+                        path.GetParent(this->additionalReadApplicationAssetsDirectory.value);
                         this->additionalReadApplicationAssetsDirectory.isSet = true;
                     }
                 }

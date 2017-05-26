@@ -4,20 +4,31 @@
 
   },
   "DVTSourceControlWorkspaceBlueprintWorkingCopyStatesKey" : {
-    "1AA466D4685DB56CBE2D3EC28EF929F703EF0B13" : 0,
+    "7E8D2459F137103E2F41F8C34D1BC48BDA8A1AE1" : 9223372036854775807,
     "DF68A909EC3F81BA96A520D02117B181A05E3BC3" : 0,
-    "7A0FBF649C1DFC792E63CD7210650F9A992A1DE6" : 0
+    "7A0FBF649C1DFC792E63CD7210650F9A992A1DE6" : 0,
+    "E80BFD390B68F2B67D004067B2C7B1B97C944995" : 9223372036854775807,
+    "0C95EEA8FF0C0E695973CB8EA4E7E70E385D606F" : 9223372036854775807,
+    "1AA466D4685DB56CBE2D3EC28EF929F703EF0B13" : 0
   },
   "DVTSourceControlWorkspaceBlueprintIdentifierKey" : "36FD8DFA-44BB-42D2-9516-BBEEF7C1ECF9",
   "DVTSourceControlWorkspaceBlueprintWorkingCopyPathsKey" : {
-    "1AA466D4685DB56CBE2D3EC28EF929F703EF0B13" : "finjin-common\/",
+    "7E8D2459F137103E2F41F8C34D1BC48BDA8A1AE1" : "..\/..\/finjin-3rd-party\/cpp\/recastnavigation",
     "DF68A909EC3F81BA96A520D02117B181A05E3BC3" : "finjin-engine\/",
-    "7A0FBF649C1DFC792E63CD7210650F9A992A1DE6" : "finjin-viewer\/"
+    "7A0FBF649C1DFC792E63CD7210650F9A992A1DE6" : "finjin-viewer\/",
+    "E80BFD390B68F2B67D004067B2C7B1B97C944995" : "..\/..\/finjin-3rd-party\/cpp\/xxHash",
+    "0C95EEA8FF0C0E695973CB8EA4E7E70E385D606F" : "..\/..\/finjin-3rd-party\/cpp\/imgui",
+    "1AA466D4685DB56CBE2D3EC28EF929F703EF0B13" : "finjin-common\/"
   },
   "DVTSourceControlWorkspaceBlueprintNameKey" : "finjin-viewer",
   "DVTSourceControlWorkspaceBlueprintVersion" : 204,
   "DVTSourceControlWorkspaceBlueprintRelativePathToProjectKey" : "project\/tvos-xcode\/finjin-viewer.xcworkspace",
   "DVTSourceControlWorkspaceBlueprintRemoteRepositoriesKey" : [
+    {
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryURLKey" : "https:\/\/github.com\/ocornut\/imgui.git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositorySystemKey" : "com.apple.dt.Xcode.sourcecontrol.Git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryIdentifierKey" : "0C95EEA8FF0C0E695973CB8EA4E7E70E385D606F"
+    },
     {
       "DVTSourceControlWorkspaceBlueprintRemoteRepositoryURLKey" : "https:\/\/github.com\/nedelman\/finjin-common.git",
       "DVTSourceControlWorkspaceBlueprintRemoteRepositorySystemKey" : "com.apple.dt.Xcode.sourcecontrol.Git",
@@ -29,9 +40,19 @@
       "DVTSourceControlWorkspaceBlueprintRemoteRepositoryIdentifierKey" : "7A0FBF649C1DFC792E63CD7210650F9A992A1DE6"
     },
     {
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryURLKey" : "https:\/\/github.com\/recastnavigation\/recastnavigation.git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositorySystemKey" : "com.apple.dt.Xcode.sourcecontrol.Git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryIdentifierKey" : "7E8D2459F137103E2F41F8C34D1BC48BDA8A1AE1"
+    },
+    {
       "DVTSourceControlWorkspaceBlueprintRemoteRepositoryURLKey" : "https:\/\/github.com\/nedelman\/finjin-engine.git",
       "DVTSourceControlWorkspaceBlueprintRemoteRepositorySystemKey" : "com.apple.dt.Xcode.sourcecontrol.Git",
       "DVTSourceControlWorkspaceBlueprintRemoteRepositoryIdentifierKey" : "DF68A909EC3F81BA96A520D02117B181A05E3BC3"
+    },
+    {
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryURLKey" : "https:\/\/github.com\/Cyan4973\/xxHash.git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositorySystemKey" : "com.apple.dt.Xcode.sourcecontrol.Git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryIdentifierKey" : "E80BFD390B68F2B67D004067B2C7B1B97C944995"
     }
   ]
 }

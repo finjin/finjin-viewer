@@ -7,6 +7,12 @@
 
 //Bindings---------------------------------------------------------------------
 
+//Push constants
+layout (push_constant) uniform PushConstantsBlock
+{
+	int objectIndex;
+};
+
 //Uniform buffers
 layout (std140, set=0, binding=0) uniform PassDataBlock 
 {
@@ -30,23 +36,17 @@ layout (set=1, binding=0) uniform sampler defaultTextureSampler;
 layout (set=1, binding=1) uniform texture2D textures[MAX_TEXTURES];
 
 
-
 //Input
-layout (location=0) in vec3 inWorldPosition;
-layout (location=1) in vec3 inWorldNormal;
-layout (location=2) in vec4 inWorldTangent;
-layout (location=3) in vec2 inTextureCoordinate0;
-
-layout (push_constant) uniform PushConstantsBlock
-{
-	int objectIndex;
-};
+layout (location=0) in float3 inWorldPosition;
+layout (location=1) in float3 inWorldNormal;
+layout (location=2) in float4 inWorldTangent;
+layout (location=3) in float2 inTextureCoordinate0;
 
 //Output
-layout (location=0) out vec4 outFragColor;
+layout (location=0) out float4 outFragColor;
 
 
-//Entry points-----------------------------------------------------------------
+//Entry point------------------------------------------------------------------
 void main() 
 {
 	//Get some initial data
@@ -65,7 +65,7 @@ void main()
         float3 worldBinormal = normalize(cross(worldTangent, worldNormal)) * inWorldTangent.w;
         
         //Get a normal from the bump texture map
-        float3 bumpMapNormal = normalize(textures2D[material.bumpTextureIndex].Sample(pointWrapSampler, inTextureCoordinate0).rgb);
+        float3 bumpMapNormal = normalize(texture(sampler2D(textures[material.bumpTextureIndex], defaultTextureSampler), inTextureCoordinate0).rgb);
         
         //Move bump map normal to world space and use it as the new normal
         worldNormal = float3x3(worldTangent, worldBinormal, worldNormal) * bumpMapNormal;

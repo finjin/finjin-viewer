@@ -125,7 +125,7 @@ ApplicationViewportDelegate::UpdateResult FinjinViewerApplicationViewportDelegat
 
             {
                 this->tempAssetRef.ForLocalFile(FlyingCameraInputBindings::GetDefaultBindingsFileName());
-                auto result = this->flyingCameraInputBindings.GetFromConfiguration(updateContext.inputContext, InputBindingsConfigurationSearchCriteria(InputDeviceClass::GAME_CONTROLLER, Utf8String::Empty(), (size_t)-1, InputBindingsConfigurationFlag::CONNECTED_ONLY, InputDeviceSemantic::NONE), this->tempAssetRef, this->tempBuffer);
+                auto result = this->flyingCameraInputBindings.GetFromConfiguration(updateContext.inputContext, InputBindingsConfigurationSearchCriteria(InputDeviceClass::GAME_CONTROLLER, Utf8String::GetEmpty(), (size_t)-1, InputBindingsConfigurationFlag::CONNECTED_ONLY, InputDeviceSemantic::NONE), this->tempAssetRef, this->tempBuffer);
                 if (result.IsSuccess())
                 {
                     FINJIN_DEBUG_LOG_INFO("Game controller successfully configured.");
@@ -462,6 +462,8 @@ void FinjinViewerApplicationViewportDelegate::StartFrame(ApplicationViewportUpda
             if (flyingCameraActions.Contains(FlyingCameraEvents::ESCAPE))
             {
                 FINJIN_DEBUG_LOG_INFO("Escape");
+                //updateContext.RequestClose();
+                //updateContext.RequestApplicationExit();
             }
             if (flyingCameraActions.Contains(FlyingCameraEvents::MENU))
             {
@@ -471,7 +473,7 @@ void FinjinViewerApplicationViewportDelegate::StartFrame(ApplicationViewportUpda
             if (cameraChanged)
                 this->camera.Update();
 
-            if (!updateContext.gpuCommands.StartGraphicsCommandList())
+            if (!updateContext.gpuCommands.StartGraphicsCommands())
             {
             }
 
@@ -568,7 +570,11 @@ void FinjinViewerApplicationViewportDelegate::StartFrame(ApplicationViewportUpda
                 }
             }
 
-            if (!updateContext.gpuCommands.FinishGraphicsCommandList())
+            if (!updateContext.gpuCommands.FinishGraphicsCommands())
+            {
+            }
+
+            if (!updateContext.gpuCommands.ExecuteGraphicsCommands())
             {
             }
 
@@ -579,14 +585,13 @@ void FinjinViewerApplicationViewportDelegate::StartFrame(ApplicationViewportUpda
         {
             FINJIN_DECLARE_ERROR(error);
 
-            updateContext.gpuContext->StartBackFrameBufferRender(frameStage);
-
             updateContext.Execute(frameStage, error);
             if (error)
             {
+                FINJIN_DEBUG_LOG_ERROR("Failed to execute frame stage: %1%", error.ToString());
             }
-
-            updateContext.gpuContext->FinishFrameStage(frameStage);
+            else
+                updateContext.gpuContext->FinishFrameStage(frameStage);
         }
     });
 }
@@ -610,7 +615,7 @@ void FinjinViewerApplicationViewportDelegate::FinishFrame(ApplicationViewportRen
 
         if (!error)
         {
-            renderContext.gpuContext->FinishBackFrameBufferRender(frameStage, renderContext.continueRendering, renderContext.modifyingRenderTarget, renderContext.presentSyncIntervalOverride, error);
+            renderContext.gpuContext->PresentFrameStage(frameStage, renderContext.renderStatus, renderContext.presentSyncIntervalOverride, error);
             if (error)
             {
                 FINJIN_SET_ERROR(error, "Failed to present back buffer.");
@@ -651,13 +656,13 @@ void FinjinViewerApplicationViewportDelegate::HandleEventsAndInputs(ApplicationV
 #if FINJIN_TARGET_PLATFORM_IS_APPLE || FINJIN_TARGET_PLATFORM_IS_LINUX
     if (this->flyingCameraGameControllerIndex == (size_t)-1)
     {
-        for (auto i = 0; i < updateContext.inputContext->GetGameControllerCount(); i++)
+        for (size_t i = 0; i < updateContext.inputContext->GetGameControllerCount(); i++)
         {
             auto gameController = updateContext.inputContext->GetGameController(i);
             if (gameController->IsNewConnection())
             {
                 this->tempAssetRef.ForLocalFile(FlyingCameraInputBindings::GetDefaultBindingsFileName());
-                auto result = this->flyingCameraInputBindings.GetFromConfiguration(updateContext.inputContext, InputBindingsConfigurationSearchCriteria(InputDeviceClass::GAME_CONTROLLER, Utf8String::Empty(), i, InputBindingsConfigurationFlag::CONNECTED_ONLY, InputDeviceSemantic::NONE), this->tempAssetRef, this->tempBuffer);
+                auto result = this->flyingCameraInputBindings.GetFromConfiguration(updateContext.inputContext, InputBindingsConfigurationSearchCriteria(InputDeviceClass::GAME_CONTROLLER, Utf8String::GetEmpty(), i, InputBindingsConfigurationFlag::CONNECTED_ONLY, InputDeviceSemantic::NONE), this->tempAssetRef, this->tempBuffer);
                 if (result.IsSuccess())
                 {
                     FINJIN_DEBUG_LOG_INFO("Game controller successfully configured.");

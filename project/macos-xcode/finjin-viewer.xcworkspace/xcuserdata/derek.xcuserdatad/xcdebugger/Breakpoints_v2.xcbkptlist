@@ -953,12 +953,12 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "../../../finjin-engine/cpp/library/src/finjin/engine/internal/gpu/metal/MetalGpuContext.mm"
-            timestampString = "515374618.028592"
+            timestampString = "517186486.219135"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "226"
-            endingLineNumber = "226"
-            landmarkName = "MetalGpuContext::FinishBackFrameBufferRender(JobPipelineStage&amp; frameStage, bool continueRendering, bool modifyingRenderTarget, size_t presentSyncIntervalOverride, Error&amp; error)"
+            startingLineNumber = "221"
+            endingLineNumber = "221"
+            landmarkName = "MetalGpuContext::FlushGpu()"
             landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>
@@ -1095,12 +1095,12 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "../../../finjin-engine/cpp/library/src/finjin/engine/internal/gpu/metal/MetalGpuContext.mm"
-            timestampString = "515374618.028592"
+            timestampString = "517186486.219135"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "225"
-            endingLineNumber = "225"
-            landmarkName = "MetalGpuContext::FinishBackFrameBufferRender(JobPipelineStage&amp; frameStage, bool continueRendering, bool modifyingRenderTarget, size_t presentSyncIntervalOverride, Error&amp; error)"
+            startingLineNumber = "220"
+            endingLineNumber = "220"
+            landmarkName = "MetalGpuContext::FlushGpu()"
             landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>
@@ -1111,12 +1111,12 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "../../../finjin-engine/cpp/library/src/finjin/engine/internal/gpu/metal/MetalGpuContext.mm"
-            timestampString = "515374618.028592"
+            timestampString = "517186486.219135"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "224"
-            endingLineNumber = "224"
-            landmarkName = "MetalGpuContext::FinishBackFrameBufferRender(JobPipelineStage&amp; frameStage, bool continueRendering, bool modifyingRenderTarget, size_t presentSyncIntervalOverride, Error&amp; error)"
+            startingLineNumber = "219"
+            endingLineNumber = "219"
+            landmarkName = "MetalGpuContext::FlushGpu()"
             landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>
@@ -1205,13 +1205,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "../../../finjin-engine/cpp/library/src/finjin/engine/internal/gpu/metal/MetalGpuContext.mm"
-            timestampString = "515374618.028592"
+            timestampString = "517186486.219135"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "222"
-            endingLineNumber = "222"
-            landmarkName = "MetalGpuContext::FinishBackFrameBufferRender(JobPipelineStage&amp; frameStage, bool continueRendering, bool modifyingRenderTarget, size_t presentSyncIntervalOverride, Error&amp; error)"
-            landmarkType = "7">
+            startingLineNumber = "217"
+            endingLineNumber = "217">
          </BreakpointContent>
       </BreakpointProxy>
       <BreakpointProxy
@@ -1269,7 +1267,7 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "../../../finjin-common/cpp/library/src/VirtualFileSystem.cpp"
-            timestampString = "489359509.487109"
+            timestampString = "516679538.541372"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "62"
@@ -1285,7 +1283,7 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "../../../finjin-common/cpp/library/src/VirtualFileSystem.cpp"
-            timestampString = "489359536.247482"
+            timestampString = "516679538.541372"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "63"
@@ -1301,11 +1299,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "../../../finjin-engine/cpp/library/src/finjin/engine/Application_General.cpp"
-            timestampString = "515552746.605031"
+            timestampString = "517322226.59386"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "611"
-            endingLineNumber = "611"
+            startingLineNumber = "619"
+            endingLineNumber = "619"
             landmarkName = "Application::Initialize(Error&amp; error)"
             landmarkType = "7">
          </BreakpointContent>
@@ -1317,12 +1315,12 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "../../../finjin-common/cpp/library/src/JobFiber.cpp"
-            timestampString = "493167808.889521"
+            timestampString = "516871510.271568"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "320"
-            endingLineNumber = "320"
-            landmarkName = "JobFiber::Create ( size_t fiberIndex, const Utf8String&amp; name, Allocator* allocator, JobFiber* mainFiber, FiberJobScheduler&amp; scheduler, FiberJobQueue&amp; jobQueue, size_t stackCommitSize, size_t stackReserveSize )"
+            startingLineNumber = "331"
+            endingLineNumber = "331"
+            landmarkName = "JobFiber::Create ( size_t fiberIndex, const Utf8String&amp; ownerThreadName, Allocator* allocator, JobFiber* mainFiber, FiberJobScheduler&amp; scheduler, FiberJobQueue&amp; jobQueue, size_t stackCommitSize, size_t stackReserveSize )"
             landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>
@@ -1333,60 +1331,12 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "../../../finjin-common/cpp/library/src/JobFiber.cpp"
-            timestampString = "493167808.889521"
+            timestampString = "516871510.271568"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "317"
-            endingLineNumber = "317"
-            landmarkName = "JobFiber::Create ( size_t fiberIndex, const Utf8String&amp; name, Allocator* allocator, JobFiber* mainFiber, FiberJobScheduler&amp; scheduler, FiberJobQueue&amp; jobQueue, size_t stackCommitSize, size_t stackReserveSize )"
-            landmarkType = "7">
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
-            shouldBeEnabled = "No"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
-            filePath = "../../../finjin-engine/cpp/library/src/finjin/engine/Application_General.cpp"
-            timestampString = "515370015.383178"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "411"
-            endingLineNumber = "411"
-            landmarkName = "Application::Initialize(Error&amp; error)"
-            landmarkType = "7">
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
-            shouldBeEnabled = "No"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
-            filePath = "../../../finjin-engine/cpp/library/src/finjin/engine/Application_General.cpp"
-            timestampString = "515370015.383178"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "415"
-            endingLineNumber = "415"
-            landmarkName = "Application::Initialize(Error&amp; error)"
-            landmarkType = "7">
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
-            shouldBeEnabled = "No"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
-            filePath = "../../../finjin-engine/cpp/library/src/finjin/engine/Application_General.cpp"
-            timestampString = "515370015.383178"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "412"
-            endingLineNumber = "412"
-            landmarkName = "Application::Initialize(Error&amp; error)"
+            startingLineNumber = "325"
+            endingLineNumber = "325"
+            landmarkName = "JobFiber::Create ( size_t fiberIndex, const Utf8String&amp; ownerThreadName, Allocator* allocator, JobFiber* mainFiber, FiberJobScheduler&amp; scheduler, FiberJobQueue&amp; jobQueue, size_t stackCommitSize, size_t stackReserveSize )"
             landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>
@@ -1401,9 +1351,7 @@
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "420"
-            endingLineNumber = "420"
-            landmarkName = "ApplicationViewport::ApplyRenderTargetsResize(Error&amp; error)"
-            landmarkType = "7">
+            endingLineNumber = "420">
          </BreakpointContent>
       </BreakpointProxy>
       <BreakpointProxy
@@ -1413,12 +1361,12 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "../../../finjin-common/cpp/library/src/JobThread.cpp"
-            timestampString = "493177644.729665"
+            timestampString = "516871510.271568"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "211"
-            endingLineNumber = "211"
-            landmarkName = "JobThread::Create ( size_t fiberIndex, const Utf8String&amp; name, Allocator* allocator, JobThreadType type, const LogicalCpu&amp; logicalCpu, size_t maxJobCount, size_t jobObjectHeapSize, size_t fiberCount, size_t stackCommitSize, size_t stackReserveSize, Error&amp; error )"
+            startingLineNumber = "208"
+            endingLineNumber = "208"
+            landmarkName = "JobThread::Create ( size_t threadIndex, Allocator* allocator, JobThreadType type, const LogicalCpu&amp; logicalCpu, size_t maxJobCount, size_t jobObjectHeapSize, size_t fiberCount, size_t stackCommitSize, size_t stackReserveSize, Error&amp; error )"
             landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>
@@ -1429,11 +1377,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "../../../finjin-engine/cpp/library/src/finjin/engine/Application_General.cpp"
-            timestampString = "515552746.605031"
+            timestampString = "517322226.59386"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "787"
-            endingLineNumber = "787"
+            startingLineNumber = "804"
+            endingLineNumber = "804"
             landmarkName = "Application::Initialize(Error&amp; error)"
             landmarkType = "7">
          </BreakpointContent>
@@ -1445,12 +1393,12 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "../../../finjin-common/cpp/library/src/JobThread.cpp"
-            timestampString = "493177644.729665"
+            timestampString = "516871510.271568"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "219"
-            endingLineNumber = "219"
-            landmarkName = "JobThread::Create ( size_t fiberIndex, const Utf8String&amp; name, Allocator* allocator, JobThreadType type, const LogicalCpu&amp; logicalCpu, size_t maxJobCount, size_t jobObjectHeapSize, size_t fiberCount, size_t stackCommitSize, size_t stackReserveSize, Error&amp; error )"
+            startingLineNumber = "216"
+            endingLineNumber = "216"
+            landmarkName = "JobThread::Create ( size_t threadIndex, Allocator* allocator, JobThreadType type, const LogicalCpu&amp; logicalCpu, size_t maxJobCount, size_t jobObjectHeapSize, size_t fiberCount, size_t stackCommitSize, size_t stackReserveSize, Error&amp; error )"
             landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>
@@ -1509,11 +1457,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "../../../finjin-common/cpp/library/src/JobThread.cpp"
-            timestampString = "493177644.729665"
+            timestampString = "516871510.271568"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "298"
-            endingLineNumber = "298"
+            startingLineNumber = "327"
+            endingLineNumber = "327"
             landmarkName = "JobThread::IsRunningFibers()"
             landmarkType = "7">
          </BreakpointContent>
@@ -1525,7 +1473,7 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "../../../finjin-engine/cpp/library/src/finjin/engine/internal/app/macos/finjin/engine/FinjinNSApplicationDelegate.mm"
-            timestampString = "515625287.577743"
+            timestampString = "516872655.088549"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "113"
@@ -1541,11 +1489,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "../../../finjin-engine/cpp/library/src/finjin/engine/Application_General.cpp"
-            timestampString = "515370015.383178"
+            timestampString = "517322226.59386"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "344"
-            endingLineNumber = "344"
+            startingLineNumber = "347"
+            endingLineNumber = "347"
             landmarkName = "Application::Tick(Error&amp; error)"
             landmarkType = "7">
          </BreakpointContent>
@@ -1557,11 +1505,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "../../../finjin-engine/cpp/library/src/finjin/engine/Application_General.cpp"
-            timestampString = "515370015.383178"
+            timestampString = "517322226.59386"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "349"
-            endingLineNumber = "349"
+            startingLineNumber = "352"
+            endingLineNumber = "352"
             landmarkName = "Application::Tick(Error&amp; error)"
             landmarkType = "7">
          </BreakpointContent>
@@ -1573,12 +1521,12 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "../../../finjin-common/cpp/library/src/JobSystem.cpp"
-            timestampString = "493173281.695661"
+            timestampString = "516833025.976715"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "450"
-            endingLineNumber = "450"
-            landmarkName = "JobSystem::Start(Error&amp; error)"
+            startingLineNumber = "449"
+            endingLineNumber = "449"
+            landmarkName = "JobSystem::Start(bool validate, Error&amp; error)"
             landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>
@@ -1589,11 +1537,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "../../../finjin-common/cpp/library/src/JobSystem.cpp"
-            timestampString = "493173453.342872"
+            timestampString = "516830216.997908"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "412"
-            endingLineNumber = "412"
+            startingLineNumber = "406"
+            endingLineNumber = "406"
             landmarkName = "JobSystem::Create(const Settings&amp; settings, Error&amp; error)"
             landmarkType = "7">
          </BreakpointContent>
@@ -1605,11 +1553,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "../../../finjin-common/cpp/library/src/JobFiber.cpp"
-            timestampString = "493174844.348202"
+            timestampString = "516835423.406912"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "126"
-            endingLineNumber = "126"
+            startingLineNumber = "127"
+            endingLineNumber = "127"
             landmarkName = "FiberFuncWin32(void* parameter)"
             landmarkType = "9">
          </BreakpointContent>
@@ -1637,11 +1585,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "../../../finjin-common/cpp/library/src/JobThread.cpp"
-            timestampString = "493177644.729665"
+            timestampString = "516871510.271568"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "267"
-            endingLineNumber = "267"
+            startingLineNumber = "296"
+            endingLineNumber = "296"
             landmarkName = "JobThread::Start(Error&amp; error)"
             landmarkType = "7">
          </BreakpointContent>
@@ -1653,11 +1601,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "../../../finjin-common/cpp/library/src/GeneralAllocator.cpp"
-            timestampString = "515293414.57933"
+            timestampString = "516085974.743668"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "453"
-            endingLineNumber = "453"
+            startingLineNumber = "501"
+            endingLineNumber = "501"
             landmarkName = "GeneralAllocator::_Init()"
             landmarkType = "7">
          </BreakpointContent>
@@ -1669,11 +1617,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "../../../finjin-common/cpp/library/src/GeneralAllocator.cpp"
-            timestampString = "515293414.57933"
+            timestampString = "516085974.743668"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "307"
-            endingLineNumber = "307"
+            startingLineNumber = "355"
+            endingLineNumber = "355"
             landmarkName = "GeneralAllocator::Deallocate(void* mem)"
             landmarkType = "7">
          </BreakpointContent>
@@ -1685,11 +1633,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "../../../finjin-common/cpp/library/src/GeneralAllocator.cpp"
-            timestampString = "515293414.57933"
+            timestampString = "516085974.743668"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "257"
-            endingLineNumber = "257"
+            startingLineNumber = "305"
+            endingLineNumber = "305"
             landmarkName = "GeneralAllocator::Deallocate(void* mem)"
             landmarkType = "7">
          </BreakpointContent>
@@ -1701,11 +1649,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "../../../finjin-common/cpp/library/src/GeneralAllocator.cpp"
-            timestampString = "515293414.57933"
+            timestampString = "516085974.743668"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "150"
-            endingLineNumber = "150"
+            startingLineNumber = "198"
+            endingLineNumber = "198"
             landmarkName = "GeneralAllocator::Allocate(size_t byteCount, FINJIN_CALLER_PARAMETERS_DECLARATION)"
             landmarkType = "7">
          </BreakpointContent>
@@ -1717,11 +1665,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "../../../finjin-engine/cpp/library/src/finjin/engine/Application_General.cpp"
-            timestampString = "515370015.383178"
+            timestampString = "517322226.59386"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "262"
-            endingLineNumber = "262"
+            startingLineNumber = "265"
+            endingLineNumber = "265"
             landmarkName = "Application::Run(CommandLineArgsProcessor&amp; argsProcessor, Error&amp; error)"
             landmarkType = "7">
          </BreakpointContent>
@@ -1733,11 +1681,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "../../../finjin-engine/cpp/library/src/finjin/engine/Application_General.cpp"
-            timestampString = "515370015.383178"
+            timestampString = "517322226.59386"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "442"
-            endingLineNumber = "442"
+            startingLineNumber = "449"
+            endingLineNumber = "449"
             landmarkName = "Application::Initialize(Error&amp; error)"
             landmarkType = "7">
             <Locations>
@@ -1781,7 +1729,7 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "../../../finjin-common/cpp/library/src/VirtualFileSystem.cpp"
-            timestampString = "506833062.485299"
+            timestampString = "516679538.541372"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "213"
@@ -1796,28 +1744,12 @@
             shouldBeEnabled = "No"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
-            filePath = "../../../finjin-common/cpp/library/src/DirectoryVirtualFileSystemRoot.cpp"
-            timestampString = "506833111.356424"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "46"
-            endingLineNumber = "46"
-            landmarkName = "Enumerate(const Path&amp; rootDirectory, const Path&amp; path, FileSystemEntry&amp; fileSystemEntry, FileSystemEntries&amp; items)"
-            landmarkType = "9">
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
-            shouldBeEnabled = "No"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
             filePath = "../../../finjin-engine/cpp/library/src/finjin/engine/internal/gpu/metal/MetalSystem.mm"
-            timestampString = "515440428.38529"
+            timestampString = "517322226.59386"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "133"
-            endingLineNumber = "133"
+            startingLineNumber = "137"
+            endingLineNumber = "137"
             landmarkName = "MetalSystem::Create(const Settings&amp; settings, Error&amp; error)"
             landmarkType = "7">
          </BreakpointContent>
@@ -1845,11 +1777,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "../../../finjin-engine/cpp/library/src/finjin/engine/internal/gpu/metal/MetalSystem.mm"
-            timestampString = "515275502.271373"
+            timestampString = "517322226.59386"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "121"
-            endingLineNumber = "121"
+            startingLineNumber = "125"
+            endingLineNumber = "125"
             landmarkName = "MetalSystem::Create(const Settings&amp; settings, Error&amp; error)"
             landmarkType = "7">
          </BreakpointContent>
@@ -1861,11 +1793,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "../../../finjin-engine/cpp/library/src/finjin/engine/internal/gpu/metal/MetalGpuContextImpl.mm"
-            timestampString = "515571248.420037"
+            timestampString = "517378055.721388"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "445"
-            endingLineNumber = "445"
+            startingLineNumber = "381"
+            endingLineNumber = "381"
             landmarkName = "MetalGpuContextImpl::CreateDeviceSupportObjects(Error&amp; error)"
             landmarkType = "7">
          </BreakpointContent>
@@ -1876,28 +1808,12 @@
             shouldBeEnabled = "No"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
-            filePath = "../../../finjin-engine/cpp/library/src/finjin/engine/internal/gpu/metal/MetalGpuContextImpl.mm"
-            timestampString = "515571248.420037"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "334"
-            endingLineNumber = "334"
-            landmarkName = "MetalGpuContextImpl::CreateDevice(Error&amp; error)"
-            landmarkType = "7">
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
-            shouldBeEnabled = "No"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
             filePath = "../../../finjin-engine/cpp/library/src/finjin/engine/internal/gpu/metal/MetalSystem.mm"
-            timestampString = "515440428.38529"
+            timestampString = "517322226.59386"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "204"
-            endingLineNumber = "204"
+            startingLineNumber = "208"
+            endingLineNumber = "208"
             landmarkName = "MetalSystem::CreateContext(const MetalGpuContext::Settings&amp; settings, Error&amp; error)"
             landmarkType = "7">
          </BreakpointContent>
@@ -1909,11 +1825,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "../../../finjin-engine/cpp/library/src/finjin/engine/internal/gpu/metal/MetalSystem.mm"
-            timestampString = "515440428.38529"
+            timestampString = "517322226.59386"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "147"
-            endingLineNumber = "147"
+            startingLineNumber = "151"
+            endingLineNumber = "151"
             landmarkName = "MetalSystem::Destroy()"
             landmarkType = "7">
          </BreakpointContent>
@@ -1925,11 +1841,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "../../../finjin-common/cpp/library/src/Path.cpp"
-            timestampString = "515370519.308594"
+            timestampString = "516881118.798228"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "2240"
-            endingLineNumber = "2240"
+            startingLineNumber = "2251"
+            endingLineNumber = "2251"
             landmarkName = "Path::ExpandUserHomeDirectory()"
             landmarkType = "7">
          </BreakpointContent>
@@ -1941,109 +1857,13 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "../../../finjin-common/cpp/library/src/Path.cpp"
-            timestampString = "515370341.295551"
+            timestampString = "516833970.315339"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "2223"
-            endingLineNumber = "2223"
+            startingLineNumber = "2235"
+            endingLineNumber = "2235"
             landmarkName = "Path::ExpandUserHomeDirectory()"
             landmarkType = "7">
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
-            shouldBeEnabled = "No"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
-            filePath = "../../../finjin-common/cpp/library/src/Path.cpp"
-            timestampString = "515370584.578551"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "2239"
-            endingLineNumber = "2239"
-            landmarkName = "Path::ExpandUserHomeDirectory()"
-            landmarkType = "7">
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
-            shouldBeEnabled = "No"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
-            filePath = "../../../finjin-engine/cpp/library/src/finjin/engine/internal/gpu/metal/MetalGpuContextImpl.mm"
-            timestampString = "515571248.420037"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "47"
-            endingLineNumber = "47"
-            landmarkName = "IsSupportedColorFormat(MetalFeatureSet::Capabilities&amp; caps, MTLPixelFormat format)"
-            landmarkType = "9">
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
-            shouldBeEnabled = "No"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
-            filePath = "../../../finjin-engine/cpp/library/src/finjin/engine/internal/gpu/metal/MetalGpuContextImpl.mm"
-            timestampString = "515571248.420037"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "41"
-            endingLineNumber = "41"
-            landmarkName = "IsSupportedColorFormat(MetalFeatureSet::Capabilities&amp; caps, MTLPixelFormat format)"
-            landmarkType = "9">
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
-            shouldBeEnabled = "No"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
-            filePath = "../../../finjin-engine/cpp/library/src/finjin/engine/internal/gpu/metal/MetalGpuContextImpl.mm"
-            timestampString = "515571248.420037"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "40"
-            endingLineNumber = "40"
-            landmarkName = "IsSupportedColorFormat(MetalFeatureSet::Capabilities&amp; caps, MTLPixelFormat format)"
-            landmarkType = "9">
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
-            shouldBeEnabled = "No"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
-            filePath = "../../../finjin-engine/cpp/library/src/finjin/engine/internal/gpu/metal/MetalGpuContextImpl.mm"
-            timestampString = "515571248.420037"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "44"
-            endingLineNumber = "44"
-            landmarkName = "IsSupportedColorFormat(MetalFeatureSet::Capabilities&amp; caps, MTLPixelFormat format)"
-            landmarkType = "9">
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
-            shouldBeEnabled = "No"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
-            filePath = "../../../finjin-engine/cpp/library/src/finjin/engine/internal/gpu/metal/MetalGpuContextImpl.mm"
-            timestampString = "515571248.420037"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "42"
-            endingLineNumber = "42"
-            landmarkName = "IsSupportedColorFormat(MetalFeatureSet::Capabilities&amp; caps, MTLPixelFormat format)"
-            landmarkType = "9">
          </BreakpointContent>
       </BreakpointProxy>
       <BreakpointProxy
@@ -2101,11 +1921,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "../../../finjin-engine/cpp/library/src/finjin/engine/internal/gpu/metal/MetalStaticMeshRenderer.mm"
-            timestampString = "515735559.818476"
+            timestampString = "516785125.507386"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "289"
-            endingLineNumber = "289"
+            startingLineNumber = "270"
+            endingLineNumber = "270"
             landmarkName = "MetalStaticMeshRenderer::Create(Settings&amp;&amp; settings, Error&amp; error)"
             landmarkType = "7">
          </BreakpointContent>
@@ -2117,11 +1937,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "../../../finjin-engine/cpp/library/src/finjin/engine/internal/gpu/metal/MetalGpuContextImpl.mm"
-            timestampString = "515571248.420037"
+            timestampString = "517378055.721388"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "466"
-            endingLineNumber = "466"
+            startingLineNumber = "402"
+            endingLineNumber = "402"
             landmarkName = "MetalGpuContextImpl::CreateDeviceSupportObjects(Error&amp; error)"
             landmarkType = "7">
          </BreakpointContent>
@@ -2133,11 +1953,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "../../../finjin-engine/cpp/library/src/finjin/engine/internal/gpu/metal/MetalGpuContextImpl.mm"
-            timestampString = "515571248.420037"
+            timestampString = "517378055.721388"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "484"
-            endingLineNumber = "484"
+            startingLineNumber = "420"
+            endingLineNumber = "420"
             landmarkName = "MetalGpuContextImpl::CreateDeviceSupportObjects(Error&amp; error)"
             landmarkType = "7">
          </BreakpointContent>
@@ -2149,11 +1969,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "../../../finjin-engine/cpp/library/src/finjin/engine/internal/gpu/metal/MetalGpuContextImpl.mm"
-            timestampString = "515571248.420037"
+            timestampString = "517378055.721388"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "480"
-            endingLineNumber = "480"
+            startingLineNumber = "416"
+            endingLineNumber = "416"
             landmarkName = "MetalGpuContextImpl::CreateDeviceSupportObjects(Error&amp; error)"
             landmarkType = "7">
          </BreakpointContent>
@@ -2165,11 +1985,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "../../../finjin-engine/cpp/library/src/finjin/engine/internal/gpu/metal/MetalGpuContextImpl.mm"
-            timestampString = "515571248.420037"
+            timestampString = "517378055.721388"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "475"
-            endingLineNumber = "475"
+            startingLineNumber = "411"
+            endingLineNumber = "411"
             landmarkName = "MetalGpuContextImpl::CreateDeviceSupportObjects(Error&amp; error)"
             landmarkType = "7">
          </BreakpointContent>
@@ -2181,11 +2001,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "../../../finjin-engine/cpp/library/src/finjin/engine/internal/gpu/metal/MetalStaticMeshRenderer.mm"
-            timestampString = "515735559.818476"
+            timestampString = "516785125.507386"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "704"
-            endingLineNumber = "704"
+            startingLineNumber = "685"
+            endingLineNumber = "685"
             landmarkName = "MetalStaticMeshRenderer::RenderQueued(MetalStaticMeshRendererFrameState&amp; frameState, id&lt;MTLCommandBuffer&gt; commandBuffer, id&lt;MTLRenderCommandEncoder&gt; renderCommandEncoder)"
             landmarkType = "7">
          </BreakpointContent>
@@ -2197,11 +2017,27 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "../../../finjin-engine/cpp/library/src/finjin/engine/internal/gpu/metal/MetalGpuContextImpl.mm"
-            timestampString = "515672092.1053"
+            timestampString = "517466745.880146"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "1000"
-            endingLineNumber = "1000"
+            startingLineNumber = "937"
+            endingLineNumber = "937"
+            landmarkName = "MetalGpuContextImpl::DestroyScreenSizeDependentResources(bool resizing)"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "../../../finjin-engine/cpp/library/src/finjin/engine/internal/gpu/metal/MetalGpuContextImpl.mm"
+            timestampString = "517466745.880146"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "949"
+            endingLineNumber = "949"
             landmarkName = "MetalGpuContextImpl::CreateTextureFromMainThread(FinjinTexture* texture, Error&amp; error)"
             landmarkType = "7">
          </BreakpointContent>
@@ -2213,27 +2049,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "../../../finjin-engine/cpp/library/src/finjin/engine/internal/gpu/metal/MetalGpuContextImpl.mm"
-            timestampString = "515672092.1053"
+            timestampString = "517466745.880146"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "1012"
-            endingLineNumber = "1012"
-            landmarkName = "MetalGpuContextImpl::CreateTextureFromMainThread(FinjinTexture* texture, Error&amp; error)"
-            landmarkType = "7">
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
-            shouldBeEnabled = "No"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
-            filePath = "../../../finjin-engine/cpp/library/src/finjin/engine/internal/gpu/metal/MetalGpuContextImpl.mm"
-            timestampString = "515672092.1053"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "1394"
-            endingLineNumber = "1394">
+            startingLineNumber = "1477"
+            endingLineNumber = "1477">
          </BreakpointContent>
       </BreakpointProxy>
       <BreakpointProxy
@@ -2243,7 +2063,7 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "../../src/FinjinViewerApplicationViewportDelegate.cpp"
-            timestampString = "515526072.745542"
+            timestampString = "516900926.13271"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "404"
@@ -2307,44 +2127,12 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "../../../finjin-engine/cpp/library/src/finjin/engine/internal/gpu/metal/MetalGpuContextImpl.mm"
-            timestampString = "515571248.420037"
+            timestampString = "517378055.721388"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "404"
-            endingLineNumber = "404"
-            landmarkName = "MetalGpuContextImpl::CreateDevice(Error&amp; error)"
-            landmarkType = "7">
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
-            shouldBeEnabled = "No"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
-            filePath = "../../../finjin-engine/cpp/library/src/finjin/engine/internal/gpu/metal/MetalGpuContextImpl.mm"
-            timestampString = "515672092.1053"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "964"
-            endingLineNumber = "964"
-            landmarkName = "MetalGpuContextImpl::CreateScreenSizeDependentResources(Error&amp; error)"
-            landmarkType = "7">
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
-            shouldBeEnabled = "No"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
-            filePath = "../../../finjin-engine/cpp/library/src/finjin/engine/internal/gpu/metal/MetalGpuContextImpl.mm"
-            timestampString = "515571248.420037"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "597"
-            endingLineNumber = "597"
-            landmarkName = "MetalGpuContextImpl::StartFrameStage(size_t index, SimpleTimeDelta elapsedTime, SimpleTimeCounter totalElapsedTime)"
+            startingLineNumber = "581"
+            endingLineNumber = "581"
+            landmarkName = "MetalGpuContextImpl::CreateRenderers(Error&amp; error)"
             landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>
@@ -2371,7 +2159,7 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "../../src/FinjinViewerApplicationViewportDelegate.cpp"
-            timestampString = "515526072.745542"
+            timestampString = "517186486.219135"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "655"
@@ -2435,11 +2223,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "../../../finjin-engine/cpp/library/src/finjin/engine/internal/gpu/metal/MetalStaticMeshRenderer.mm"
-            timestampString = "515735559.818476"
+            timestampString = "516785125.507386"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "759"
-            endingLineNumber = "759"
+            startingLineNumber = "740"
+            endingLineNumber = "740"
             landmarkName = "MetalStaticMeshRenderer::RenderQueued(MetalStaticMeshRendererFrameState&amp; frameState, id&lt;MTLCommandBuffer&gt; commandBuffer, id&lt;MTLRenderCommandEncoder&gt; renderCommandEncoder)"
             landmarkType = "7">
          </BreakpointContent>
@@ -2483,7 +2271,7 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "../../../finjin-engine/cpp/library/src/finjin/engine/internal/app/macos/finjin/engine/FinjinNSApplicationDelegate.mm"
-            timestampString = "515625287.577743"
+            timestampString = "516872655.088549"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "142"
@@ -2515,11 +2303,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "../../../finjin-engine/cpp/library/src/finjin/engine/Application_General.cpp"
-            timestampString = "515669906.278543"
+            timestampString = "517322226.59386"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "1131"
-            endingLineNumber = "1131"
+            startingLineNumber = "1148"
+            endingLineNumber = "1148"
             landmarkName = "Application::GetConfiguredApplicationViewportSize(WindowSize&amp; windowSize, const Setting&lt;OSWindowRect&gt;&amp; windowFrame)"
             landmarkType = "7">
          </BreakpointContent>
@@ -2531,11 +2319,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "../../../finjin-engine/cpp/library/src/finjin/engine/Application_General.cpp"
-            timestampString = "515669907.779663"
+            timestampString = "517322226.59386"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "1132"
-            endingLineNumber = "1132"
+            startingLineNumber = "1149"
+            endingLineNumber = "1149"
             landmarkName = "Application::GetConfiguredApplicationViewportSize(WindowSize&amp; windowSize, const Setting&lt;OSWindowRect&gt;&amp; windowFrame)"
             landmarkType = "7">
          </BreakpointContent>
@@ -2546,13 +2334,157 @@
             shouldBeEnabled = "No"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
+            filePath = "../../../finjin-engine/cpp/library/src/finjin/engine/InputComponents.cpp"
+            timestampString = "516530122.889512"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "947"
+            endingLineNumber = "947"
+            landmarkName = "InputButton::ClearChanged()"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "../../../finjin-engine/cpp/library/src/finjin/engine/InputComponents.cpp"
+            timestampString = "516530122.889512"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "948"
+            endingLineNumber = "948"
+            landmarkName = "InputButton::ClearChanged()"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "../../../finjin-engine/cpp/library/src/finjin/engine/InputComponents.cpp"
+            timestampString = "516530122.889512"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "950"
+            endingLineNumber = "950"
+            landmarkName = "InputButton::GetValue()"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "../../../finjin-engine/cpp/library/src/finjin/engine/internal/app/macos/finjin/engine/Application.mm"
+            timestampString = "516085808.206342"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "56"
+            endingLineNumber = "56"
+            landmarkName = "Application::InitializeGlobals(Error&amp; error)"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
             filePath = "../../../finjin-engine/cpp/library/src/finjin/engine/internal/gpu/metal/MetalGpuContextImpl.mm"
-            timestampString = "515670330.068022"
+            timestampString = "517466745.880146"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "962"
-            endingLineNumber = "962"
-            landmarkName = "MetalGpuContextImpl::CreateScreenSizeDependentResources(Error&amp; error)"
+            startingLineNumber = "1067"
+            endingLineNumber = "1067"
+            landmarkName = "MetalGpuContextImpl::CreateMaterialFromMainThread(FinjinMaterial* material, Error&amp; error)"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "../../../finjin-common/cpp/library/src/VirtualFileSystem.cpp"
+            timestampString = "516683572.352939"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "273"
+            endingLineNumber = "273"
+            landmarkName = "VirtualFileSystem::CanRead(const Path&amp; relativeFilePath)"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "../../../finjin-common/cpp/library/src/VirtualFileSystem.cpp"
+            timestampString = "516683572.352939"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "313"
+            endingLineNumber = "313"
+            landmarkName = "VirtualFileSystem::Read(const Path&amp; relativeFilePath, ByteBuffer&amp; buffer)"
+            landmarkType = "7">
+            <Locations>
+               <Location
+                  shouldBeEnabled = "No"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "Finjin::Common::VirtualFileSystem::Read(Finjin::Common::Path const&amp;, Finjin::Common::ByteBuffer&amp;)"
+                  moduleName = "finjin-viewer"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/derek/git/nedelman/finjin-common/cpp/library/src/VirtualFileSystem.cpp"
+                  timestampString = "516675040.913157"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "313"
+                  endingLineNumber = "313"
+                  offsetFromSymbolStart = "303">
+               </Location>
+               <Location
+                  shouldBeEnabled = "No"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "Finjin::Common::VirtualFileSystem::Read(Finjin::Common::Path const&amp;, Finjin::Common::ByteBuffer&amp;)"
+                  moduleName = "finjin-viewer"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/derek/git/nedelman/finjin-common/cpp/library/src/VirtualFileSystem.cpp"
+                  timestampString = "516675040.916265"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "313"
+                  endingLineNumber = "313"
+                  offsetFromSymbolStart = "357">
+               </Location>
+            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "../../../finjin-common/cpp/library/src/VirtualFileSystem.cpp"
+            timestampString = "516683572.352939"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "312"
+            endingLineNumber = "312"
+            landmarkName = "VirtualFileSystem::Read(const Path&amp; relativeFilePath, ByteBuffer&amp; buffer)"
             landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>
@@ -2563,12 +2495,12 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "../../../finjin-engine/cpp/library/src/finjin/engine/internal/gpu/metal/MetalGpuContextImpl.mm"
-            timestampString = "515671975.100035"
+            timestampString = "517299797.594461"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "961"
-            endingLineNumber = "961"
-            landmarkName = "MetalGpuContextImpl::CreateScreenSizeDependentResources(Error&amp; error)"
+            startingLineNumber = "67"
+            endingLineNumber = "67"
+            landmarkName = "MetalGpuContextImpl::InternalSettings::ParseSettings(const ByteBufferReader&amp; configFileBuffer, const Path&amp; assetFilePath, Error&amp; error)"
             landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>
@@ -2578,13 +2510,13 @@
             shouldBeEnabled = "No"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
-            filePath = "../../../finjin-engine/cpp/library/src/finjin/engine/InputComponents.cpp"
-            timestampString = "515698682.458169"
+            filePath = "../../../finjin-engine/cpp/library/src/finjin/engine/internal/gpu/metal/MetalGpuContextImpl.mm"
+            timestampString = "517378055.721388"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "904"
-            endingLineNumber = "904"
-            landmarkName = "InputButton::ClearChanged()"
+            startingLineNumber = "417"
+            endingLineNumber = "417"
+            landmarkName = "MetalGpuContextImpl::CreateDeviceSupportObjects(Error&amp; error)"
             landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>
@@ -2594,13 +2526,13 @@
             shouldBeEnabled = "No"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
-            filePath = "../../../finjin-engine/cpp/library/src/finjin/engine/InputComponents.cpp"
-            timestampString = "515698682.458169"
+            filePath = "../../../finjin-common/cpp/library/src/VirtualFileSystem.cpp"
+            timestampString = "516679538.541372"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "905"
-            endingLineNumber = "905"
-            landmarkName = "InputButton::ClearChanged()"
+            startingLineNumber = "33"
+            endingLineNumber = "33"
+            landmarkName = "VirtualFileSystem::Create(const Settings&amp; settings, Error&amp; error)"
             landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>
@@ -2610,13 +2542,1639 @@
             shouldBeEnabled = "No"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
-            filePath = "../../../finjin-engine/cpp/library/src/finjin/engine/InputComponents.cpp"
-            timestampString = "515698682.458169"
+            filePath = "../../../finjin-engine/cpp/library/src/finjin/engine/ApplicationDelegate.cpp"
+            timestampString = "516698451.568182"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "907"
-            endingLineNumber = "907"
-            landmarkName = "InputButton::ClearChanged()"
+            startingLineNumber = "113"
+            endingLineNumber = "113"
+            landmarkName = "ApplicationDelegate::OnGpusEnumerated(const HardwareGpuDescriptions&amp; hardwareGpus, const SoftwareGpuDescriptions&amp; softwareGpus)"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "../../../finjin-engine/cpp/library/src/finjin/engine/internal/gpu/metal/MetalGpuContextImpl.mm"
+            timestampString = "517378055.721388"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "393"
+            endingLineNumber = "393"
+            landmarkName = "MetalGpuContextImpl::CreateDeviceSupportObjects(Error&amp; error)"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "../../../finjin-engine/cpp/library/src/finjin/engine/Application_General.cpp"
+            timestampString = "516765660.068952"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "83"
+            endingLineNumber = "83">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "../../../finjin-engine/cpp/library/src/finjin/engine/Application_General.cpp"
+            timestampString = "516765662.278199"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "88"
+            endingLineNumber = "88">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "../../../finjin-engine/cpp/library/src/finjin/engine/Application_General.cpp"
+            timestampString = "517322226.59386"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "406"
+            endingLineNumber = "406"
+            landmarkName = "Application::Initialize(Error&amp; error)"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "../../../finjin-common/cpp/library/src/PassthroughSystemAllocator.cpp"
+            timestampString = "516780076.262591"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "128"
+            endingLineNumber = "128"
+            landmarkName = "PassthroughSystemAllocator::GetBytesFree()"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "../../../finjin-engine/cpp/library/src/finjin/engine/Application_General.cpp"
+            timestampString = "517322226.59386"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "410"
+            endingLineNumber = "410"
+            landmarkName = "Application::Initialize(Error&amp; error)"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "../../../finjin-common/cpp/library/include/finjin/common/AllocatedClass.hpp"
+            timestampString = "516835423.406912"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "76"
+            endingLineNumber = "76"
+            landmarkName = "NewUnique(Allocator* allocator, FINJIN_CALLER_PARAMETERS_DECLARATION, Args&amp;&amp;... args)"
+            landmarkType = "9">
+            <Locations>
+               <Location
+                  shouldBeEnabled = "No"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "Finjin::Viewer::FinjinViewerApplicationViewportDelegate* Finjin::Common::AllocatedClass::New&lt;Finjin::Viewer::FinjinViewerApplicationViewportDelegate, Finjin::Common::Setting&lt;Finjin::Common::Utf8String&gt;&amp;&gt;(Finjin::Common::Allocator*, char const*, char const*, int, Finjin::Common::Setting&lt;Finjin::Common::Utf8String&gt;&amp;&amp;&amp;)"
+                  moduleName = "finjin-viewer"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/derek/git/nedelman/finjin-common/cpp/library/include/finjin/common/AllocatedClass.hpp"
+                  timestampString = "516832642.482606"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "78"
+                  endingLineNumber = "78"
+                  offsetFromSymbolStart = "232">
+               </Location>
+               <Location
+                  shouldBeEnabled = "No"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "Finjin::Common::packaged_task&lt;void ()&gt;* Finjin::Common::AllocatedClass::New&lt;Finjin::Common::WrappedFiberJob&lt;boost::intrusive_ptr&lt;Finjin::Common::FiberJob&gt; Finjin::Common::JobSystem::CreateFiberJob&lt;Finjin::Common::packaged_task&lt;void ()&gt; &gt;(Finjin::Common::Allocator*, unsigned long, Finjin::Common::SimpleSpinLockMutex*, Finjin::Common::packaged_task&lt;void ()&gt;&amp;&amp;)::&apos;lambda&apos;()&gt;, unsigned long&amp;, Finjin::Common::SimpleSpinLockMutex*&amp;, boost::intrusive_ptr&lt;Finjin::Common::FiberJob&gt; Finjin::Common::JobSystem::CreateFiberJob&lt;Finjin::Common::packaged_task&lt;void ()&gt; &gt;(Finjin::Common::Allocator*, unsigned long, Finjin::Common::SimpleSpinLockMutex*, Finjin::Common::packaged_task&lt;void ()&gt;&amp;&amp;)::&apos;lambda&apos;()&gt;(Finjin::Common::Allocator*, char const*, char const*, int)"
+                  moduleName = "finjin-viewer"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/derek/git/nedelman/finjin-common/cpp/library/include/finjin/common/AllocatedClass.hpp"
+                  timestampString = "516832642.485413"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "78"
+                  endingLineNumber = "78"
+                  offsetFromSymbolStart = "247">
+               </Location>
+               <Location
+                  shouldBeEnabled = "No"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "Finjin::Viewer::FinjinViewerApplicationDelegate* Finjin::Common::AllocatedClass::New&lt;Finjin::Viewer::FinjinViewerApplicationDelegate&gt;(Finjin::Common::Allocator*, char const*, char const*, int)"
+                  moduleName = "finjin-viewer"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/derek/git/nedelman/finjin-common/cpp/library/include/finjin/common/AllocatedClass.hpp"
+                  timestampString = "516832642.487807"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "78"
+                  endingLineNumber = "78"
+                  offsetFromSymbolStart = "228">
+               </Location>
+               <Location
+                  shouldBeEnabled = "No"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "Finjin::Common::Thread::Impl* Finjin::Common::AllocatedClass::New&lt;Finjin::Common::Thread::Impl&gt;(Finjin::Common::Allocator*, char const*, char const*, int)"
+                  moduleName = "finjin-viewer"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/derek/git/nedelman/finjin-common/cpp/library/project/macos-xcode/../../include/finjin/common/AllocatedClass.hpp"
+                  timestampString = "516832642.489933"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "78"
+                  endingLineNumber = "78"
+                  offsetFromSymbolStart = "228">
+               </Location>
+               <Location
+                  shouldBeEnabled = "No"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "Finjin::Common::JobFiber::Impl* Finjin::Common::AllocatedClass::New&lt;Finjin::Common::JobFiber::Impl&gt;(Finjin::Common::Allocator*, char const*, char const*, int)"
+                  moduleName = "finjin-viewer"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/derek/git/nedelman/finjin-common/cpp/library/project/macos-xcode/../../include/finjin/common/AllocatedClass.hpp"
+                  timestampString = "516832642.49154"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "78"
+                  endingLineNumber = "78"
+                  offsetFromSymbolStart = "228">
+               </Location>
+               <Location
+                  shouldBeEnabled = "No"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "Finjin::Common::JobSystem::Impl* Finjin::Common::AllocatedClass::New&lt;Finjin::Common::JobSystem::Impl&gt;(Finjin::Common::Allocator*, char const*, char const*, int)"
+                  moduleName = "finjin-viewer"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/derek/git/nedelman/finjin-common/cpp/library/project/macos-xcode/../../include/finjin/common/AllocatedClass.hpp"
+                  timestampString = "516832642.493037"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "78"
+                  endingLineNumber = "78"
+                  offsetFromSymbolStart = "228">
+               </Location>
+               <Location
+                  shouldBeEnabled = "No"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "Finjin::Common::JobThread::Impl* Finjin::Common::AllocatedClass::New&lt;Finjin::Common::JobThread::Impl, Finjin::Common::JobThread*&gt;(Finjin::Common::Allocator*, char const*, char const*, int, Finjin::Common::JobThread*&amp;&amp;)"
+                  moduleName = "finjin-viewer"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/derek/git/nedelman/finjin-common/cpp/library/project/macos-xcode/../../include/finjin/common/AllocatedClass.hpp"
+                  timestampString = "516832642.496154"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "78"
+                  endingLineNumber = "78"
+                  offsetFromSymbolStart = "232">
+               </Location>
+               <Location
+                  shouldBeEnabled = "No"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "Finjin::Engine::FinjinSceneMovableObject* Finjin::Common::AllocatedClass::New&lt;Finjin::Engine::FinjinSceneMovableObject&gt;(Finjin::Common::Allocator*, char const*, char const*, int)"
+                  moduleName = "finjin-viewer"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/derek/git/nedelman/finjin-engine/cpp/library/project/macos-xcode/../../../../../finjin-common/cpp/library/include/finjin/common/AllocatedClass.hpp"
+                  timestampString = "516832642.49843"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "78"
+                  endingLineNumber = "78"
+                  offsetFromSymbolStart = "228">
+               </Location>
+               <Location
+                  shouldBeEnabled = "No"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "Finjin::Engine::FinjinSceneRenderableMovableObject* Finjin::Common::AllocatedClass::New&lt;Finjin::Engine::FinjinSceneRenderableMovableObject&gt;(Finjin::Common::Allocator*, char const*, char const*, int)"
+                  moduleName = "finjin-viewer"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/derek/git/nedelman/finjin-engine/cpp/library/project/macos-xcode/../../../../../finjin-common/cpp/library/include/finjin/common/AllocatedClass.hpp"
+                  timestampString = "516832642.50116"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "78"
+                  endingLineNumber = "78"
+                  offsetFromSymbolStart = "228">
+               </Location>
+               <Location
+                  shouldBeEnabled = "No"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "Finjin::Engine::FinjinSceneObjectEntity* Finjin::Common::AllocatedClass::New&lt;Finjin::Engine::FinjinSceneObjectEntity&gt;(Finjin::Common::Allocator*, char const*, char const*, int)"
+                  moduleName = "finjin-viewer"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/derek/git/nedelman/finjin-engine/cpp/library/project/macos-xcode/../../../../../finjin-common/cpp/library/include/finjin/common/AllocatedClass.hpp"
+                  timestampString = "516832642.507036"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "78"
+                  endingLineNumber = "78"
+                  offsetFromSymbolStart = "228">
+               </Location>
+               <Location
+                  shouldBeEnabled = "No"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "Finjin::Engine::FinjinSceneObjectCamera* Finjin::Common::AllocatedClass::New&lt;Finjin::Engine::FinjinSceneObjectCamera&gt;(Finjin::Common::Allocator*, char const*, char const*, int)"
+                  moduleName = "finjin-viewer"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/derek/git/nedelman/finjin-engine/cpp/library/project/macos-xcode/../../../../../finjin-common/cpp/library/include/finjin/common/AllocatedClass.hpp"
+                  timestampString = "516832642.512494"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "78"
+                  endingLineNumber = "78"
+                  offsetFromSymbolStart = "228">
+               </Location>
+               <Location
+                  shouldBeEnabled = "No"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "Finjin::Engine::FinjinSceneObjectLight* Finjin::Common::AllocatedClass::New&lt;Finjin::Engine::FinjinSceneObjectLight&gt;(Finjin::Common::Allocator*, char const*, char const*, int)"
+                  moduleName = "finjin-viewer"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/derek/git/nedelman/finjin-engine/cpp/library/project/macos-xcode/../../../../../finjin-common/cpp/library/include/finjin/common/AllocatedClass.hpp"
+                  timestampString = "516832642.517722"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "78"
+                  endingLineNumber = "78"
+                  offsetFromSymbolStart = "228">
+               </Location>
+               <Location
+                  shouldBeEnabled = "No"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "Finjin::Engine::FinjinSceneNode* Finjin::Common::AllocatedClass::New&lt;Finjin::Engine::FinjinSceneNode&gt;(Finjin::Common::Allocator*, char const*, char const*, int)"
+                  moduleName = "finjin-viewer"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/derek/git/nedelman/finjin-engine/cpp/library/project/macos-xcode/../../../../../finjin-common/cpp/library/include/finjin/common/AllocatedClass.hpp"
+                  timestampString = "516832642.521442"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "78"
+                  endingLineNumber = "78"
+                  offsetFromSymbolStart = "228">
+               </Location>
+               <Location
+                  shouldBeEnabled = "No"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "Finjin::Engine::FinjinMesh* Finjin::Common::AllocatedClass::New&lt;Finjin::Engine::FinjinMesh&gt;(Finjin::Common::Allocator*, char const*, char const*, int)"
+                  moduleName = "finjin-viewer"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/derek/git/nedelman/finjin-engine/cpp/library/project/macos-xcode/../../../../../finjin-common/cpp/library/include/finjin/common/AllocatedClass.hpp"
+                  timestampString = "516832642.524271"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "78"
+                  endingLineNumber = "78"
+                  offsetFromSymbolStart = "228">
+               </Location>
+               <Location
+                  shouldBeEnabled = "No"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "Finjin::Engine::FinjinMaterial* Finjin::Common::AllocatedClass::New&lt;Finjin::Engine::FinjinMaterial&gt;(Finjin::Common::Allocator*, char const*, char const*, int)"
+                  moduleName = "finjin-viewer"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/derek/git/nedelman/finjin-engine/cpp/library/project/macos-xcode/../../../../../finjin-common/cpp/library/include/finjin/common/AllocatedClass.hpp"
+                  timestampString = "516832642.52666"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "78"
+                  endingLineNumber = "78"
+                  offsetFromSymbolStart = "228">
+               </Location>
+               <Location
+                  shouldBeEnabled = "No"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "Finjin::Engine::UserDataEnum* Finjin::Common::AllocatedClass::New&lt;Finjin::Engine::UserDataEnum&gt;(Finjin::Common::Allocator*, char const*, char const*, int)"
+                  moduleName = "finjin-viewer"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/derek/git/nedelman/finjin-engine/cpp/library/project/macos-xcode/../../../../../finjin-common/cpp/library/include/finjin/common/AllocatedClass.hpp"
+                  timestampString = "516832642.529134"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "78"
+                  endingLineNumber = "78"
+                  offsetFromSymbolStart = "228">
+               </Location>
+               <Location
+                  shouldBeEnabled = "No"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "Finjin::Engine::UserDataClass* Finjin::Common::AllocatedClass::New&lt;Finjin::Engine::UserDataClass&gt;(Finjin::Common::Allocator*, char const*, char const*, int)"
+                  moduleName = "finjin-viewer"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/derek/git/nedelman/finjin-engine/cpp/library/project/macos-xcode/../../../../../finjin-common/cpp/library/include/finjin/common/AllocatedClass.hpp"
+                  timestampString = "516832642.532339"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "78"
+                  endingLineNumber = "78"
+                  offsetFromSymbolStart = "228">
+               </Location>
+               <Location
+                  shouldBeEnabled = "No"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "Finjin::Engine::FinjinMeshSkeleton* Finjin::Common::AllocatedClass::New&lt;Finjin::Engine::FinjinMeshSkeleton&gt;(Finjin::Common::Allocator*, char const*, char const*, int)"
+                  moduleName = "finjin-viewer"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/derek/git/nedelman/finjin-engine/cpp/library/project/macos-xcode/../../../../../finjin-common/cpp/library/include/finjin/common/AllocatedClass.hpp"
+                  timestampString = "516832642.534326"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "78"
+                  endingLineNumber = "78"
+                  offsetFromSymbolStart = "228">
+               </Location>
+               <Location
+                  shouldBeEnabled = "No"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "Finjin::Engine::FinjinMeshSkeletonAnimation* Finjin::Common::AllocatedClass::New&lt;Finjin::Engine::FinjinMeshSkeletonAnimation&gt;(Finjin::Common::Allocator*, char const*, char const*, int)"
+                  moduleName = "finjin-viewer"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/derek/git/nedelman/finjin-engine/cpp/library/project/macos-xcode/../../../../../finjin-common/cpp/library/include/finjin/common/AllocatedClass.hpp"
+                  timestampString = "516832642.535987"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "78"
+                  endingLineNumber = "78"
+                  offsetFromSymbolStart = "228">
+               </Location>
+               <Location
+                  shouldBeEnabled = "No"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "Finjin::Engine::FinjinMeshMorphAnimation* Finjin::Common::AllocatedClass::New&lt;Finjin::Engine::FinjinMeshMorphAnimation&gt;(Finjin::Common::Allocator*, char const*, char const*, int)"
+                  moduleName = "finjin-viewer"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/derek/git/nedelman/finjin-engine/cpp/library/project/macos-xcode/../../../../../finjin-common/cpp/library/include/finjin/common/AllocatedClass.hpp"
+                  timestampString = "516832642.537759"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "78"
+                  endingLineNumber = "78"
+                  offsetFromSymbolStart = "228">
+               </Location>
+               <Location
+                  shouldBeEnabled = "No"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "Finjin::Engine::FinjinMeshPoseAnimation* Finjin::Common::AllocatedClass::New&lt;Finjin::Engine::FinjinMeshPoseAnimation&gt;(Finjin::Common::Allocator*, char const*, char const*, int)"
+                  moduleName = "finjin-viewer"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/derek/git/nedelman/finjin-engine/cpp/library/project/macos-xcode/../../../../../finjin-common/cpp/library/include/finjin/common/AllocatedClass.hpp"
+                  timestampString = "516832642.539305"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "78"
+                  endingLineNumber = "78"
+                  offsetFromSymbolStart = "228">
+               </Location>
+               <Location
+                  shouldBeEnabled = "No"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "Finjin::Engine::FinjinNodeAnimation* Finjin::Common::AllocatedClass::New&lt;Finjin::Engine::FinjinNodeAnimation&gt;(Finjin::Common::Allocator*, char const*, char const*, int)"
+                  moduleName = "finjin-viewer"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/derek/git/nedelman/finjin-engine/cpp/library/project/macos-xcode/../../../../../finjin-common/cpp/library/include/finjin/common/AllocatedClass.hpp"
+                  timestampString = "516832642.54084"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "78"
+                  endingLineNumber = "78"
+                  offsetFromSymbolStart = "228">
+               </Location>
+               <Location
+                  shouldBeEnabled = "No"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "Finjin::Engine::FinjinPrefab* Finjin::Common::AllocatedClass::New&lt;Finjin::Engine::FinjinPrefab&gt;(Finjin::Common::Allocator*, char const*, char const*, int)"
+                  moduleName = "finjin-viewer"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/derek/git/nedelman/finjin-engine/cpp/library/project/macos-xcode/../../../../../finjin-common/cpp/library/include/finjin/common/AllocatedClass.hpp"
+                  timestampString = "516832642.54237"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "78"
+                  endingLineNumber = "78"
+                  offsetFromSymbolStart = "228">
+               </Location>
+               <Location
+                  shouldBeEnabled = "No"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "Finjin::Engine::UserDataClassInstance::StringPropertyInstance* Finjin::Common::AllocatedClass::New&lt;Finjin::Engine::UserDataClassInstance::StringPropertyInstance, Finjin::Engine::UserDataClass::Item*&amp;&gt;(Finjin::Common::Allocator*, char const*, char const*, int, Finjin::Engine::UserDataClass::Item*&amp;&amp;&amp;)"
+                  moduleName = "finjin-viewer"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/derek/git/nedelman/finjin-engine/cpp/library/project/macos-xcode/../../../../../finjin-common/cpp/library/include/finjin/common/AllocatedClass.hpp"
+                  timestampString = "516832642.543841"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "78"
+                  endingLineNumber = "78"
+                  offsetFromSymbolStart = "232">
+               </Location>
+               <Location
+                  shouldBeEnabled = "No"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "Finjin::Engine::UserDataClassInstance::IntPropertyInstance* Finjin::Common::AllocatedClass::New&lt;Finjin::Engine::UserDataClassInstance::IntPropertyInstance, Finjin::Engine::UserDataClass::Item*&amp;&gt;(Finjin::Common::Allocator*, char const*, char const*, int, Finjin::Engine::UserDataClass::Item*&amp;&amp;&amp;)"
+                  moduleName = "finjin-viewer"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/derek/git/nedelman/finjin-engine/cpp/library/project/macos-xcode/../../../../../finjin-common/cpp/library/include/finjin/common/AllocatedClass.hpp"
+                  timestampString = "516832642.545582"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "78"
+                  endingLineNumber = "78"
+                  offsetFromSymbolStart = "232">
+               </Location>
+               <Location
+                  shouldBeEnabled = "No"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "Finjin::Engine::UserDataClassInstance::FloatPropertyInstance* Finjin::Common::AllocatedClass::New&lt;Finjin::Engine::UserDataClassInstance::FloatPropertyInstance, Finjin::Engine::UserDataClass::Item*&amp;&gt;(Finjin::Common::Allocator*, char const*, char const*, int, Finjin::Engine::UserDataClass::Item*&amp;&amp;&amp;)"
+                  moduleName = "finjin-viewer"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/derek/git/nedelman/finjin-engine/cpp/library/project/macos-xcode/../../../../../finjin-common/cpp/library/include/finjin/common/AllocatedClass.hpp"
+                  timestampString = "516832642.547588"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "78"
+                  endingLineNumber = "78"
+                  offsetFromSymbolStart = "232">
+               </Location>
+               <Location
+                  shouldBeEnabled = "No"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "Finjin::Engine::UserDataClassInstance::BoolPropertyInstance* Finjin::Common::AllocatedClass::New&lt;Finjin::Engine::UserDataClassInstance::BoolPropertyInstance, Finjin::Engine::UserDataClass::Item*&amp;&gt;(Finjin::Common::Allocator*, char const*, char const*, int, Finjin::Engine::UserDataClass::Item*&amp;&amp;&amp;)"
+                  moduleName = "finjin-viewer"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/derek/git/nedelman/finjin-engine/cpp/library/project/macos-xcode/../../../../../finjin-common/cpp/library/include/finjin/common/AllocatedClass.hpp"
+                  timestampString = "516832642.549383"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "78"
+                  endingLineNumber = "78"
+                  offsetFromSymbolStart = "232">
+               </Location>
+               <Location
+                  shouldBeEnabled = "No"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "Finjin::Engine::UserDataClassInstance::RGBAPropertyInstance* Finjin::Common::AllocatedClass::New&lt;Finjin::Engine::UserDataClassInstance::RGBAPropertyInstance, Finjin::Engine::UserDataClass::Item*&amp;&gt;(Finjin::Common::Allocator*, char const*, char const*, int, Finjin::Engine::UserDataClass::Item*&amp;&amp;&amp;)"
+                  moduleName = "finjin-viewer"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/derek/git/nedelman/finjin-engine/cpp/library/project/macos-xcode/../../../../../finjin-common/cpp/library/include/finjin/common/AllocatedClass.hpp"
+                  timestampString = "516832642.551002"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "78"
+                  endingLineNumber = "78"
+                  offsetFromSymbolStart = "232">
+               </Location>
+               <Location
+                  shouldBeEnabled = "No"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "Finjin::Engine::UserDataClassInstance::StringPropertyInstance* Finjin::Common::AllocatedClass::New&lt;Finjin::Engine::UserDataClassInstance::StringPropertyInstance, std::nullptr_t&gt;(Finjin::Common::Allocator*, char const*, char const*, int, std::nullptr_t&amp;&amp;)"
+                  moduleName = "finjin-viewer"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/derek/git/nedelman/finjin-engine/cpp/library/project/macos-xcode/../../../../../finjin-common/cpp/library/include/finjin/common/AllocatedClass.hpp"
+                  timestampString = "516832642.552584"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "78"
+                  endingLineNumber = "78"
+                  offsetFromSymbolStart = "236">
+               </Location>
+               <Location
+                  shouldBeEnabled = "No"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "Finjin::Engine::FinjinScene* Finjin::Common::AllocatedClass::New&lt;Finjin::Engine::FinjinScene&gt;(Finjin::Common::Allocator*, char const*, char const*, int)"
+                  moduleName = "finjin-viewer"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/derek/git/nedelman/finjin-engine/cpp/library/project/macos-xcode/../../../../../finjin-common/cpp/library/include/finjin/common/AllocatedClass.hpp"
+                  timestampString = "516832642.554236"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "78"
+                  endingLineNumber = "78"
+                  offsetFromSymbolStart = "228">
+               </Location>
+               <Location
+                  shouldBeEnabled = "No"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "Finjin::Engine::FinjinTexture* Finjin::Common::AllocatedClass::New&lt;Finjin::Engine::FinjinTexture&gt;(Finjin::Common::Allocator*, char const*, char const*, int)"
+                  moduleName = "finjin-viewer"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/derek/git/nedelman/finjin-engine/cpp/library/project/macos-xcode/../../../../../finjin-common/cpp/library/include/finjin/common/AllocatedClass.hpp"
+                  timestampString = "516832642.555742"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "78"
+                  endingLineNumber = "78"
+                  offsetFromSymbolStart = "228">
+               </Location>
+               <Location
+                  shouldBeEnabled = "No"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "Finjin::Engine::UserDataTypes* Finjin::Common::AllocatedClass::New&lt;Finjin::Engine::UserDataTypes, bool&gt;(Finjin::Common::Allocator*, char const*, char const*, int, bool&amp;&amp;)"
+                  moduleName = "finjin-viewer"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/derek/git/nedelman/finjin-engine/cpp/library/project/macos-xcode/../../../../../finjin-common/cpp/library/include/finjin/common/AllocatedClass.hpp"
+                  timestampString = "516832642.557707"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "78"
+                  endingLineNumber = "78"
+                  offsetFromSymbolStart = "232">
+               </Location>
+               <Location
+                  shouldBeEnabled = "No"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "Finjin::Engine::StringTable* Finjin::Common::AllocatedClass::New&lt;Finjin::Engine::StringTable&gt;(Finjin::Common::Allocator*, char const*, char const*, int)"
+                  moduleName = "finjin-viewer"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/derek/git/nedelman/finjin-engine/cpp/library/project/macos-xcode/../../../../../finjin-common/cpp/library/include/finjin/common/AllocatedClass.hpp"
+                  timestampString = "516832642.56001"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "78"
+                  endingLineNumber = "78"
+                  offsetFromSymbolStart = "228">
+               </Location>
+               <Location
+                  shouldBeEnabled = "No"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "Finjin::Engine::FinjinSound* Finjin::Common::AllocatedClass::New&lt;Finjin::Engine::FinjinSound&gt;(Finjin::Common::Allocator*, char const*, char const*, int)"
+                  moduleName = "finjin-viewer"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/derek/git/nedelman/finjin-engine/cpp/library/project/macos-xcode/../../../../../finjin-common/cpp/library/include/finjin/common/AllocatedClass.hpp"
+                  timestampString = "516832642.563065"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "78"
+                  endingLineNumber = "78"
+                  offsetFromSymbolStart = "228">
+               </Location>
+               <Location
+                  shouldBeEnabled = "No"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "Finjin::Engine::ApplicationViewport::Impl* Finjin::Common::AllocatedClass::New&lt;Finjin::Engine::ApplicationViewport::Impl&gt;(Finjin::Common::Allocator*, char const*, char const*, int)"
+                  moduleName = "finjin-viewer"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/derek/git/nedelman/finjin-engine/cpp/library/project/macos-xcode/../../../../../finjin-common/cpp/library/include/finjin/common/AllocatedClass.hpp"
+                  timestampString = "516832642.571152"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "78"
+                  endingLineNumber = "78"
+                  offsetFromSymbolStart = "228">
+               </Location>
+               <Location
+                  shouldBeEnabled = "No"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "Finjin::Engine::ApplicationViewport* Finjin::Common::AllocatedClass::New&lt;Finjin::Engine::ApplicationViewport&gt;(Finjin::Common::Allocator*, char const*, char const*, int)"
+                  moduleName = "finjin-viewer"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/derek/git/nedelman/finjin-engine/cpp/library/project/macos-xcode/../../../../../finjin-common/cpp/library/include/finjin/common/AllocatedClass.hpp"
+                  timestampString = "516832642.573911"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "78"
+                  endingLineNumber = "78"
+                  offsetFromSymbolStart = "228">
+               </Location>
+               <Location
+                  shouldBeEnabled = "No"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "Finjin::Engine::ApplicationViewportDelegate* Finjin::Common::AllocatedClass::New&lt;Finjin::Engine::ApplicationViewportDelegate&gt;(Finjin::Common::Allocator*, char const*, char const*, int)"
+                  moduleName = "finjin-viewer"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/derek/git/nedelman/finjin-engine/cpp/library/project/macos-xcode/../../../../../finjin-common/cpp/library/include/finjin/common/AllocatedClass.hpp"
+                  timestampString = "516832642.576291"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "78"
+                  endingLineNumber = "78"
+                  offsetFromSymbolStart = "228">
+               </Location>
+               <Location
+                  shouldBeEnabled = "No"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "Finjin::Engine::AVAudioEngineSoundContextImpl* Finjin::Common::AllocatedClass::New&lt;Finjin::Engine::AVAudioEngineSoundContextImpl, Finjin::Engine::AVAudioEngineSoundSystem*&amp;&gt;(Finjin::Common::Allocator*, char const*, char const*, int, Finjin::Engine::AVAudioEngineSoundSystem*&amp;&amp;&amp;)"
+                  moduleName = "finjin-viewer"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/derek/git/nedelman/finjin-engine/cpp/library/project/macos-xcode/../../../../../finjin-common/cpp/library/include/finjin/common/AllocatedClass.hpp"
+                  timestampString = "516832642.578555"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "78"
+                  endingLineNumber = "78"
+                  offsetFromSymbolStart = "232">
+               </Location>
+               <Location
+                  shouldBeEnabled = "No"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "Finjin::Engine::AVAudioEngineSoundSystem::Impl* Finjin::Common::AllocatedClass::New&lt;Finjin::Engine::AVAudioEngineSoundSystem::Impl&gt;(Finjin::Common::Allocator*, char const*, char const*, int)"
+                  moduleName = "finjin-viewer"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/derek/git/nedelman/finjin-engine/cpp/library/project/macos-xcode/../../../../../finjin-common/cpp/library/include/finjin/common/AllocatedClass.hpp"
+                  timestampString = "516832642.581033"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "78"
+                  endingLineNumber = "78"
+                  offsetFromSymbolStart = "228">
+               </Location>
+               <Location
+                  shouldBeEnabled = "No"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "Finjin::Engine::MacOSInputContext::Impl* Finjin::Common::AllocatedClass::New&lt;Finjin::Engine::MacOSInputContext::Impl, Finjin::Engine::MacOSInputSystem*&amp;&gt;(Finjin::Common::Allocator*, char const*, char const*, int, Finjin::Engine::MacOSInputSystem*&amp;&amp;&amp;)"
+                  moduleName = "finjin-viewer"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/derek/git/nedelman/finjin-engine/cpp/library/project/macos-xcode/../../../../../finjin-common/cpp/library/include/finjin/common/AllocatedClass.hpp"
+                  timestampString = "516832642.583221"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "78"
+                  endingLineNumber = "78"
+                  offsetFromSymbolStart = "232">
+               </Location>
+               <Location
+                  shouldBeEnabled = "No"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "Finjin::Engine::MacOSInputSystem::Impl* Finjin::Common::AllocatedClass::New&lt;Finjin::Engine::MacOSInputSystem::Impl&gt;(Finjin::Common::Allocator*, char const*, char const*, int)"
+                  moduleName = "finjin-viewer"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/derek/git/nedelman/finjin-engine/cpp/library/project/macos-xcode/../../../../../finjin-common/cpp/library/include/finjin/common/AllocatedClass.hpp"
+                  timestampString = "516832642.58484"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "78"
+                  endingLineNumber = "78"
+                  offsetFromSymbolStart = "228">
+               </Location>
+               <Location
+                  shouldBeEnabled = "No"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "Finjin::Engine::MetalGpuContextImpl* Finjin::Common::AllocatedClass::New&lt;Finjin::Engine::MetalGpuContextImpl&gt;(Finjin::Common::Allocator*, char const*, char const*, int)"
+                  moduleName = "finjin-viewer"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/derek/git/nedelman/finjin-engine/cpp/library/project/macos-xcode/../../../../../finjin-common/cpp/library/include/finjin/common/AllocatedClass.hpp"
+                  timestampString = "516832642.586381"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "78"
+                  endingLineNumber = "78"
+                  offsetFromSymbolStart = "228">
+               </Location>
+               <Location
+                  shouldBeEnabled = "No"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "Finjin::Engine::MetalSystemImpl* Finjin::Common::AllocatedClass::New&lt;Finjin::Engine::MetalSystemImpl&gt;(Finjin::Common::Allocator*, char const*, char const*, int)"
+                  moduleName = "finjin-viewer"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/derek/git/nedelman/finjin-engine/cpp/library/project/macos-xcode/../../../../../finjin-common/cpp/library/include/finjin/common/AllocatedClass.hpp"
+                  timestampString = "516832642.587934"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "78"
+                  endingLineNumber = "78"
+                  offsetFromSymbolStart = "228">
+               </Location>
+               <Location
+                  shouldBeEnabled = "No"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "Finjin::Engine::OSWindowImpl* Finjin::Common::AllocatedClass::New&lt;Finjin::Engine::OSWindowImpl, void*&amp;&gt;(Finjin::Common::Allocator*, char const*, char const*, int, void*&amp;&amp;&amp;)"
+                  moduleName = "finjin-viewer"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/derek/git/nedelman/finjin-engine/cpp/library/project/macos-xcode/../../../../../finjin-common/cpp/library/include/finjin/common/AllocatedClass.hpp"
+                  timestampString = "516832642.589436"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "78"
+                  endingLineNumber = "78"
+                  offsetFromSymbolStart = "232">
+               </Location>
+            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "../../../finjin-common/cpp/library/include/finjin/common/AllocatedClass.hpp"
+            timestampString = "516835423.406912"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "75"
+            endingLineNumber = "75"
+            landmarkName = "NewUnique(Allocator* allocator, FINJIN_CALLER_PARAMETERS_DECLARATION, Args&amp;&amp;... args)"
+            landmarkType = "9">
+            <Locations>
+               <Location
+                  shouldBeEnabled = "No"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "Finjin::Viewer::FinjinViewerApplicationViewportDelegate* Finjin::Common::AllocatedClass::New&lt;Finjin::Viewer::FinjinViewerApplicationViewportDelegate, Finjin::Common::Setting&lt;Finjin::Common::Utf8String&gt;&amp;&gt;(Finjin::Common::Allocator*, char const*, char const*, int, Finjin::Common::Setting&lt;Finjin::Common::Utf8String&gt;&amp;&amp;&amp;)"
+                  moduleName = "finjin-viewer"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/derek/git/nedelman/finjin-common/cpp/library/include/finjin/common/AllocatedClass.hpp"
+                  timestampString = "516832651.169853"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "76"
+                  endingLineNumber = "76"
+                  offsetFromSymbolStart = "221">
+               </Location>
+               <Location
+                  shouldBeEnabled = "No"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "Finjin::Common::packaged_task&lt;void ()&gt;* Finjin::Common::AllocatedClass::New&lt;Finjin::Common::WrappedFiberJob&lt;boost::intrusive_ptr&lt;Finjin::Common::FiberJob&gt; Finjin::Common::JobSystem::CreateFiberJob&lt;Finjin::Common::packaged_task&lt;void ()&gt; &gt;(Finjin::Common::Allocator*, unsigned long, Finjin::Common::SimpleSpinLockMutex*, Finjin::Common::packaged_task&lt;void ()&gt;&amp;&amp;)::&apos;lambda&apos;()&gt;, unsigned long&amp;, Finjin::Common::SimpleSpinLockMutex*&amp;, boost::intrusive_ptr&lt;Finjin::Common::FiberJob&gt; Finjin::Common::JobSystem::CreateFiberJob&lt;Finjin::Common::packaged_task&lt;void ()&gt; &gt;(Finjin::Common::Allocator*, unsigned long, Finjin::Common::SimpleSpinLockMutex*, Finjin::Common::packaged_task&lt;void ()&gt;&amp;&amp;)::&apos;lambda&apos;()&gt;(Finjin::Common::Allocator*, char const*, char const*, int)"
+                  moduleName = "finjin-viewer"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/derek/git/nedelman/finjin-common/cpp/library/include/finjin/common/AllocatedClass.hpp"
+                  timestampString = "516832651.171379"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "76"
+                  endingLineNumber = "76"
+                  offsetFromSymbolStart = "236">
+               </Location>
+               <Location
+                  shouldBeEnabled = "No"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "Finjin::Viewer::FinjinViewerApplicationDelegate* Finjin::Common::AllocatedClass::New&lt;Finjin::Viewer::FinjinViewerApplicationDelegate&gt;(Finjin::Common::Allocator*, char const*, char const*, int)"
+                  moduleName = "finjin-viewer"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/derek/git/nedelman/finjin-common/cpp/library/include/finjin/common/AllocatedClass.hpp"
+                  timestampString = "516832651.173043"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "76"
+                  endingLineNumber = "76"
+                  offsetFromSymbolStart = "217">
+               </Location>
+               <Location
+                  shouldBeEnabled = "No"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "Finjin::Common::Thread::Impl* Finjin::Common::AllocatedClass::New&lt;Finjin::Common::Thread::Impl&gt;(Finjin::Common::Allocator*, char const*, char const*, int)"
+                  moduleName = "finjin-viewer"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/derek/git/nedelman/finjin-common/cpp/library/project/macos-xcode/../../include/finjin/common/AllocatedClass.hpp"
+                  timestampString = "516832651.174975"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "76"
+                  endingLineNumber = "76"
+                  offsetFromSymbolStart = "217">
+               </Location>
+               <Location
+                  shouldBeEnabled = "No"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "Finjin::Common::JobFiber::Impl* Finjin::Common::AllocatedClass::New&lt;Finjin::Common::JobFiber::Impl&gt;(Finjin::Common::Allocator*, char const*, char const*, int)"
+                  moduleName = "finjin-viewer"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/derek/git/nedelman/finjin-common/cpp/library/project/macos-xcode/../../include/finjin/common/AllocatedClass.hpp"
+                  timestampString = "516832651.176529"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "76"
+                  endingLineNumber = "76"
+                  offsetFromSymbolStart = "217">
+               </Location>
+               <Location
+                  shouldBeEnabled = "No"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "Finjin::Common::JobSystem::Impl* Finjin::Common::AllocatedClass::New&lt;Finjin::Common::JobSystem::Impl&gt;(Finjin::Common::Allocator*, char const*, char const*, int)"
+                  moduleName = "finjin-viewer"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/derek/git/nedelman/finjin-common/cpp/library/project/macos-xcode/../../include/finjin/common/AllocatedClass.hpp"
+                  timestampString = "516832651.178008"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "76"
+                  endingLineNumber = "76"
+                  offsetFromSymbolStart = "217">
+               </Location>
+               <Location
+                  shouldBeEnabled = "No"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "Finjin::Common::JobThread::Impl* Finjin::Common::AllocatedClass::New&lt;Finjin::Common::JobThread::Impl, Finjin::Common::JobThread*&gt;(Finjin::Common::Allocator*, char const*, char const*, int, Finjin::Common::JobThread*&amp;&amp;)"
+                  moduleName = "finjin-viewer"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/derek/git/nedelman/finjin-common/cpp/library/project/macos-xcode/../../include/finjin/common/AllocatedClass.hpp"
+                  timestampString = "516832651.17947"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "76"
+                  endingLineNumber = "76"
+                  offsetFromSymbolStart = "221">
+               </Location>
+               <Location
+                  shouldBeEnabled = "No"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "Finjin::Engine::FinjinSceneMovableObject* Finjin::Common::AllocatedClass::New&lt;Finjin::Engine::FinjinSceneMovableObject&gt;(Finjin::Common::Allocator*, char const*, char const*, int)"
+                  moduleName = "finjin-viewer"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/derek/git/nedelman/finjin-engine/cpp/library/project/macos-xcode/../../../../../finjin-common/cpp/library/include/finjin/common/AllocatedClass.hpp"
+                  timestampString = "516832651.181055"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "76"
+                  endingLineNumber = "76"
+                  offsetFromSymbolStart = "217">
+               </Location>
+               <Location
+                  shouldBeEnabled = "No"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "Finjin::Engine::FinjinSceneRenderableMovableObject* Finjin::Common::AllocatedClass::New&lt;Finjin::Engine::FinjinSceneRenderableMovableObject&gt;(Finjin::Common::Allocator*, char const*, char const*, int)"
+                  moduleName = "finjin-viewer"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/derek/git/nedelman/finjin-engine/cpp/library/project/macos-xcode/../../../../../finjin-common/cpp/library/include/finjin/common/AllocatedClass.hpp"
+                  timestampString = "516832651.182973"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "76"
+                  endingLineNumber = "76"
+                  offsetFromSymbolStart = "217">
+               </Location>
+               <Location
+                  shouldBeEnabled = "No"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "Finjin::Engine::FinjinSceneObjectEntity* Finjin::Common::AllocatedClass::New&lt;Finjin::Engine::FinjinSceneObjectEntity&gt;(Finjin::Common::Allocator*, char const*, char const*, int)"
+                  moduleName = "finjin-viewer"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/derek/git/nedelman/finjin-engine/cpp/library/project/macos-xcode/../../../../../finjin-common/cpp/library/include/finjin/common/AllocatedClass.hpp"
+                  timestampString = "516832651.184785"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "76"
+                  endingLineNumber = "76"
+                  offsetFromSymbolStart = "217">
+               </Location>
+               <Location
+                  shouldBeEnabled = "No"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "Finjin::Engine::FinjinSceneObjectCamera* Finjin::Common::AllocatedClass::New&lt;Finjin::Engine::FinjinSceneObjectCamera&gt;(Finjin::Common::Allocator*, char const*, char const*, int)"
+                  moduleName = "finjin-viewer"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/derek/git/nedelman/finjin-engine/cpp/library/project/macos-xcode/../../../../../finjin-common/cpp/library/include/finjin/common/AllocatedClass.hpp"
+                  timestampString = "516832651.186462"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "76"
+                  endingLineNumber = "76"
+                  offsetFromSymbolStart = "217">
+               </Location>
+               <Location
+                  shouldBeEnabled = "No"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "Finjin::Engine::FinjinSceneObjectLight* Finjin::Common::AllocatedClass::New&lt;Finjin::Engine::FinjinSceneObjectLight&gt;(Finjin::Common::Allocator*, char const*, char const*, int)"
+                  moduleName = "finjin-viewer"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/derek/git/nedelman/finjin-engine/cpp/library/project/macos-xcode/../../../../../finjin-common/cpp/library/include/finjin/common/AllocatedClass.hpp"
+                  timestampString = "516832651.187985"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "76"
+                  endingLineNumber = "76"
+                  offsetFromSymbolStart = "217">
+               </Location>
+               <Location
+                  shouldBeEnabled = "No"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "Finjin::Engine::FinjinSceneNode* Finjin::Common::AllocatedClass::New&lt;Finjin::Engine::FinjinSceneNode&gt;(Finjin::Common::Allocator*, char const*, char const*, int)"
+                  moduleName = "finjin-viewer"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/derek/git/nedelman/finjin-engine/cpp/library/project/macos-xcode/../../../../../finjin-common/cpp/library/include/finjin/common/AllocatedClass.hpp"
+                  timestampString = "516832651.189875"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "76"
+                  endingLineNumber = "76"
+                  offsetFromSymbolStart = "217">
+               </Location>
+               <Location
+                  shouldBeEnabled = "No"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "Finjin::Engine::FinjinMesh* Finjin::Common::AllocatedClass::New&lt;Finjin::Engine::FinjinMesh&gt;(Finjin::Common::Allocator*, char const*, char const*, int)"
+                  moduleName = "finjin-viewer"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/derek/git/nedelman/finjin-engine/cpp/library/project/macos-xcode/../../../../../finjin-common/cpp/library/include/finjin/common/AllocatedClass.hpp"
+                  timestampString = "516832651.191518"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "76"
+                  endingLineNumber = "76"
+                  offsetFromSymbolStart = "217">
+               </Location>
+               <Location
+                  shouldBeEnabled = "No"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "Finjin::Engine::FinjinMaterial* Finjin::Common::AllocatedClass::New&lt;Finjin::Engine::FinjinMaterial&gt;(Finjin::Common::Allocator*, char const*, char const*, int)"
+                  moduleName = "finjin-viewer"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/derek/git/nedelman/finjin-engine/cpp/library/project/macos-xcode/../../../../../finjin-common/cpp/library/include/finjin/common/AllocatedClass.hpp"
+                  timestampString = "516832651.193041"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "76"
+                  endingLineNumber = "76"
+                  offsetFromSymbolStart = "217">
+               </Location>
+               <Location
+                  shouldBeEnabled = "No"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "Finjin::Engine::UserDataEnum* Finjin::Common::AllocatedClass::New&lt;Finjin::Engine::UserDataEnum&gt;(Finjin::Common::Allocator*, char const*, char const*, int)"
+                  moduleName = "finjin-viewer"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/derek/git/nedelman/finjin-engine/cpp/library/project/macos-xcode/../../../../../finjin-common/cpp/library/include/finjin/common/AllocatedClass.hpp"
+                  timestampString = "516832651.194535"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "76"
+                  endingLineNumber = "76"
+                  offsetFromSymbolStart = "217">
+               </Location>
+               <Location
+                  shouldBeEnabled = "No"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "Finjin::Engine::UserDataClass* Finjin::Common::AllocatedClass::New&lt;Finjin::Engine::UserDataClass&gt;(Finjin::Common::Allocator*, char const*, char const*, int)"
+                  moduleName = "finjin-viewer"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/derek/git/nedelman/finjin-engine/cpp/library/project/macos-xcode/../../../../../finjin-common/cpp/library/include/finjin/common/AllocatedClass.hpp"
+                  timestampString = "516832651.196013"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "76"
+                  endingLineNumber = "76"
+                  offsetFromSymbolStart = "217">
+               </Location>
+               <Location
+                  shouldBeEnabled = "No"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "Finjin::Engine::FinjinMeshSkeleton* Finjin::Common::AllocatedClass::New&lt;Finjin::Engine::FinjinMeshSkeleton&gt;(Finjin::Common::Allocator*, char const*, char const*, int)"
+                  moduleName = "finjin-viewer"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/derek/git/nedelman/finjin-engine/cpp/library/project/macos-xcode/../../../../../finjin-common/cpp/library/include/finjin/common/AllocatedClass.hpp"
+                  timestampString = "516832651.197928"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "76"
+                  endingLineNumber = "76"
+                  offsetFromSymbolStart = "217">
+               </Location>
+               <Location
+                  shouldBeEnabled = "No"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "Finjin::Engine::FinjinMeshSkeletonAnimation* Finjin::Common::AllocatedClass::New&lt;Finjin::Engine::FinjinMeshSkeletonAnimation&gt;(Finjin::Common::Allocator*, char const*, char const*, int)"
+                  moduleName = "finjin-viewer"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/derek/git/nedelman/finjin-engine/cpp/library/project/macos-xcode/../../../../../finjin-common/cpp/library/include/finjin/common/AllocatedClass.hpp"
+                  timestampString = "516832651.199559"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "76"
+                  endingLineNumber = "76"
+                  offsetFromSymbolStart = "217">
+               </Location>
+               <Location
+                  shouldBeEnabled = "No"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "Finjin::Engine::FinjinMeshMorphAnimation* Finjin::Common::AllocatedClass::New&lt;Finjin::Engine::FinjinMeshMorphAnimation&gt;(Finjin::Common::Allocator*, char const*, char const*, int)"
+                  moduleName = "finjin-viewer"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/derek/git/nedelman/finjin-engine/cpp/library/project/macos-xcode/../../../../../finjin-common/cpp/library/include/finjin/common/AllocatedClass.hpp"
+                  timestampString = "516832651.201067"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "76"
+                  endingLineNumber = "76"
+                  offsetFromSymbolStart = "217">
+               </Location>
+               <Location
+                  shouldBeEnabled = "No"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "Finjin::Engine::FinjinMeshPoseAnimation* Finjin::Common::AllocatedClass::New&lt;Finjin::Engine::FinjinMeshPoseAnimation&gt;(Finjin::Common::Allocator*, char const*, char const*, int)"
+                  moduleName = "finjin-viewer"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/derek/git/nedelman/finjin-engine/cpp/library/project/macos-xcode/../../../../../finjin-common/cpp/library/include/finjin/common/AllocatedClass.hpp"
+                  timestampString = "516832651.202572"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "76"
+                  endingLineNumber = "76"
+                  offsetFromSymbolStart = "217">
+               </Location>
+               <Location
+                  shouldBeEnabled = "No"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "Finjin::Engine::FinjinNodeAnimation* Finjin::Common::AllocatedClass::New&lt;Finjin::Engine::FinjinNodeAnimation&gt;(Finjin::Common::Allocator*, char const*, char const*, int)"
+                  moduleName = "finjin-viewer"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/derek/git/nedelman/finjin-engine/cpp/library/project/macos-xcode/../../../../../finjin-common/cpp/library/include/finjin/common/AllocatedClass.hpp"
+                  timestampString = "516832651.204059"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "76"
+                  endingLineNumber = "76"
+                  offsetFromSymbolStart = "217">
+               </Location>
+               <Location
+                  shouldBeEnabled = "No"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "Finjin::Engine::FinjinPrefab* Finjin::Common::AllocatedClass::New&lt;Finjin::Engine::FinjinPrefab&gt;(Finjin::Common::Allocator*, char const*, char const*, int)"
+                  moduleName = "finjin-viewer"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/derek/git/nedelman/finjin-engine/cpp/library/project/macos-xcode/../../../../../finjin-common/cpp/library/include/finjin/common/AllocatedClass.hpp"
+                  timestampString = "516832651.205931"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "76"
+                  endingLineNumber = "76"
+                  offsetFromSymbolStart = "217">
+               </Location>
+               <Location
+                  shouldBeEnabled = "No"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "Finjin::Engine::UserDataClassInstance::StringPropertyInstance* Finjin::Common::AllocatedClass::New&lt;Finjin::Engine::UserDataClassInstance::StringPropertyInstance, Finjin::Engine::UserDataClass::Item*&amp;&gt;(Finjin::Common::Allocator*, char const*, char const*, int, Finjin::Engine::UserDataClass::Item*&amp;&amp;&amp;)"
+                  moduleName = "finjin-viewer"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/derek/git/nedelman/finjin-engine/cpp/library/project/macos-xcode/../../../../../finjin-common/cpp/library/include/finjin/common/AllocatedClass.hpp"
+                  timestampString = "516832651.207572"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "76"
+                  endingLineNumber = "76"
+                  offsetFromSymbolStart = "221">
+               </Location>
+               <Location
+                  shouldBeEnabled = "No"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "Finjin::Engine::UserDataClassInstance::IntPropertyInstance* Finjin::Common::AllocatedClass::New&lt;Finjin::Engine::UserDataClassInstance::IntPropertyInstance, Finjin::Engine::UserDataClass::Item*&amp;&gt;(Finjin::Common::Allocator*, char const*, char const*, int, Finjin::Engine::UserDataClass::Item*&amp;&amp;&amp;)"
+                  moduleName = "finjin-viewer"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/derek/git/nedelman/finjin-engine/cpp/library/project/macos-xcode/../../../../../finjin-common/cpp/library/include/finjin/common/AllocatedClass.hpp"
+                  timestampString = "516832651.209087"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "76"
+                  endingLineNumber = "76"
+                  offsetFromSymbolStart = "221">
+               </Location>
+               <Location
+                  shouldBeEnabled = "No"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "Finjin::Engine::UserDataClassInstance::FloatPropertyInstance* Finjin::Common::AllocatedClass::New&lt;Finjin::Engine::UserDataClassInstance::FloatPropertyInstance, Finjin::Engine::UserDataClass::Item*&amp;&gt;(Finjin::Common::Allocator*, char const*, char const*, int, Finjin::Engine::UserDataClass::Item*&amp;&amp;&amp;)"
+                  moduleName = "finjin-viewer"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/derek/git/nedelman/finjin-engine/cpp/library/project/macos-xcode/../../../../../finjin-common/cpp/library/include/finjin/common/AllocatedClass.hpp"
+                  timestampString = "516832651.210819"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "76"
+                  endingLineNumber = "76"
+                  offsetFromSymbolStart = "221">
+               </Location>
+               <Location
+                  shouldBeEnabled = "No"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "Finjin::Engine::UserDataClassInstance::BoolPropertyInstance* Finjin::Common::AllocatedClass::New&lt;Finjin::Engine::UserDataClassInstance::BoolPropertyInstance, Finjin::Engine::UserDataClass::Item*&amp;&gt;(Finjin::Common::Allocator*, char const*, char const*, int, Finjin::Engine::UserDataClass::Item*&amp;&amp;&amp;)"
+                  moduleName = "finjin-viewer"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/derek/git/nedelman/finjin-engine/cpp/library/project/macos-xcode/../../../../../finjin-common/cpp/library/include/finjin/common/AllocatedClass.hpp"
+                  timestampString = "516832651.212404"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "76"
+                  endingLineNumber = "76"
+                  offsetFromSymbolStart = "221">
+               </Location>
+               <Location
+                  shouldBeEnabled = "No"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "Finjin::Engine::UserDataClassInstance::RGBAPropertyInstance* Finjin::Common::AllocatedClass::New&lt;Finjin::Engine::UserDataClassInstance::RGBAPropertyInstance, Finjin::Engine::UserDataClass::Item*&amp;&gt;(Finjin::Common::Allocator*, char const*, char const*, int, Finjin::Engine::UserDataClass::Item*&amp;&amp;&amp;)"
+                  moduleName = "finjin-viewer"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/derek/git/nedelman/finjin-engine/cpp/library/project/macos-xcode/../../../../../finjin-common/cpp/library/include/finjin/common/AllocatedClass.hpp"
+                  timestampString = "516832651.214395"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "76"
+                  endingLineNumber = "76"
+                  offsetFromSymbolStart = "221">
+               </Location>
+               <Location
+                  shouldBeEnabled = "No"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "Finjin::Engine::UserDataClassInstance::StringPropertyInstance* Finjin::Common::AllocatedClass::New&lt;Finjin::Engine::UserDataClassInstance::StringPropertyInstance, std::nullptr_t&gt;(Finjin::Common::Allocator*, char const*, char const*, int, std::nullptr_t&amp;&amp;)"
+                  moduleName = "finjin-viewer"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/derek/git/nedelman/finjin-engine/cpp/library/project/macos-xcode/../../../../../finjin-common/cpp/library/include/finjin/common/AllocatedClass.hpp"
+                  timestampString = "516832651.216004"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "76"
+                  endingLineNumber = "76"
+                  offsetFromSymbolStart = "221">
+               </Location>
+               <Location
+                  shouldBeEnabled = "No"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "Finjin::Engine::FinjinScene* Finjin::Common::AllocatedClass::New&lt;Finjin::Engine::FinjinScene&gt;(Finjin::Common::Allocator*, char const*, char const*, int)"
+                  moduleName = "finjin-viewer"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/derek/git/nedelman/finjin-engine/cpp/library/project/macos-xcode/../../../../../finjin-common/cpp/library/include/finjin/common/AllocatedClass.hpp"
+                  timestampString = "516832651.217526"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "76"
+                  endingLineNumber = "76"
+                  offsetFromSymbolStart = "217">
+               </Location>
+               <Location
+                  shouldBeEnabled = "No"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "Finjin::Engine::FinjinTexture* Finjin::Common::AllocatedClass::New&lt;Finjin::Engine::FinjinTexture&gt;(Finjin::Common::Allocator*, char const*, char const*, int)"
+                  moduleName = "finjin-viewer"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/derek/git/nedelman/finjin-engine/cpp/library/project/macos-xcode/../../../../../finjin-common/cpp/library/include/finjin/common/AllocatedClass.hpp"
+                  timestampString = "516832651.21916"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "76"
+                  endingLineNumber = "76"
+                  offsetFromSymbolStart = "217">
+               </Location>
+               <Location
+                  shouldBeEnabled = "No"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "Finjin::Engine::UserDataTypes* Finjin::Common::AllocatedClass::New&lt;Finjin::Engine::UserDataTypes, bool&gt;(Finjin::Common::Allocator*, char const*, char const*, int, bool&amp;&amp;)"
+                  moduleName = "finjin-viewer"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/derek/git/nedelman/finjin-engine/cpp/library/project/macos-xcode/../../../../../finjin-common/cpp/library/include/finjin/common/AllocatedClass.hpp"
+                  timestampString = "516832651.220673"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "76"
+                  endingLineNumber = "76"
+                  offsetFromSymbolStart = "221">
+               </Location>
+               <Location
+                  shouldBeEnabled = "No"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "Finjin::Engine::StringTable* Finjin::Common::AllocatedClass::New&lt;Finjin::Engine::StringTable&gt;(Finjin::Common::Allocator*, char const*, char const*, int)"
+                  moduleName = "finjin-viewer"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/derek/git/nedelman/finjin-engine/cpp/library/project/macos-xcode/../../../../../finjin-common/cpp/library/include/finjin/common/AllocatedClass.hpp"
+                  timestampString = "516832651.222649"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "76"
+                  endingLineNumber = "76"
+                  offsetFromSymbolStart = "217">
+               </Location>
+               <Location
+                  shouldBeEnabled = "No"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "Finjin::Engine::FinjinSound* Finjin::Common::AllocatedClass::New&lt;Finjin::Engine::FinjinSound&gt;(Finjin::Common::Allocator*, char const*, char const*, int)"
+                  moduleName = "finjin-viewer"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/derek/git/nedelman/finjin-engine/cpp/library/project/macos-xcode/../../../../../finjin-common/cpp/library/include/finjin/common/AllocatedClass.hpp"
+                  timestampString = "516832651.224272"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "76"
+                  endingLineNumber = "76"
+                  offsetFromSymbolStart = "217">
+               </Location>
+               <Location
+                  shouldBeEnabled = "No"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "Finjin::Engine::ApplicationViewport::Impl* Finjin::Common::AllocatedClass::New&lt;Finjin::Engine::ApplicationViewport::Impl&gt;(Finjin::Common::Allocator*, char const*, char const*, int)"
+                  moduleName = "finjin-viewer"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/derek/git/nedelman/finjin-engine/cpp/library/project/macos-xcode/../../../../../finjin-common/cpp/library/include/finjin/common/AllocatedClass.hpp"
+                  timestampString = "516832651.225778"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "76"
+                  endingLineNumber = "76"
+                  offsetFromSymbolStart = "217">
+               </Location>
+               <Location
+                  shouldBeEnabled = "No"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "Finjin::Engine::ApplicationViewport* Finjin::Common::AllocatedClass::New&lt;Finjin::Engine::ApplicationViewport&gt;(Finjin::Common::Allocator*, char const*, char const*, int)"
+                  moduleName = "finjin-viewer"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/derek/git/nedelman/finjin-engine/cpp/library/project/macos-xcode/../../../../../finjin-common/cpp/library/include/finjin/common/AllocatedClass.hpp"
+                  timestampString = "516832651.227258"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "76"
+                  endingLineNumber = "76"
+                  offsetFromSymbolStart = "217">
+               </Location>
+               <Location
+                  shouldBeEnabled = "No"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "Finjin::Engine::ApplicationViewportDelegate* Finjin::Common::AllocatedClass::New&lt;Finjin::Engine::ApplicationViewportDelegate&gt;(Finjin::Common::Allocator*, char const*, char const*, int)"
+                  moduleName = "finjin-viewer"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/derek/git/nedelman/finjin-engine/cpp/library/project/macos-xcode/../../../../../finjin-common/cpp/library/include/finjin/common/AllocatedClass.hpp"
+                  timestampString = "516832651.228712"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "76"
+                  endingLineNumber = "76"
+                  offsetFromSymbolStart = "217">
+               </Location>
+               <Location
+                  shouldBeEnabled = "No"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "Finjin::Engine::AVAudioEngineSoundContextImpl* Finjin::Common::AllocatedClass::New&lt;Finjin::Engine::AVAudioEngineSoundContextImpl, Finjin::Engine::AVAudioEngineSoundSystem*&amp;&gt;(Finjin::Common::Allocator*, char const*, char const*, int, Finjin::Engine::AVAudioEngineSoundSystem*&amp;&amp;&amp;)"
+                  moduleName = "finjin-viewer"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/derek/git/nedelman/finjin-engine/cpp/library/project/macos-xcode/../../../../../finjin-common/cpp/library/include/finjin/common/AllocatedClass.hpp"
+                  timestampString = "516832651.23063"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "76"
+                  endingLineNumber = "76"
+                  offsetFromSymbolStart = "221">
+               </Location>
+               <Location
+                  shouldBeEnabled = "No"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "Finjin::Engine::AVAudioEngineSoundSystem::Impl* Finjin::Common::AllocatedClass::New&lt;Finjin::Engine::AVAudioEngineSoundSystem::Impl&gt;(Finjin::Common::Allocator*, char const*, char const*, int)"
+                  moduleName = "finjin-viewer"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/derek/git/nedelman/finjin-engine/cpp/library/project/macos-xcode/../../../../../finjin-common/cpp/library/include/finjin/common/AllocatedClass.hpp"
+                  timestampString = "516832651.232179"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "76"
+                  endingLineNumber = "76"
+                  offsetFromSymbolStart = "217">
+               </Location>
+               <Location
+                  shouldBeEnabled = "No"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "Finjin::Engine::MacOSInputContext::Impl* Finjin::Common::AllocatedClass::New&lt;Finjin::Engine::MacOSInputContext::Impl, Finjin::Engine::MacOSInputSystem*&amp;&gt;(Finjin::Common::Allocator*, char const*, char const*, int, Finjin::Engine::MacOSInputSystem*&amp;&amp;&amp;)"
+                  moduleName = "finjin-viewer"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/derek/git/nedelman/finjin-engine/cpp/library/project/macos-xcode/../../../../../finjin-common/cpp/library/include/finjin/common/AllocatedClass.hpp"
+                  timestampString = "516832651.233756"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "76"
+                  endingLineNumber = "76"
+                  offsetFromSymbolStart = "221">
+               </Location>
+               <Location
+                  shouldBeEnabled = "No"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "Finjin::Engine::MacOSInputSystem::Impl* Finjin::Common::AllocatedClass::New&lt;Finjin::Engine::MacOSInputSystem::Impl&gt;(Finjin::Common::Allocator*, char const*, char const*, int)"
+                  moduleName = "finjin-viewer"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/derek/git/nedelman/finjin-engine/cpp/library/project/macos-xcode/../../../../../finjin-common/cpp/library/include/finjin/common/AllocatedClass.hpp"
+                  timestampString = "516832651.235276"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "76"
+                  endingLineNumber = "76"
+                  offsetFromSymbolStart = "217">
+               </Location>
+               <Location
+                  shouldBeEnabled = "No"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "Finjin::Engine::MetalGpuContextImpl* Finjin::Common::AllocatedClass::New&lt;Finjin::Engine::MetalGpuContextImpl&gt;(Finjin::Common::Allocator*, char const*, char const*, int)"
+                  moduleName = "finjin-viewer"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/derek/git/nedelman/finjin-engine/cpp/library/project/macos-xcode/../../../../../finjin-common/cpp/library/include/finjin/common/AllocatedClass.hpp"
+                  timestampString = "516832651.236758"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "76"
+                  endingLineNumber = "76"
+                  offsetFromSymbolStart = "217">
+               </Location>
+               <Location
+                  shouldBeEnabled = "No"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "Finjin::Engine::MetalSystemImpl* Finjin::Common::AllocatedClass::New&lt;Finjin::Engine::MetalSystemImpl&gt;(Finjin::Common::Allocator*, char const*, char const*, int)"
+                  moduleName = "finjin-viewer"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/derek/git/nedelman/finjin-engine/cpp/library/project/macos-xcode/../../../../../finjin-common/cpp/library/include/finjin/common/AllocatedClass.hpp"
+                  timestampString = "516832651.238699"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "76"
+                  endingLineNumber = "76"
+                  offsetFromSymbolStart = "217">
+               </Location>
+               <Location
+                  shouldBeEnabled = "No"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "Finjin::Engine::OSWindowImpl* Finjin::Common::AllocatedClass::New&lt;Finjin::Engine::OSWindowImpl, void*&amp;&gt;(Finjin::Common::Allocator*, char const*, char const*, int, void*&amp;&amp;&amp;)"
+                  moduleName = "finjin-viewer"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/derek/git/nedelman/finjin-engine/cpp/library/project/macos-xcode/../../../../../finjin-common/cpp/library/include/finjin/common/AllocatedClass.hpp"
+                  timestampString = "516832651.240281"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "76"
+                  endingLineNumber = "76"
+                  offsetFromSymbolStart = "221">
+               </Location>
+            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "../../../finjin-common/cpp/library/src/JobSystem.cpp"
+            timestampString = "516832928.036285"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "392"
+            endingLineNumber = "392"
+            landmarkName = "JobSystem::Create(const Settings&amp; settings, Error&amp; error)"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "../../../finjin-common/cpp/library/src/JobSystem.cpp"
+            timestampString = "516833048.17842"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "413"
+            endingLineNumber = "413"
+            landmarkName = "JobSystem::Create(const Settings&amp; settings, Error&amp; error)"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "../../../finjin-engine/cpp/library/src/finjin/engine/Application_General.cpp"
+            timestampString = "517322226.59386"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "927"
+            endingLineNumber = "927"
+            landmarkName = "Application::Initialize(Error&amp; error)"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "../../../finjin-engine/cpp/library/src/finjin/engine/internal/app/macos/finjin/engine/FinjinNSView.mm"
+            timestampString = "516864632.512772"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "54"
+            endingLineNumber = "54"
+            landmarkName = "-_finishInit"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "../../../finjin-engine/cpp/library/src/finjin/engine/internal/gpu/metal/MetalFrameBuffer.mm"
+            timestampString = "517466391.830203"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "58"
+            endingLineNumber = "58"
+            landmarkName = "MetalFrameBuffer::CreateCommandBuffers(size_t maxGpuCommandListsPerStage, Allocator* allocator, Error&amp; error)"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.AddressBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            symbolName = "*0x7fff8e19d1a4">
+            <Locations>
+               <Location
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  usesParentBreakpointCondition = "Yes"
+                  offsetFromSymbolStart = "0">
+               </Location>
+            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "../../../finjin-common/cpp/library/src/Path.cpp"
+            timestampString = "516881118.798228"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "2250"
+            endingLineNumber = "2250"
+            landmarkName = "Path::ExpandUserHomeDirectory()"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "../../../finjin-engine/cpp/library/src/finjin/engine/internal/gpu/metal/MetalGpuContextImpl.mm"
+            timestampString = "517466745.880146"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "888"
+            endingLineNumber = "888"
+            landmarkName = "MetalGpuContextImpl::FlushGpu()"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "../../../finjin-engine/cpp/library/src/finjin/engine/internal/app/macos/finjin/engine/DisplayInfo.mm"
+            timestampString = "517318066.221501"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "30"
+            endingLineNumber = "30"
+            landmarkName = "GetNameForDisplayID(Utf8String&amp; name, CGDirectDisplayID displayID)"
+            landmarkType = "9">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "../../../finjin-engine/cpp/library/src/finjin/engine/internal/app/macos/finjin/engine/DisplayInfo.mm"
+            timestampString = "517318068.673803"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "33"
+            endingLineNumber = "33"
+            landmarkName = "GetNameForDisplayID(Utf8String&amp; name, CGDirectDisplayID displayID)"
+            landmarkType = "9">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "../../../finjin-engine/cpp/library/src/finjin/engine/internal/gpu/metal/MetalFrameBuffer.mm"
+            timestampString = "517466391.830203"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "133"
+            endingLineNumber = "133"
+            landmarkName = "MetalFrameBuffer::CreateFreeCommandBuffers()"
             landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>

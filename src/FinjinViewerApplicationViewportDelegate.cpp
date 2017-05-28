@@ -33,6 +33,10 @@ static void WriteScreenCapture(const StandardPaths& standardPaths, const ScreenC
 {
     static int screenCaptureCount = 0;
     
+    auto standardScreenCapturePath = standardPaths.GetBestSavedScreenCapturePath();
+    if (standardScreenCapturePath == nullptr)
+        return;
+    
     if (screenCapture.IsFloatPixelFormat())
     {
         //Not supported
@@ -64,24 +68,20 @@ static void WriteScreenCapture(const StandardPaths& standardPaths, const ScreenC
             return;
         }
         
-        auto standardScreenCapturePath = standardPaths.GetBestSavedScreenCapturePath();
-        if (standardScreenCapturePath != nullptr)
+        auto filePath = standardScreenCapturePath->path;
+        filePath /= "finjin-viewer-screenshot-";
+        filePath += Convert::ToString(screenCaptureCount);
+        filePath += ".png";
+        
+        FileAccessor file;
+        if (file.OpenForWrite(filePath))
         {
-            Path filePath = standardScreenCapturePath->path;
-            filePath /= "finjin-viewer-screenshot-";
-            filePath += Convert::ToString(screenCaptureCount);
-            filePath += ".png";
+            file.Write(pngOutputBuffer.data(), pngOutputBuffer.size());
+            file.Close();
             
-            FileAccessor file;
-            if (file.OpenForWrite(filePath))
-            {
-                file.Write(pngOutputBuffer.data(), pngOutputBuffer.size());
-                file.Close();
-                
-                FINJIN_DEBUG_LOG_INFO("Saved screenshot to '%1%'.", filePath);
-                
-                screenCaptureCount++;
-            }
+            FINJIN_DEBUG_LOG_INFO("Saved screenshot to '%1%'.", filePath);
+            
+            screenCaptureCount++;
         }
     }
 }
@@ -403,9 +403,10 @@ void FinjinViewerApplicationViewportDelegate::HandleNewAssets(ApplicationViewpor
 
 void FinjinViewerApplicationViewportDelegate::StartFrame(ApplicationViewportUpdateContext& updateContext, FlyingCameraEvents& flyingCameraActions)
 {
+    //Kick off jobs for the frame
+    
     this->totalElapsedTime += updateContext.elapsedTime;
 
-    //Kick off jobs for the frame
     auto& frameStage = updateContext.gpuContext->StartFrameStage(updateContext.jobPipelineStage->index, updateContext.elapsedTime, this->totalElapsedTime);
 
     auto frameSequenceIndex = this->lifetimeFrameSequenceIndex++;

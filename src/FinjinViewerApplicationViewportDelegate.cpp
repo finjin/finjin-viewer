@@ -356,40 +356,55 @@ void FinjinViewerApplicationViewportDelegate::StartFrame(ApplicationViewportUpda
     {
         static int screenCaptureCount = 0;
 
-        PNGWriter pngWriter;
-
-        if (screenCapture.pixelFormat == ScreenCapturePixelFormat::BGRA8_UNORM || screenCapture.pixelFormat == ScreenCapturePixelFormat::BGRA8_UNORM_SRGB)
-            pngWriter.SetReverseRGB(true);
-
-        ByteBuffer pngOutputBuffer;
-        if (!pngOutputBuffer.Create(screenCapture.width * screenCapture.height * 4 * 2, FINJIN_ALLOCATOR_NULL)) //Leave enough for PNG header
+        if (screenCapture.IsFloatPixelFormat())
         {
-            FINJIN_DEBUG_LOG_INFO("Failed to allocate PNG write buffer.");
-            return;
+            //Not supported
         }
-        if (pngWriter.Write(screenCapture.image, screenCapture.width, screenCapture.height, screenCapture.rowStride, pngOutputBuffer) != PNGWriter::WriteResult::SUCCESS)
+        else if (screenCapture.IsIntPixelFormat())
         {
-            FINJIN_DEBUG_LOG_INFO("Failed to write PNG file to output buffer.");
-            return;
-        }
-
-        auto standardScreenCapturePath = updateContext.standardPaths->GetBestSavedScreenCapturePath();
-        if (standardScreenCapturePath != nullptr)
-        {
-            Path filePath = standardScreenCapturePath->path;
-            filePath /= "finjin-viewer-screenshot-";
-            filePath += Convert::ToString(screenCaptureCount);
-            filePath += ".png";
-
-            FileAccessor file;
-            if (file.OpenForWrite(filePath))
+            PNGWriter pngWriter;
+            
+            if (screenCapture.IsBGRPixelFormat())
+                pngWriter.SetReverseRGB(true);
+            
+            if (screenCapture.IsSRGBPixelFormat())
+                pngWriter.SetSRGB(true);
+            
+            pngWriter.SetChannelCount(screenCapture.GetChannelCount());
+            pngWriter.SetBytesPerChannel(screenCapture.GetBytesPerChannel());
+            
+            ByteBuffer pngOutputBuffer;
+            if (!pngOutputBuffer.Create(screenCapture.width * screenCapture.height * 4 * 2, FINJIN_ALLOCATOR_NULL)) //Leave enough for PNG header
             {
-                file.Write(pngOutputBuffer.data(), pngOutputBuffer.size());
-                file.Close();
-
-                FINJIN_DEBUG_LOG_INFO("Saved screenshot to '%1%'.", filePath);
-
-                screenCaptureCount++;
+                FINJIN_DEBUG_LOG_INFO("Failed to allocate PNG write buffer.");
+                return;
+            }
+            
+            auto writeResult = pngWriter.Write(screenCapture.image, screenCapture.width, screenCapture.height, screenCapture.rowStride, pngOutputBuffer);
+            if (writeResult != PNGWriter::WriteResult::SUCCESS)
+            {
+                FINJIN_DEBUG_LOG_INFO("Failed to write PNG file to output buffer: %1%", pngWriter.GetWriteResultString(writeResult));
+                return;
+            }
+            
+            auto standardScreenCapturePath = updateContext.standardPaths->GetBestSavedScreenCapturePath();
+            if (standardScreenCapturePath != nullptr)
+            {
+                Path filePath = standardScreenCapturePath->path;
+                filePath /= "finjin-viewer-screenshot-";
+                filePath += Convert::ToString(screenCaptureCount);
+                filePath += ".png";
+                
+                FileAccessor file;
+                if (file.OpenForWrite(filePath))
+                {
+                    file.Write(pngOutputBuffer.data(), pngOutputBuffer.size());
+                    file.Close();
+                    
+                    FINJIN_DEBUG_LOG_INFO("Saved screenshot to '%1%'.", filePath);
+                    
+                    screenCaptureCount++;
+                }
             }
         }
     }

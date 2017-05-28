@@ -16,16 +16,13 @@
 #include "FinjinViewerApplicationViewportDelegate.hpp"
 #include <finjin/common/Allocator.hpp>
 #include <finjin/common/DebugLog.hpp>
-#include <finjin/common/FileAccessor.hpp>
 #include <finjin/common/JobSystem.hpp>
-#include <finjin/common/PNGWriter.hpp>
 #include <finjin/engine/AssetCountsSettings.hpp>
 
 using namespace Finjin::Viewer;
 
 
 //Macros------------------------------------------------------------------------
-#define WRITE_UNSUPPORTED_SCREEN_CAPTURE_AS_RAW 1
 #define USE_TEST_SCENE_AS_FALLBACK 1
 
 
@@ -43,79 +40,19 @@ static void WriteScreenCapture(const StandardPaths& standardPaths, const ScreenC
     filePath += Convert::ToString(screenCaptureCount);
     filePath += ".";
     
-    auto successfullySaved = false;
-    
-    if (forceRaw || (screenCapture.IsFloatPixelFormat() && WRITE_UNSUPPORTED_SCREEN_CAPTURE_AS_RAW))
-    {
-        filePath += "raw";
-        
-        FileAccessor file;
-        if (file.OpenForWrite(filePath))
-        {
-            uint32_t signature = FINJIN_SIGNATURE_FOURCC;
-            uint32_t width = screenCapture.width;
-            uint32_t height = screenCapture.height;
-            uint32_t format = static_cast<uint32_t>(screenCapture.pixelFormat);
-            
-            file.Write(&signature, sizeof(signature));
-            file.Write(&width, sizeof(width));
-            file.Write(&height, sizeof(height));
-            file.Write(&format, sizeof(format));
-            
-            auto pixels = static_cast<const uint8_t*>(screenCapture.image);
-            for (size_t y = 0; y < screenCapture.height; y++)
-            {
-                file.Write(pixels, width * height * screenCapture.GetBytesPerPixel());
-                pixels += screenCapture.rowStride;
-            }
-            
-            successfullySaved = true;
-        }
-    }
-    else if (screenCapture.IsIntPixelFormat())
-    {
-        PNGWriter pngWriter;
-        
-        if (screenCapture.IsBGRPixelFormat())
-            pngWriter.SetReverseRGB(true);
-        
-        if (screenCapture.IsSRGBPixelFormat())
-            pngWriter.SetSRGB(true);
-        
-        pngWriter.SetChannelCount(screenCapture.GetChannelCount());
-        pngWriter.SetBytesPerChannel(screenCapture.GetBytesPerChannel());
-        
-        ByteBuffer pngOutputBuffer;
-        if (!pngOutputBuffer.Create(screenCapture.width * screenCapture.height * screenCapture.GetChannelCount() * 2, FINJIN_ALLOCATOR_NULL)) //Leave enough for PNG header
-        {
-            FINJIN_DEBUG_LOG_INFO("Failed to allocate PNG write buffer.");
-            return;
-        }
-        
-        auto writeResult = pngWriter.Write(screenCapture.image, screenCapture.width, screenCapture.height, screenCapture.rowStride, pngOutputBuffer);
-        if (writeResult != PNGWriter::WriteResult::SUCCESS)
-        {
-            FINJIN_DEBUG_LOG_INFO("Failed to write PNG file to output buffer: %1%", pngWriter.GetWriteResultString(writeResult));
-            return;
-        }
-        
-        filePath += "png";
-        
-        FileAccessor file;
-        if (file.OpenForWrite(filePath))
-        {
-            file.Write(pngOutputBuffer.data(), pngOutputBuffer.size());
-            
-            successfullySaved = true;
-        }
-    }
-    
-    if (successfullySaved)
+    ScreenCaptureWriteSettings writeSettings;
+    writeSettings.writeUnsupportedFormatAsRaw = true;
+    auto writeResult = screenCapture.WriteToFile(filePath, writeSettings);
+    if (writeResult == ScreenCapture::WriteResult::SUCCESS)
     {
         FINJIN_DEBUG_LOG_INFO("Saved screenshot to '%1%'.", filePath);
-        
+
         screenCaptureCount++;
     }
+    else
+    {
+        FINJIN_DEBUG_LOG_INFO("Failed to write screenshot: %1%", screenCapture.GetWriteResultString(writeResult));
+    }    
 }
 
 

@@ -16,7 +16,9 @@
 #include "FinjinViewerApplicationViewportDelegate.hpp"
 #include <finjin/common/Allocator.hpp>
 #include <finjin/common/DebugLog.hpp>
+#include <finjin/common/FileAccessor.hpp>
 #include <finjin/common/JobSystem.hpp>
+#include <finjin/common/PNGWriter.hpp>
 #include <finjin/engine/AssetCountsSettings.hpp>
 
 using namespace Finjin::Viewer;
@@ -349,6 +351,49 @@ void FinjinViewerApplicationViewportDelegate::StartFrame(ApplicationViewportUpda
 
     auto frameSequenceIndex = this->lifetimeFrameSequenceIndex++;
 
+    ScreenCapture screenCapture;
+    if (updateContext.gpuContext->GetScreenCapture(screenCapture, frameStage) == ScreenCaptureResult::SUCCESS)
+    {
+        static int screenCaptureCount = 0;
+
+        PNGWriter pngWriter;
+
+        if (screenCapture.pixelFormat == ScreenCapturePixelFormat::BGRA8_UNORM || screenCapture.pixelFormat == ScreenCapturePixelFormat::BGRA8_UNORM_SRGB)
+            pngWriter.SetReverseRGB(true);
+
+        ByteBuffer pngOutputBuffer;
+        if (!pngOutputBuffer.Create(screenCapture.width * screenCapture.height * 4 * 2, FINJIN_ALLOCATOR_NULL)) //Leave enough for PNG header
+        {
+            FINJIN_DEBUG_LOG_INFO("Failed to allocate PNG write buffer.");
+            return;
+        }
+        if (pngWriter.Write(screenCapture.image, screenCapture.width, screenCapture.height, screenCapture.rowStride, pngOutputBuffer) != PNGWriter::WriteResult::SUCCESS)
+        {
+            FINJIN_DEBUG_LOG_INFO("Failed to write PNG file to output buffer.");
+            return;
+        }
+
+        auto standardScreenCapturePath = updateContext.standardPaths->GetBestSavedScreenCapturePath();
+        if (standardScreenCapturePath != nullptr)
+        {
+            Path filePath = standardScreenCapturePath->path;
+            filePath /= "finjin-viewer-screenshot-";
+            filePath += Convert::ToString(screenCaptureCount);
+            filePath += ".png";
+
+            FileAccessor file;
+            if (file.OpenForWrite(filePath))
+            {
+                file.Write(pngOutputBuffer.data(), pngOutputBuffer.size());
+                file.Close();
+
+                FINJIN_DEBUG_LOG_INFO("Saved screenshot to '%1%'.", filePath);
+
+                screenCaptureCount++;
+            }
+        }
+    }
+
     updateContext.jobSystem->StartGroupFromMainThread();
     updateContext.jobPipelineStage->simulateAndRenderFuture = updateContext.jobSystem->Submit([this, &updateContext, flyingCameraActions, &frameStage, frameSequenceIndex]()
     {
@@ -458,6 +503,7 @@ void FinjinViewerApplicationViewportDelegate::StartFrame(ApplicationViewportUpda
             if (flyingCameraActions.Contains(FlyingCameraEvents::SCREENSHOT))
             {
                 FINJIN_DEBUG_LOG_INFO("Screenshot");
+                updateContext.gpuCommands.CaptureScreen();
             }
             if (flyingCameraActions.Contains(FlyingCameraEvents::ESCAPE))
             {

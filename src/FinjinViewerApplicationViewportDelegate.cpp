@@ -25,11 +25,12 @@ using namespace Finjin::Viewer;
 
 
 //Macros------------------------------------------------------------------------
+#define WRITE_UNSUPPORTED_SCREEN_CAPTURE_AS_RAW 1
 #define USE_TEST_SCENE_AS_FALLBACK 1
 
 
 //Local functions---------------------------------------------------------------
-static void WriteScreenCapture(const StandardPaths& standardPaths, const ScreenCapture& screenCapture)
+static void WriteScreenCapture(const StandardPaths& standardPaths, const ScreenCapture& screenCapture, bool forceRaw = false)
 {
     static int screenCaptureCount = 0;
     
@@ -37,9 +38,39 @@ static void WriteScreenCapture(const StandardPaths& standardPaths, const ScreenC
     if (standardScreenCapturePath == nullptr)
         return;
     
-    if (screenCapture.IsFloatPixelFormat())
+    auto filePath = standardScreenCapturePath->path;
+    filePath /= "finjin-viewer-screenshot-";
+    filePath += Convert::ToString(screenCaptureCount);
+    filePath += ".";
+    
+    auto successfullySaved = false;
+    
+    if (forceRaw || (screenCapture.IsFloatPixelFormat() && WRITE_UNSUPPORTED_SCREEN_CAPTURE_AS_RAW))
     {
-        //Not supported
+        filePath += "raw";
+        
+        FileAccessor file;
+        if (file.OpenForWrite(filePath))
+        {
+            uint32_t signature = FINJIN_SIGNATURE_FOURCC;
+            uint32_t width = screenCapture.width;
+            uint32_t height = screenCapture.height;
+            uint32_t format = static_cast<uint32_t>(screenCapture.pixelFormat);
+            
+            file.Write(&signature, sizeof(signature));
+            file.Write(&width, sizeof(width));
+            file.Write(&height, sizeof(height));
+            file.Write(&format, sizeof(format));
+            
+            auto pixels = static_cast<const uint8_t*>(screenCapture.image);
+            for (size_t y = 0; y < screenCapture.height; y++)
+            {
+                file.Write(pixels, width * height * screenCapture.GetBytesPerPixel());
+                pixels += screenCapture.rowStride;
+            }
+            
+            successfullySaved = true;
+        }
     }
     else if (screenCapture.IsIntPixelFormat())
     {
@@ -68,21 +99,22 @@ static void WriteScreenCapture(const StandardPaths& standardPaths, const ScreenC
             return;
         }
         
-        auto filePath = standardScreenCapturePath->path;
-        filePath /= "finjin-viewer-screenshot-";
-        filePath += Convert::ToString(screenCaptureCount);
-        filePath += ".png";
+        filePath += "png";
         
         FileAccessor file;
         if (file.OpenForWrite(filePath))
         {
             file.Write(pngOutputBuffer.data(), pngOutputBuffer.size());
-            file.Close();
             
-            FINJIN_DEBUG_LOG_INFO("Saved screenshot to '%1%'.", filePath);
-            
-            screenCaptureCount++;
+            successfullySaved = true;
         }
+    }
+    
+    if (successfullySaved)
+    {
+        FINJIN_DEBUG_LOG_INFO("Saved screenshot to '%1%'.", filePath);
+        
+        screenCaptureCount++;
     }
 }
 

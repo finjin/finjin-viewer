@@ -23,6 +23,7 @@ using namespace Finjin::Viewer;
 FinjinViewerApplicationSettings::FinjinViewerApplicationSettings()
 {
     this->checkSystemMemoryFree = false;
+    //this->startInVR = true;    
 }
 
 void FinjinViewerApplicationSettings::ReadCommandLineSettings(CommandLineArgsProcessor& argsProcessor, Error& error)

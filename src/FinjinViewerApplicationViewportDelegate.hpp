@@ -30,18 +30,19 @@ namespace Finjin { namespace Viewer {
     class FinjinViewerApplicationViewportDelegate : public ApplicationViewportDelegate
     {
     public:
-        FinjinViewerApplicationViewportDelegate(Allocator* allocator, const Utf8String& loadFileName);
+        FinjinViewerApplicationViewportDelegate(Allocator* allocator, const Utf8String& loadFileName, bool startInVR);
 
         UpdateResult Update(ApplicationViewportUpdateContext& updateContext, Error& error) override;
         void FinishFrame(ApplicationViewportRenderContext& renderContext, Error& error) override;
 
     private:
-        void HandleEventsAndInputs(ApplicationViewportUpdateContext& updateContext, FlyingCameraEvents& flyingCameraActions);
+        void HandleEventsAndInputs(ApplicationViewportUpdateContext& updateContext, FlyingCameraEvents& flyingCameraActions, FlyingCameraEvents& headsetFlyingCameraActions);
         void HandleNewAssets(ApplicationViewportUpdateContext& updateContext, Error& error);
-        void StartFrame(ApplicationViewportUpdateContext& updateContext, FlyingCameraEvents& flyingCameraActions);
+        void StartFrame(ApplicationViewportUpdateContext& updateContext, FlyingCameraEvents& flyingCameraActions, FlyingCameraEvents& headsetFlyingCameraActions);
 
     private:
         Utf8String loadFileName;
+        bool startInVR;
 
         FinjinSceneReader::State sceneReaderState;
         FinjinSceneReader sceneReader;
@@ -60,6 +61,7 @@ namespace Finjin { namespace Viewer {
         };
         RunState runState;
 
+        FlyingCameraInputBindings headsetFlyingCameraInputBindings; //Overkill since only the locator is used
         FlyingCameraInputBindings flyingCameraInputBindings;
         size_t flyingCameraGameControllerIndex;
 
@@ -80,6 +82,9 @@ namespace Finjin { namespace Viewer {
 
         float moveUnitsPerSecond;
         float rotateUnitsPerSecond;
+
+        bool allowRelativeMove;
+        bool allowRelativeLook;
 
         size_t lifetimeFrameSequenceIndex;
     };

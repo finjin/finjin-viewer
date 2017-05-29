@@ -91,6 +91,7 @@ ApplicationViewportDelegate* FinjinViewerApplicationDelegate::CreateApplicationV
         (
         allocator,
         FINJIN_CALLER_ARGUMENTS,
-        this->commandLineSettings.fileName
+        this->commandLineSettings.fileName,
+        this->commandLineSettings.startInVR
         );
 }

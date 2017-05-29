@@ -57,18 +57,20 @@ static void WriteScreenCapture(const StandardPaths& standardPaths, const ScreenC
 
 
 //Implementation----------------------------------------------------------------
-FinjinViewerApplicationViewportDelegate::FinjinViewerApplicationViewportDelegate(Allocator* allocator, const Utf8String& loadFileName) :
+FinjinViewerApplicationViewportDelegate::FinjinViewerApplicationViewportDelegate(Allocator* allocator, const Utf8String& _loadFileName, bool _startInVR) :
     ApplicationViewportDelegate(allocator),
     sceneReader(allocator),
     tempAssetRef(allocator),
-    loadFileName(allocator)
+    loadFileName(_loadFileName, allocator),
+    startInVR(_startInVR)
 {
     this->totalElapsedTime = 0;
     this->runState = RunState::STARTING;
-    this->loadFileName = loadFileName;
     this->clearColor = MathVector4(0, 0, 0, 1);
     this->moveUnitsPerSecond = 30.0f;
     this->rotateUnitsPerSecond = 1.0f;
+    this->allowRelativeMove = true;
+    this->allowRelativeLook = true;
     this->lifetimeFrameSequenceIndex = 0;
     this->flyingCameraGameControllerIndex = (size_t)-1;
 }
@@ -155,13 +157,30 @@ ApplicationViewportDelegate::UpdateResult FinjinViewerApplicationViewportDelegat
 
             {
                 this->tempAssetRef.ForLocalFile(FlyingCameraInputBindings::GetDefaultBindingsFileName());
-                auto result = this->flyingCameraInputBindings.GetFromConfiguration(updateContext.inputContext, InputBindingsConfigurationSearchCriteria(InputDeviceClass::GAME_CONTROLLER, Utf8String::GetEmpty(), (size_t)-1, InputBindingsConfigurationFlag::CONNECTED_ONLY, InputDeviceSemantic::NONE), this->tempAssetRef, this->tempBuffer);
-                if (result.IsSuccess())
+                                
+            #if FINJIN_TARGET_VR_SYSTEM != FINJIN_TARGET_VR_SYSTEM_NONE
+                if (updateContext.vrContext != nullptr && updateContext.vrContext->GetInitializationStatus() == VRContextInitializationStatus::INITIALIZED && this->startInVR)
                 {
-                    FINJIN_DEBUG_LOG_INFO("Game controller successfully configured.");
-                    this->flyingCameraGameControllerIndex = result.deviceIndex;
+                    auto result = this->headsetFlyingCameraInputBindings.GetFromConfiguration(updateContext.inputContext, InputBindingsConfigurationSearchCriteria(InputDeviceClass::HEADSET, Utf8String::GetEmpty(), (size_t)0, InputBindingsConfigurationFlag::CONNECTED_ONLY, InputDeviceSemantic::NONE), this->tempAssetRef, this->tempBuffer);
+                    if (result.IsSuccess())
+                    {
+                        this->allowRelativeMove = false;
+                        this->allowRelativeLook = false;
+
+                        FINJIN_DEBUG_LOG_INFO("Headset successfully configured.");
+                        this->flyingCameraGameControllerIndex = result.deviceIndex;
+                    }
                 }
-                result = this->flyingCameraInputBindings.GetFromConfiguration(updateContext.inputContext, InputBindingsConfigurationSearchCriteria(InputDeviceClass::KEYBOARD, (size_t)-1), this->tempAssetRef, this->tempBuffer);
+            #endif                
+                {
+                    auto result = this->flyingCameraInputBindings.GetFromConfiguration(updateContext.inputContext, InputBindingsConfigurationSearchCriteria(InputDeviceClass::GAME_CONTROLLER, Utf8String::GetEmpty(), (size_t)-1, InputBindingsConfigurationFlag::CONNECTED_ONLY, InputDeviceSemantic::NONE), this->tempAssetRef, this->tempBuffer);
+                    if (result.IsSuccess())
+                    {
+                        FINJIN_DEBUG_LOG_INFO("Game controller successfully configured.");
+                        this->flyingCameraGameControllerIndex = result.deviceIndex;
+                    }
+                }
+                auto result = this->flyingCameraInputBindings.GetFromConfiguration(updateContext.inputContext, InputBindingsConfigurationSearchCriteria(InputDeviceClass::KEYBOARD, (size_t)-1), this->tempAssetRef, this->tempBuffer);
                 if (result.IsSuccess())
                 {
                     FINJIN_DEBUG_LOG_INFO("Keyboard successfully configured.");
@@ -226,10 +245,10 @@ ApplicationViewportDelegate::UpdateResult FinjinViewerApplicationViewportDelegat
             return UpdateResult::LOGIC_ONLY;
         }
 
-        FlyingCameraEvents flyingCameraActions;
-        HandleEventsAndInputs(updateContext, flyingCameraActions);
+        FlyingCameraEvents flyingCameraActions, headsetFlyingCameraActions;
+        HandleEventsAndInputs(updateContext, flyingCameraActions, headsetFlyingCameraActions);
 
-        StartFrame(updateContext, flyingCameraActions);
+        StartFrame(updateContext, flyingCameraActions, headsetFlyingCameraActions);
         return UpdateResult::STARTED_FRAME;
     }
     else
@@ -370,7 +389,7 @@ void FinjinViewerApplicationViewportDelegate::HandleNewAssets(ApplicationViewpor
     }
 }
 
-void FinjinViewerApplicationViewportDelegate::StartFrame(ApplicationViewportUpdateContext& updateContext, FlyingCameraEvents& flyingCameraActions)
+void FinjinViewerApplicationViewportDelegate::StartFrame(ApplicationViewportUpdateContext& updateContext, FlyingCameraEvents& flyingCameraActions, FlyingCameraEvents& headsetFlyingCameraActions)
 {
     //Kick off jobs for the frame
     
@@ -387,7 +406,7 @@ void FinjinViewerApplicationViewportDelegate::StartFrame(ApplicationViewportUpda
     }
 
     updateContext.jobSystem->StartGroupFromMainThread();
-    updateContext.jobPipelineStage->simulateAndRenderFuture = updateContext.jobSystem->Submit([this, &updateContext, flyingCameraActions, &frameStage, frameSequenceIndex]()
+    updateContext.jobPipelineStage->simulateAndRenderFuture = updateContext.jobSystem->Submit([this, &updateContext, flyingCameraActions, headsetFlyingCameraActions, &frameStage, frameSequenceIndex]()
     {
         //Simulate----------------------------
         auto cameraChanged = false;
@@ -424,29 +443,52 @@ void FinjinViewerApplicationViewportDelegate::StartFrame(ApplicationViewportUpda
             {
                 FINJIN_DEBUG_LOG_INFO("MouseRightButtonUp");
             }
+            if (headsetFlyingCameraActions.Contains(FlyingCameraEvents::LOCATOR))
+            {
+                //This handler must come before others that depend on updating the camera
+                if (!this->allowRelativeMove)
+                {
+                    this->camera.SetPosition(headsetFlyingCameraActions.lookHeadset.position);
+                    cameraChanged = true;
+                }
+                if (!this->allowRelativeLook)
+                {
+                    this->camera.SetOrientationFromColumns(headsetFlyingCameraActions.lookHeadset.orientation);
+                    cameraChanged = true;
+                }                
+            }
             if (flyingCameraActions.Contains(FlyingCameraEvents::MOVE))
             {
-                this->camera.Pan(flyingCameraActions.move[0] * updateContext.elapsedTime * this->moveUnitsPerSecond, 0);
-                this->camera.Walk(flyingCameraActions.move[1] * updateContext.elapsedTime * this->moveUnitsPerSecond);
+                if (this->allowRelativeMove)
+                {
+                    this->camera.Pan(flyingCameraActions.move[0] * updateContext.elapsedTime * this->moveUnitsPerSecond, 0);
+                    this->camera.Walk(flyingCameraActions.move[1] * updateContext.elapsedTime * this->moveUnitsPerSecond);
 
-                cameraChanged = true;
+                    cameraChanged = true;
 
-                FINJIN_DEBUG_LOG_INFO("Move: %1% %2%", flyingCameraActions.move[0], flyingCameraActions.move[1]);
+                    FINJIN_DEBUG_LOG_INFO("Move: %1% %2%", flyingCameraActions.move[0], flyingCameraActions.move[1]);
+                }
             }
             if (flyingCameraActions.Contains(FlyingCameraEvents::PAN_ORBIT))
             {
-                this->camera.Pan(flyingCameraActions.panOrbit[0] * updateContext.elapsedTime * this->moveUnitsPerSecond, flyingCameraActions.panOrbit[1] * updateContext.elapsedTime * this->moveUnitsPerSecond);
+                if (this->allowRelativeMove)
+                {
+                    this->camera.Pan(flyingCameraActions.panOrbit[0] * updateContext.elapsedTime * this->moveUnitsPerSecond, flyingCameraActions.panOrbit[1] * updateContext.elapsedTime * this->moveUnitsPerSecond);
 
-                FINJIN_DEBUG_LOG_INFO("PanOrbit: %1% %2%", flyingCameraActions.panOrbit[0], flyingCameraActions.panOrbit[1]);
+                    FINJIN_DEBUG_LOG_INFO("PanOrbit: %1% %2%", flyingCameraActions.panOrbit[0], flyingCameraActions.panOrbit[1]);
+                }
             }
             if (flyingCameraActions.Contains(FlyingCameraEvents::LOOK))
             {
-                this->camera.RotateY(Radians(flyingCameraActions.look[0] * updateContext.elapsedTime * this->rotateUnitsPerSecond * -1.0f)); //Negate since a left 'look' is negative but represents a positive rotation about Y
-                this->camera.Pitch(Radians(flyingCameraActions.look[1] * updateContext.elapsedTime * this->rotateUnitsPerSecond));
+                if (this->allowRelativeLook)
+                {
+                    this->camera.RotateY(Radians(flyingCameraActions.look[0] * updateContext.elapsedTime * this->rotateUnitsPerSecond * -1.0f)); //Negate since a left 'look' is negative but represents a positive rotation about Y
+                    this->camera.Pitch(Radians(flyingCameraActions.look[1] * updateContext.elapsedTime * this->rotateUnitsPerSecond));
 
-                cameraChanged = true;
+                    cameraChanged = true;
 
-                FINJIN_DEBUG_LOG_INFO("Look: %1% %2%", flyingCameraActions.look[0], flyingCameraActions.look[1]);
+                    FINJIN_DEBUG_LOG_INFO("Look: %1% %2%", flyingCameraActions.look[0], flyingCameraActions.look[1]);
+                }
             }
             if (flyingCameraActions.Contains(FlyingCameraEvents::SELECT_OBJECT))
             {
@@ -663,7 +705,7 @@ void FinjinViewerApplicationViewportDelegate::FinishFrame(ApplicationViewportRen
     }
 }
 
-void FinjinViewerApplicationViewportDelegate::HandleEventsAndInputs(ApplicationViewportUpdateContext& updateContext, FlyingCameraEvents& flyingCameraActions)
+void FinjinViewerApplicationViewportDelegate::HandleEventsAndInputs(ApplicationViewportUpdateContext& updateContext, FlyingCameraEvents& flyingCameraActions, FlyingCameraEvents& headsetFlyingCameraActions)
 {
 #if FINJIN_TARGET_VR_SYSTEM != FINJIN_TARGET_VR_SYSTEM_NONE
     //VR events
@@ -725,6 +767,7 @@ void FinjinViewerApplicationViewportDelegate::HandleEventsAndInputs(ApplicationV
 
     //Update input
     updateContext.inputContext->GetActions(flyingCameraActions, this->flyingCameraInputBindings, updateContext.elapsedTime);
+    updateContext.inputContext->GetActions(headsetFlyingCameraActions, this->headsetFlyingCameraInputBindings, updateContext.elapsedTime);
 
     updateContext.FinishPoll();
 }

@@ -12,6 +12,8 @@ README.md                   This file.
 assets/                     Application-specific assets.
   shaders/                  Shader assets.
     d3d12/                  D3D12-specific shaders.
+    metal/                  Metal-specific shaders.
+    vulkan/                 Vulkan-specific shaders.
 project/                    Platform-specific projects.
 src/                        Application-specific source files.
 ```

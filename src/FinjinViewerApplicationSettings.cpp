@@ -30,13 +30,13 @@ void FinjinViewerApplicationSettings::ReadCommandLineSettings(CommandLineArgsPro
 {
     FINJIN_ERROR_METHOD_START(error);
 
-    for (size_t index = 0; index < argsProcessor.GetCount(); index++)
+    for (size_t argIndex = 0; argIndex < argsProcessor.GetCount(); argIndex++)
     {
-        auto& arg = argsProcessor[index];
+        auto& arg = argsProcessor[argIndex];
 
-        if (arg == "-file" && index < argsProcessor.GetCount() - 1)
+        if (arg == "-file" && argIndex < argsProcessor.GetCount() - 1)
         {
-            auto& argValue = argsProcessor[index + 1];
+            auto& argValue = argsProcessor[argIndex + 1];
 
             Path path(argValue);
             if (path.IsAbsolute())
@@ -64,7 +64,7 @@ void FinjinViewerApplicationSettings::ReadCommandLineSettings(CommandLineArgsPro
             else
                 this->fileName = argValue;
 
-            index++;
+            argIndex++;
         }
     }
 

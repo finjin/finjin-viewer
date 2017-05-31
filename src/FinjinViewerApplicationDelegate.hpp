@@ -36,8 +36,8 @@ namespace Finjin { namespace Viewer {
 
         const ApplicationSettings& GetApplicationSettings() const override;
 
-        void OnStart() override;
-        void OnStop() override;
+        void OnDestroyStart() override;
+        void OnDestroyFinish() override;
 
         size_t GetRequestedApplicationViewportDescriptionCount() const override;
         ApplicationViewportDescription& GetApplicationViewportDescription(size_t index) override;

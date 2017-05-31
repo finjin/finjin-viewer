@@ -67,11 +67,11 @@ const ApplicationSettings& FinjinViewerApplicationDelegate::GetApplicationSettin
     return this->commandLineSettings;
 }
 
-void FinjinViewerApplicationDelegate::OnStart()
+void FinjinViewerApplicationDelegate::OnDestroyStart()
 {
 }
 
-void FinjinViewerApplicationDelegate::OnStop()
+void FinjinViewerApplicationDelegate::OnDestroyFinish()
 {
 }
 

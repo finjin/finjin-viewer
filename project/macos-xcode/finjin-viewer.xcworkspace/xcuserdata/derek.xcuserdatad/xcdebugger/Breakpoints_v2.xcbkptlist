@@ -1299,11 +1299,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "../../../finjin-engine/cpp/library/src/finjin/engine/Application_General.cpp"
-            timestampString = "517322226.59386"
+            timestampString = "517792802.836977"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "619"
-            endingLineNumber = "619"
+            startingLineNumber = "613"
+            endingLineNumber = "613"
             landmarkName = "Application::Initialize(Error&amp; error)"
             landmarkType = "7">
          </BreakpointContent>
@@ -1377,11 +1377,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "../../../finjin-engine/cpp/library/src/finjin/engine/Application_General.cpp"
-            timestampString = "517322226.59386"
+            timestampString = "517792802.836977"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "804"
-            endingLineNumber = "804"
+            startingLineNumber = "798"
+            endingLineNumber = "798"
             landmarkName = "Application::Initialize(Error&amp; error)"
             landmarkType = "7">
          </BreakpointContent>
@@ -1489,11 +1489,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "../../../finjin-engine/cpp/library/src/finjin/engine/Application_General.cpp"
-            timestampString = "517322226.59386"
+            timestampString = "517792802.836977"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "347"
-            endingLineNumber = "347"
+            startingLineNumber = "346"
+            endingLineNumber = "346"
             landmarkName = "Application::Tick(Error&amp; error)"
             landmarkType = "7">
          </BreakpointContent>
@@ -1505,11 +1505,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "../../../finjin-engine/cpp/library/src/finjin/engine/Application_General.cpp"
-            timestampString = "517322226.59386"
+            timestampString = "517792802.836977"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "352"
-            endingLineNumber = "352"
+            startingLineNumber = "351"
+            endingLineNumber = "351"
             landmarkName = "Application::Tick(Error&amp; error)"
             landmarkType = "7">
          </BreakpointContent>
@@ -1681,11 +1681,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "../../../finjin-engine/cpp/library/src/finjin/engine/Application_General.cpp"
-            timestampString = "517322226.59386"
+            timestampString = "517792802.836977"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "449"
-            endingLineNumber = "449"
+            startingLineNumber = "443"
+            endingLineNumber = "443"
             landmarkName = "Application::Initialize(Error&amp; error)"
             landmarkType = "7">
             <Locations>
@@ -2061,12 +2061,12 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "../../src/FinjinViewerApplicationViewportDelegate.cpp"
-            timestampString = "517580644.697598"
+            timestampString = "517673716.097445"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "446"
-            endingLineNumber = "446"
-            landmarkName = "FinjinViewerApplicationViewportDelegate::StartFrame(ApplicationViewportUpdateContext&amp; updateContext, FlyingCameraEvents&amp; flyingCameraActions)"
+            startingLineNumber = "501"
+            endingLineNumber = "501"
+            landmarkName = "FinjinViewerApplicationViewportDelegate::StartFrame(ApplicationViewportUpdateContext&amp; updateContext, FlyingCameraEvents&amp; flyingCameraActions, FlyingCameraEvents&amp; headsetFlyingCameraActions)"
             landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>
@@ -2157,12 +2157,12 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "../../src/FinjinViewerApplicationViewportDelegate.cpp"
-            timestampString = "517580644.697598"
+            timestampString = "517673716.097445"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "698"
-            endingLineNumber = "698"
-            landmarkName = "FinjinViewerApplicationViewportDelegate::HandleEventsAndInputs(ApplicationViewportUpdateContext&amp; updateContext, FlyingCameraEvents&amp; flyingCameraActions)"
+            startingLineNumber = "753"
+            endingLineNumber = "753"
+            landmarkName = "FinjinViewerApplicationViewportDelegate::HandleEventsAndInputs(ApplicationViewportUpdateContext&amp; updateContext, FlyingCameraEvents&amp; flyingCameraActions, FlyingCameraEvents&amp; headsetFlyingCameraActions)"
             landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>
@@ -2301,11 +2301,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "../../../finjin-engine/cpp/library/src/finjin/engine/Application_General.cpp"
-            timestampString = "517322226.59386"
+            timestampString = "517792802.836977"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "1148"
-            endingLineNumber = "1148">
+            startingLineNumber = "1142"
+            endingLineNumber = "1142">
          </BreakpointContent>
       </BreakpointProxy>
       <BreakpointProxy
@@ -2315,11 +2315,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "../../../finjin-engine/cpp/library/src/finjin/engine/Application_General.cpp"
-            timestampString = "517322226.59386"
+            timestampString = "517792802.836977"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "1149"
-            endingLineNumber = "1149"
+            startingLineNumber = "1143"
+            endingLineNumber = "1143"
             landmarkName = "Application::WindowClosing(OSWindow* osWindow)"
             landmarkType = "7">
          </BreakpointContent>
@@ -2599,11 +2599,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "../../../finjin-engine/cpp/library/src/finjin/engine/Application_General.cpp"
-            timestampString = "517322226.59386"
+            timestampString = "517792802.836977"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "406"
-            endingLineNumber = "406"
+            startingLineNumber = "400"
+            endingLineNumber = "400"
             landmarkName = "Application::Initialize(Error&amp; error)"
             landmarkType = "7">
          </BreakpointContent>
@@ -2631,11 +2631,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "../../../finjin-engine/cpp/library/src/finjin/engine/Application_General.cpp"
-            timestampString = "517322226.59386"
+            timestampString = "517792802.836977"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "410"
-            endingLineNumber = "410"
+            startingLineNumber = "404"
+            endingLineNumber = "404"
             landmarkName = "Application::Initialize(Error&amp; error)"
             landmarkType = "7">
          </BreakpointContent>
@@ -4035,11 +4035,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "../../../finjin-engine/cpp/library/src/finjin/engine/Application_General.cpp"
-            timestampString = "517322226.59386"
+            timestampString = "517792802.836977"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "927"
-            endingLineNumber = "927"
+            startingLineNumber = "921"
+            endingLineNumber = "921"
             landmarkName = "Application::Initialize(Error&amp; error)"
             landmarkType = "7">
          </BreakpointContent>
@@ -4196,22 +4196,6 @@
             shouldBeEnabled = "No"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
-            filePath = "../../src/FinjinViewerApplicationViewportDelegate.cpp"
-            timestampString = "517580644.697598"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "364"
-            endingLineNumber = "364"
-            landmarkName = "FinjinViewerApplicationViewportDelegate::StartFrame(ApplicationViewportUpdateContext&amp; updateContext, FlyingCameraEvents&amp; flyingCameraActions)"
-            landmarkType = "7">
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
-            shouldBeEnabled = "No"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
             filePath = "../../../finjin-engine/cpp/library/src/finjin/engine/internal/gpu/metal/MetalUtilities.mm"
             timestampString = "517575025.182196"
             startingColumnNumber = "9223372036854775807"
@@ -4235,22 +4219,6 @@
             startingLineNumber = "112"
             endingLineNumber = "112"
             landmarkName = "MetalUtilities::GetBestColorFormat(RequestedValue&lt;MTLPixelFormat&gt;&amp; colorFormat, MetalFeatureSet::Capabilities&amp; caps)"
-            landmarkType = "7">
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
-            shouldBeEnabled = "No"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
-            filePath = "../../src/FinjinViewerApplicationViewportDelegate.cpp"
-            timestampString = "517580644.697598"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "360"
-            endingLineNumber = "360"
-            landmarkName = "FinjinViewerApplicationViewportDelegate::StartFrame(ApplicationViewportUpdateContext&amp; updateContext, FlyingCameraEvents&amp; flyingCameraActions)"
             landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>
@@ -4308,13 +4276,45 @@
             shouldBeEnabled = "No"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
-            filePath = "../../src/FinjinViewerApplicationViewportDelegate.cpp"
-            timestampString = "517633890.524781"
+            filePath = "../../../finjin-common/cpp/library/src/StandardPaths_macOS.mm"
+            timestampString = "517639452.297209"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "376"
-            endingLineNumber = "376"
-            landmarkName = "FinjinViewerApplicationViewportDelegate::StartFrame(ApplicationViewportUpdateContext&amp; updateContext, FlyingCameraEvents&amp; flyingCameraActions)"
+            startingLineNumber = "156"
+            endingLineNumber = "156"
+            landmarkName = "StandardPaths::Create(const Utf8String&amp; _applicationName, void* applicationHandle, Error&amp; error)"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "../../../finjin-engine/cpp/library/src/finjin/engine/internal/input/macosinput/MacOSKeyboard.mm"
+            timestampString = "517791687.31824"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "138"
+            endingLineNumber = "138"
+            landmarkName = "MacOSKeyboard::Create(MacOSInputContext* context, size_t index)"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "../../../finjin-engine/cpp/library/src/finjin/engine/internal/input/macosinput/MacOSKeyboard.mm"
+            timestampString = "517791687.31824"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "139"
+            endingLineNumber = "139"
+            landmarkName = "MacOSKeyboard::Create(MacOSInputContext* context, size_t index)"
             landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>

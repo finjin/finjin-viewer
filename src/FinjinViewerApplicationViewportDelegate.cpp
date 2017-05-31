@@ -30,16 +30,16 @@ using namespace Finjin::Viewer;
 static void WriteScreenCapture(const StandardPaths& standardPaths, const ScreenCapture& screenCapture, bool forceRaw = false)
 {
     static int screenCaptureCount = 0;
-    
+
     auto standardScreenCapturePath = standardPaths.GetBestSavedScreenCapturePath();
     if (standardScreenCapturePath == nullptr)
         return;
-    
+
     auto filePath = standardScreenCapturePath->path;
     filePath /= "finjin-viewer-screenshot-";
     filePath += Convert::ToString(screenCaptureCount);
     filePath += ".";
-    
+
     ScreenCaptureWriteSettings writeSettings;
     writeSettings.writeUnsupportedFormatAsRaw = true;
     auto writeResult = screenCapture.WriteToFile(filePath, writeSettings);
@@ -52,7 +52,7 @@ static void WriteScreenCapture(const StandardPaths& standardPaths, const ScreenC
     else
     {
         FINJIN_DEBUG_LOG_INFO("Failed to write screenshot: %1%", screenCapture.GetWriteResultString(writeResult));
-    }    
+    }
 }
 
 
@@ -95,7 +95,7 @@ ApplicationViewportDelegate::UpdateResult FinjinViewerApplicationViewportDelegat
             }
 
             this->camera.SetFovY(Degrees(90.0f));
-            this->camera.SetPosition(0, 35, 0);
+            this->camera.SetPosition(MathVector3(0.0f, 35.0f, 0.0f));
 
             {
                 const size_t fileCount = 100;
@@ -157,7 +157,7 @@ ApplicationViewportDelegate::UpdateResult FinjinViewerApplicationViewportDelegat
 
             {
                 this->tempAssetRef.ForLocalFile(FlyingCameraInputBindings::GetDefaultBindingsFileName());
-                                
+
             #if FINJIN_TARGET_VR_SYSTEM != FINJIN_TARGET_VR_SYSTEM_NONE
                 if (updateContext.vrContext != nullptr && updateContext.vrContext->GetInitializationStatus() == VRContextInitializationStatus::INITIALIZED && this->startInVR)
                 {
@@ -171,7 +171,7 @@ ApplicationViewportDelegate::UpdateResult FinjinViewerApplicationViewportDelegat
                         this->flyingCameraGameControllerIndex = result.deviceIndex;
                     }
                 }
-            #endif                
+            #endif
                 {
                     auto result = this->flyingCameraInputBindings.GetFromConfiguration(updateContext.inputContext, InputBindingsConfigurationSearchCriteria(InputDeviceClass::GAME_CONTROLLER, Utf8String::GetEmpty(), (size_t)-1, InputBindingsConfigurationFlag::CONNECTED_ONLY, InputDeviceSemantic::NONE), this->tempAssetRef, this->tempBuffer);
                     if (result.IsSuccess())
@@ -392,7 +392,7 @@ void FinjinViewerApplicationViewportDelegate::HandleNewAssets(ApplicationViewpor
 void FinjinViewerApplicationViewportDelegate::StartFrame(ApplicationViewportUpdateContext& updateContext, FlyingCameraEvents& flyingCameraActions, FlyingCameraEvents& headsetFlyingCameraActions)
 {
     //Kick off jobs for the frame
-    
+
     this->totalElapsedTime += updateContext.elapsedTime;
 
     auto& frameStage = updateContext.gpuContext->StartFrameStage(updateContext.jobPipelineStage->index, updateContext.elapsedTime, this->totalElapsedTime);
@@ -455,7 +455,7 @@ void FinjinViewerApplicationViewportDelegate::StartFrame(ApplicationViewportUpda
                 {
                     this->camera.SetOrientationFromColumns(headsetFlyingCameraActions.lookHeadset.orientation);
                     cameraChanged = true;
-                }                
+                }
             }
             if (flyingCameraActions.Contains(FlyingCameraEvents::MOVE))
             {

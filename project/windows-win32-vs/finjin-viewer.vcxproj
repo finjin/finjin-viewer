@@ -111,7 +111,7 @@
     <Link>
       <SubSystem>Windows</SubSystem>
       <GenerateDebugInformation>true</GenerateDebugInformation>
-      <AdditionalLibraryDirectories>C:\finjin-3rd-party\cpp\xaudio2-dxsdk-june2010\Lib\x64;C:\Program Files (x86)\Windows Kits\10\Lib\10.0.14393.0\um\x64;C:\git\nedelman\finjin-common\cpp\library\project\windows-win32-vs\x64\Debug;C:\finjin-3rd-party\cpp\boost/lib64-msvc-14.0;c:\finjin-3rd-party\cpp/curl/builds/libcurl-vc-x64-debug-static-ipv6-sspi-winssl\lib;C:\VulkanSDK\1.0.42.1\Bin;C:\VulkanSDK\1.0.42.1\glslang\build\glslang\Debug;C:\VulkanSDK\1.0.42.1\glslang\build\glslang\OSDependent\Windows\Debug;C:\VulkanSDK\1.0.42.1\glslang\build\OGLCompilersDLL\Debug;C:\VulkanSDK\1.0.42.1\glslang\build\SPIRV\Debug;C:\VulkanSDK\1.0.42.1\spirv-tools\build\Debug;C:\git\other\openvr\lib\win64</AdditionalLibraryDirectories>
+      <AdditionalLibraryDirectories>C:\finjin-3rd-party\cpp\xaudio2-dxsdk-june2010\Lib\x64;C:\Program Files (x86)\Windows Kits\10\Lib\10.0.14393.0\um\x64;C:\git\nedelman\finjin-common\cpp\library\project\windows-win32-vs\x64\Debug;C:\finjin-3rd-party\cpp\boost/lib64-msvc-14.0;c:\finjin-3rd-party\cpp/curl/builds/libcurl-vc-x64-debug-static-ipv6-sspi-winssl\lib;C:\finjin-3rd-party\cpp\openvr\lib\win64</AdditionalLibraryDirectories>
       <AdditionalDependencies>kernel32.lib;user32.lib;gdi32.lib;winspool.lib;comdlg32.lib;advapi32.lib;shell32.lib;ole32.lib;oleaut32.lib;uuid.lib;%(AdditionalDependencies)</AdditionalDependencies>
       <OptimizeReferences>false</OptimizeReferences>
     </Link>
@@ -136,7 +136,7 @@
     <Link>
       <SubSystem>Windows</SubSystem>
       <GenerateDebugInformation>true</GenerateDebugInformation>
-      <AdditionalLibraryDirectories>C:\Program Files (x86)\Windows Kits\10\Lib\10.0.14393.0\um\x64;C:\git\nedelman\finjin-common\cpp\library\project\windows-win32-vs\x64\Debug;C:\finjin-3rd-party\cpp\boost/lib64-msvc-14.0;c:\finjin-3rd-party\cpp/curl/builds/libcurl-vc-x64-debug-static-ipv6-sspi-winssl\lib;C:\VulkanSDK\1.0.42.1\Bin;C:\VulkanSDK\1.0.42.1\glslang\build\glslang\Debug;C:\VulkanSDK\1.0.42.1\glslang\build\glslang\OSDependent\Windows\Debug;C:\VulkanSDK\1.0.42.1\glslang\build\OGLCompilersDLL\Debug;C:\VulkanSDK\1.0.42.1\glslang\build\SPIRV\Debug;C:\VulkanSDK\1.0.42.1\spirv-tools\build\Debug;C:\git\other\openvr\lib\win64</AdditionalLibraryDirectories>
+      <AdditionalLibraryDirectories>C:\Program Files (x86)\Windows Kits\10\Lib\10.0.14393.0\um\x64;C:\git\nedelman\finjin-common\cpp\library\project\windows-win32-vs\x64\Debug;C:\finjin-3rd-party\cpp\boost/lib64-msvc-14.0;c:\finjin-3rd-party\cpp/curl/builds/libcurl-vc-x64-debug-static-ipv6-sspi-winssl\lib;C:\finjin-3rd-party\cpp\openvr\lib\win64</AdditionalLibraryDirectories>
       <AdditionalDependencies>kernel32.lib;user32.lib;gdi32.lib;winspool.lib;comdlg32.lib;advapi32.lib;shell32.lib;ole32.lib;oleaut32.lib;uuid.lib;%(AdditionalDependencies)</AdditionalDependencies>
       <OptimizeReferences>false</OptimizeReferences>
       <LinkTimeCodeGeneration />
@@ -167,7 +167,7 @@
       <GenerateDebugInformation>true</GenerateDebugInformation>
       <EnableCOMDATFolding>true</EnableCOMDATFolding>
       <OptimizeReferences>false</OptimizeReferences>
-      <AdditionalLibraryDirectories>C:\finjin-3rd-party\cpp\xaudio2-dxsdk-june2010\Lib\x64;C:\Program Files (x86)\Windows Kits\10\Lib\10.0.14393.0\um\x64;C:\git\nedelman\finjin-common\cpp\library\project\windows-win32-vs\x64\Release;C:\finjin-3rd-party\cpp\boost/lib64-msvc-14.0;c:\finjin-3rd-party\cpp/curl/builds/libcurl-vc-x64-release-static-ipv6-sspi-winssl\lib;C:\VulkanSDK\1.0.42.1\Bin;C:\VulkanSDK\1.0.42.1\glslang\build\glslang\Release;C:\VulkanSDK\1.0.42.1\glslang\build\glslang\OSDependent\Windows\Release;C:\VulkanSDK\1.0.42.1\glslang\build\OGLCompilersDLL\Release;C:\VulkanSDK\1.0.42.1\glslang\build\SPIRV\Release;C:\VulkanSDK\1.0.42.1\spirv-tools\build\Release;C:\git\other\openvr\lib\win64</AdditionalLibraryDirectories>
+      <AdditionalLibraryDirectories>C:\finjin-3rd-party\cpp\xaudio2-dxsdk-june2010\Lib\x64;C:\Program Files (x86)\Windows Kits\10\Lib\10.0.14393.0\um\x64;C:\git\nedelman\finjin-common\cpp\library\project\windows-win32-vs\x64\Release;C:\finjin-3rd-party\cpp\boost/lib64-msvc-14.0;c:\finjin-3rd-party\cpp/curl/builds/libcurl-vc-x64-release-static-ipv6-sspi-winssl\lib;C:\finjin-3rd-party\cpp\openvr\lib\win64</AdditionalLibraryDirectories>
       <AdditionalDependencies>kernel32.lib;user32.lib;gdi32.lib;winspool.lib;comdlg32.lib;advapi32.lib;shell32.lib;ole32.lib;oleaut32.lib;uuid.lib;%(AdditionalDependencies)</AdditionalDependencies>
     </Link>
     <ProjectReference>
@@ -194,7 +194,7 @@
       <GenerateDebugInformation>true</GenerateDebugInformation>
       <EnableCOMDATFolding>true</EnableCOMDATFolding>
       <OptimizeReferences>false</OptimizeReferences>
-      <AdditionalLibraryDirectories>C:\Program Files (x86)\Windows Kits\10\Lib\10.0.14393.0\um\x64;C:\git\nedelman\finjin-common\cpp\library\project\windows-win32-vs\x64\Release;C:\finjin-3rd-party\cpp\boost/lib64-msvc-14.0;c:\finjin-3rd-party\cpp/curl/builds/libcurl-vc-x64-release-static-ipv6-sspi-winssl\lib;C:\VulkanSDK\1.0.42.1\Bin;C:\VulkanSDK\1.0.42.1\glslang\build\glslang\Release;C:\VulkanSDK\1.0.42.1\glslang\build\glslang\OSDependent\Windows\Release;C:\VulkanSDK\1.0.42.1\glslang\build\OGLCompilersDLL\Release;C:\VulkanSDK\1.0.42.1\glslang\build\SPIRV\Release;C:\VulkanSDK\1.0.42.1\spirv-tools\build\Release;C:\git\other\openvr\lib\win64</AdditionalLibraryDirectories>
+      <AdditionalLibraryDirectories>C:\Program Files (x86)\Windows Kits\10\Lib\10.0.14393.0\um\x64;C:\git\nedelman\finjin-common\cpp\library\project\windows-win32-vs\x64\Release;C:\finjin-3rd-party\cpp\boost/lib64-msvc-14.0;c:\finjin-3rd-party\cpp/curl/builds/libcurl-vc-x64-release-static-ipv6-sspi-winssl\lib;C:\finjin-3rd-party\cpp\openvr\lib\win64</AdditionalLibraryDirectories>
       <AdditionalDependencies>kernel32.lib;user32.lib;gdi32.lib;winspool.lib;comdlg32.lib;advapi32.lib;shell32.lib;ole32.lib;oleaut32.lib;uuid.lib;%(AdditionalDependencies)</AdditionalDependencies>
       <LinkTimeCodeGeneration />
     </Link>

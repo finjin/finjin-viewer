@@ -1299,12 +1299,12 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "../../../finjin-engine/cpp/library/src/finjin/engine/Application_General.cpp"
-            timestampString = "517792802.836977"
+            timestampString = "517981305.142836"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "613"
-            endingLineNumber = "613"
-            landmarkName = "Application::Initialize(Error&amp; error)"
+            startingLineNumber = "610"
+            endingLineNumber = "610"
+            landmarkName = "Application::Create(Error&amp; error)"
             landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>
@@ -1377,12 +1377,12 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "../../../finjin-engine/cpp/library/src/finjin/engine/Application_General.cpp"
-            timestampString = "517792802.836977"
+            timestampString = "517981305.142836"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "798"
-            endingLineNumber = "798"
-            landmarkName = "Application::Initialize(Error&amp; error)"
+            startingLineNumber = "795"
+            endingLineNumber = "795"
+            landmarkName = "Application::Create(Error&amp; error)"
             landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>
@@ -1681,12 +1681,12 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "../../../finjin-engine/cpp/library/src/finjin/engine/Application_General.cpp"
-            timestampString = "517792802.836977"
+            timestampString = "517981305.142836"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "443"
-            endingLineNumber = "443"
-            landmarkName = "Application::Initialize(Error&amp; error)"
+            startingLineNumber = "440"
+            endingLineNumber = "440"
+            landmarkName = "Application::Create(Error&amp; error)"
             landmarkType = "7">
             <Locations>
                <Location
@@ -2301,11 +2301,13 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "../../../finjin-engine/cpp/library/src/finjin/engine/Application_General.cpp"
-            timestampString = "517792802.836977"
+            timestampString = "517981305.142836"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "1142"
-            endingLineNumber = "1142">
+            startingLineNumber = "1139"
+            endingLineNumber = "1139"
+            landmarkName = "Application::WindowGainedFocus(OSWindow* osWindow)"
+            landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>
       <BreakpointProxy
@@ -2315,12 +2317,12 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "../../../finjin-engine/cpp/library/src/finjin/engine/Application_General.cpp"
-            timestampString = "517792802.836977"
+            timestampString = "517981305.142836"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "1143"
-            endingLineNumber = "1143"
-            landmarkName = "Application::WindowClosing(OSWindow* osWindow)"
+            startingLineNumber = "1140"
+            endingLineNumber = "1140"
+            landmarkName = "Application::WindowGainedFocus(OSWindow* osWindow)"
             landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>
@@ -2599,12 +2601,12 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "../../../finjin-engine/cpp/library/src/finjin/engine/Application_General.cpp"
-            timestampString = "517792802.836977"
+            timestampString = "517981305.142836"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "400"
-            endingLineNumber = "400"
-            landmarkName = "Application::Initialize(Error&amp; error)"
+            startingLineNumber = "397"
+            endingLineNumber = "397"
+            landmarkName = "Application::Tick(Error&amp; error)"
             landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>
@@ -2631,12 +2633,12 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "../../../finjin-engine/cpp/library/src/finjin/engine/Application_General.cpp"
-            timestampString = "517792802.836977"
+            timestampString = "517981305.142836"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "404"
-            endingLineNumber = "404"
-            landmarkName = "Application::Initialize(Error&amp; error)"
+            startingLineNumber = "401"
+            endingLineNumber = "401"
+            landmarkName = "Application::Create(Error&amp; error)"
             landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>
@@ -4035,12 +4037,12 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "../../../finjin-engine/cpp/library/src/finjin/engine/Application_General.cpp"
-            timestampString = "517792802.836977"
+            timestampString = "517981305.142836"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "921"
-            endingLineNumber = "921"
-            landmarkName = "Application::Initialize(Error&amp; error)"
+            startingLineNumber = "918"
+            endingLineNumber = "918"
+            landmarkName = "Application::Create(Error&amp; error)"
             landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>
@@ -4315,6 +4317,22 @@
             startingLineNumber = "139"
             endingLineNumber = "139"
             landmarkName = "MacOSKeyboard::Create(MacOSInputContext* context, size_t index)"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "../../../finjin-common/cpp/library/src/BinaryDataChunkReader.cpp"
+            timestampString = "517982099.145317"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "412"
+            endingLineNumber = "412"
+            landmarkName = "BinaryDataChunkReader::Skip(DataHeader&amp; dataHeader, Error&amp; error)"
             landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>

@@ -343,11 +343,11 @@
 					BOOST_SYSTEM_NO_DEPRECATED,
 				);
 				HEADER_SEARCH_PATHS = (
-					"~/finjin-3rd-party/cpp/boost",
-					"~/finjin-3rd-party/cpp/eigen",
-					"~/git/nedelman/finjin-common/cpp/library/include",
-					"~/git/nedelman/finjin-engine/cpp/library/src",
-					"~/git/nedelman/finjin-engine/cpp/library/src/finjin/engine/internal/app/ios",
+					"/Users/derek/finjin-3rd-party/cpp/boost",
+					"/Users/derek/finjin-3rd-party/cpp/eigen",
+					"../../../finjin-common/cpp/library/include",
+					"../../../finjin-engine/cpp/library/src",
+					"../../../finjin-engine/cpp/library/src/finjin/engine/internal/app/ios",
 					../../src,
 				);
 				INFOPLIST_FILE = "finjin-viewer/Info.plist";
@@ -367,11 +367,11 @@
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				GCC_PREPROCESSOR_DEFINITIONS = BOOST_SYSTEM_NO_DEPRECATED;
 				HEADER_SEARCH_PATHS = (
-					"~/finjin-3rd-party/cpp/boost",
-					"~/finjin-3rd-party/cpp/eigen",
-					"~/git/nedelman/finjin-common/cpp/library/include",
-					"~/git/nedelman/finjin-engine/cpp/library/src",
-					"~/git/nedelman/finjin-engine/cpp/library/src/finjin/engine/internal/app/ios",
+					"/Users/derek/finjin-3rd-party/cpp/boost",
+					"/Users/derek/finjin-3rd-party/cpp/eigen",
+					"../../../finjin-common/cpp/library/include",
+					"../../../finjin-engine/cpp/library/src",
+					"../../../finjin-engine/cpp/library/src/finjin/engine/internal/app/ios",
 					../../src,
 				);
 				INFOPLIST_FILE = "finjin-viewer/Info.plist";

@@ -394,11 +394,11 @@
 					"__ASSERT_MACROS_DEFINE_VERSIONS_WITHOUT_UNDERSCORES=0",
 				);
 				HEADER_SEARCH_PATHS = (
-					"~/finjin-3rd-party/cpp/boost",
-					"~/finjin-3rd-party/cpp/eigen",
-					"~/git/nedelman/finjin-common/cpp/library/include",
-					"~/git/nedelman/finjin-engine/cpp/library/src",
-					"~/git/nedelman/finjin-engine/cpp/library/src/finjin/engine/internal/app/macos",
+					"/Users/derek/finjin-3rd-party/cpp/boost",
+					"/Users/derek/finjin-3rd-party/cpp/eigen",
+					"../../../finjin-common/cpp/library/include",
+					"../../../finjin-engine/cpp/library/src",
+					"../../../finjin-engine/cpp/library/src/finjin/engine/internal/app/macos",
 					../../src,
 				);
 				INFOPLIST_FILE = "finjin-viewer/Info.plist";
@@ -406,7 +406,7 @@
 				LIBRARY_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(PROJECT_DIR)/Build/Products/Debug",
-					"~/finjin-3rd-party/cpp/boost/stage/lib",
+					"/Users/derek/finjin-3rd-party/cpp/boost/stage/lib",
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.finjin.viewer;
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -421,11 +421,11 @@
 				COMBINE_HIDPI_IMAGES = YES;
 				GCC_PREPROCESSOR_DEFINITIONS = "__ASSERT_MACROS_DEFINE_VERSIONS_WITHOUT_UNDERSCORES=0";
 				HEADER_SEARCH_PATHS = (
-					"~/finjin-3rd-party/cpp/boost",
-					"~/finjin-3rd-party/cpp/eigen",
-					"~/git/nedelman/finjin-common/cpp/library/include",
-					"~/git/nedelman/finjin-engine/cpp/library/src",
-					"~/git/nedelman/finjin-engine/cpp/library/src/finjin/engine/internal/app/macos",
+					"/Users/derek/finjin-3rd-party/cpp/boost",
+					"/Users/derek/finjin-3rd-party/cpp/eigen",
+					"../../../finjin-common/cpp/library/include",
+					"../../../finjin-engine/cpp/library/src",
+					"../../../finjin-engine/cpp/library/src/finjin/engine/internal/app/macos",
 					../../src,
 				);
 				INFOPLIST_FILE = "finjin-viewer/Info.plist";
@@ -433,7 +433,7 @@
 				LIBRARY_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(PROJECT_DIR)/Build/Products/Debug",
-					"~/finjin-3rd-party/cpp/boost/stage/lib",
+					"/Users/derek/finjin-3rd-party/cpp/boost/stage/lib",
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.finjin.viewer;
 				PRODUCT_NAME = "$(TARGET_NAME)";

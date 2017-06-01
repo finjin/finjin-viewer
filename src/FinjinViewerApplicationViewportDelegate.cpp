@@ -206,7 +206,7 @@ ApplicationViewportDelegate::UpdateResult FinjinViewerApplicationViewportDelegat
             else
             {
             #if USE_TEST_SCENE_AS_FALLBACK
-                this->sceneReader.RequestReadLocalFiles(error, "test.fstd-scene");
+                this->sceneReader.RequestReadLocalFiles(error, "test.fsbd-scene");
                 if (error)
                 {
                     FINJIN_SET_ERROR(error, "Failed to add scene read request.");

@@ -266,20 +266,22 @@ void FinjinViewerApplicationViewportDelegate::HandleNewAssets(ApplicationViewpor
         {
             auto& scene = *updateContext.newScenes.begin();
 
-            auto result = scene.Get<FinjinSceneObjectLight>();
-            if (!result.empty())
             {
-                this->sceneData.lights.CreateEmpty(result.size(), GetAllocator());
+                auto result = scene.Get<FinjinSceneObjectLight>();
                 FINJIN_DEBUG_LOG_INFO("Light count: %1%", result.size());
-                for (auto& item : result)
+                if (!result.empty())
                 {
-                    FINJIN_DEBUG_LOG_INFO("  Light: %1%, type: %2%, light type: %3%", item.name, item.GetTypeDescription().GetName(), (int)item.lightType);
-                    updateContext.gpuContext->CreateLightFromMainThread(item, error);
-                    if (error)
+                    this->sceneData.lights.CreateEmpty(result.size(), GetAllocator());                    
+                    for (auto& item : result)
                     {
-                    }
+                        FINJIN_DEBUG_LOG_INFO("  Light: %1%, type: %2%, light type: %3%", item.name, item.GetTypeDescription().GetName(), (int)item.lightType);
+                        updateContext.gpuContext->CreateLightFromMainThread(item, error);
+                        if (error)
+                        {
+                        }
 
-                    this->sceneData.lights.push_back(&item);
+                        this->sceneData.lights.push_back(&item);
+                    }
                 }
             }
 

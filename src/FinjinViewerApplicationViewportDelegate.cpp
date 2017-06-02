@@ -35,17 +35,16 @@ static void WriteScreenCapture(const StandardPaths& standardPaths, const ScreenC
     if (standardScreenCapturePath == nullptr)
         return;
 
-    auto filePath = standardScreenCapturePath->path;
-    filePath /= "finjin-viewer-screenshot-";
-    filePath += Convert::ToString(screenCaptureCount);
-    filePath += ".";
-
+    auto filePathNoExtension = standardScreenCapturePath->path;
+    filePathNoExtension /= "finjin-viewer-screenshot-";
+    filePathNoExtension += Convert::ToString(screenCaptureCount);
+    
     ScreenCaptureWriteSettings writeSettings;
     writeSettings.writeUnsupportedFormatAsRaw = true;
-    auto writeResult = screenCapture.WriteToFile(filePath, writeSettings);
+    auto writeResult = screenCapture.WriteToFile(filePathNoExtension, writeSettings);
     if (writeResult == ScreenCapture::WriteResult::SUCCESS)
     {
-        FINJIN_DEBUG_LOG_INFO("Saved screenshot to '%1%'.", filePath);
+        FINJIN_DEBUG_LOG_INFO("Saved screenshot to '%1%'.", filePathNoExtension);
 
         screenCaptureCount++;
     }
@@ -245,10 +244,10 @@ ApplicationViewportDelegate::UpdateResult FinjinViewerApplicationViewportDelegat
             return UpdateResult::LOGIC_ONLY;
         }
 
-        FlyingCameraEvents flyingCameraActions, headsetFlyingCameraActions;
-        HandleEventsAndInputs(updateContext, flyingCameraActions, headsetFlyingCameraActions);
+        FlyingCameraEvents flyingCameraEvents, headsetFlyingCameraEvents;
+        HandleEventsAndInputs(updateContext, flyingCameraEvents, headsetFlyingCameraEvents);
 
-        StartFrame(updateContext, flyingCameraActions, headsetFlyingCameraActions);
+        StartFrame(updateContext, flyingCameraEvents, headsetFlyingCameraEvents);
         return UpdateResult::STARTED_FRAME;
     }
     else
@@ -271,7 +270,7 @@ void FinjinViewerApplicationViewportDelegate::HandleNewAssets(ApplicationViewpor
                 FINJIN_DEBUG_LOG_INFO("Light count: %1%", result.size());
                 if (!result.empty())
                 {
-                    this->sceneData.lights.CreateEmpty(result.size(), GetAllocator());                    
+                    this->sceneData.lights.CreateEmpty(result.size(), GetAllocator());
                     for (auto& item : result)
                     {
                         FINJIN_DEBUG_LOG_INFO("  Light: %1%, type: %2%, light type: %3%", item.name, item.GetTypeDescription().GetName(), (int)item.lightType);
@@ -391,7 +390,7 @@ void FinjinViewerApplicationViewportDelegate::HandleNewAssets(ApplicationViewpor
     }
 }
 
-void FinjinViewerApplicationViewportDelegate::StartFrame(ApplicationViewportUpdateContext& updateContext, FlyingCameraEvents& flyingCameraActions, FlyingCameraEvents& headsetFlyingCameraActions)
+void FinjinViewerApplicationViewportDelegate::StartFrame(ApplicationViewportUpdateContext& updateContext, FlyingCameraEvents& flyingCameraEvents, FlyingCameraEvents& headsetFlyingCameraEvents)
 {
     //Kick off jobs for the frame
 
@@ -408,146 +407,146 @@ void FinjinViewerApplicationViewportDelegate::StartFrame(ApplicationViewportUpda
     }
 
     updateContext.jobSystem->StartGroupFromMainThread();
-    updateContext.jobPipelineStage->simulateAndRenderFuture = updateContext.jobSystem->Submit([this, &updateContext, flyingCameraActions, headsetFlyingCameraActions, &frameStage, frameSequenceIndex]()
+    updateContext.jobPipelineStage->Start(updateContext.jobSystem->Submit([this, &updateContext, flyingCameraEvents, headsetFlyingCameraEvents, &frameStage, frameSequenceIndex]()
     {
         //Simulate----------------------------
         auto cameraChanged = false;
         {
-            if (flyingCameraActions.Contains(FlyingCameraEvents::TAP))
+            if (flyingCameraEvents.Contains(FlyingCameraEvents::TAP))
             {
                 FINJIN_DEBUG_LOG_INFO("Tap");
             }
-            if (flyingCameraActions.Contains(FlyingCameraEvents::SWIPE))
+            if (flyingCameraEvents.Contains(FlyingCameraEvents::SWIPE))
             {
                 FINJIN_DEBUG_LOG_INFO("Swipe");
             }
-            if (flyingCameraActions.Contains(FlyingCameraEvents::MOUSE_X))
+            if (flyingCameraEvents.Contains(FlyingCameraEvents::MOUSE_X))
             {
                 FINJIN_DEBUG_LOG_INFO("MouseX");
             }
-            if (flyingCameraActions.Contains(FlyingCameraEvents::MOUSE_Y))
+            if (flyingCameraEvents.Contains(FlyingCameraEvents::MOUSE_Y))
             {
                 FINJIN_DEBUG_LOG_INFO("MouseY");
             }
-            if (flyingCameraActions.Contains(FlyingCameraEvents::MOUSE_LEFT_BUTTON_DOWN))
+            if (flyingCameraEvents.Contains(FlyingCameraEvents::MOUSE_LEFT_BUTTON_DOWN))
             {
                 FINJIN_DEBUG_LOG_INFO("MouseLeftButtonDown");
             }
-            if (flyingCameraActions.Contains(FlyingCameraEvents::MOUSE_LEFT_BUTTON_UP))
+            if (flyingCameraEvents.Contains(FlyingCameraEvents::MOUSE_LEFT_BUTTON_UP))
             {
                 FINJIN_DEBUG_LOG_INFO("MouseLeftButtonUp");
             }
-            if (flyingCameraActions.Contains(FlyingCameraEvents::MOUSE_RIGHT_BUTTON_DOWN))
+            if (flyingCameraEvents.Contains(FlyingCameraEvents::MOUSE_RIGHT_BUTTON_DOWN))
             {
                 FINJIN_DEBUG_LOG_INFO("MouseRightButtonDown");
             }
-            if (flyingCameraActions.Contains(FlyingCameraEvents::MOUSE_RIGHT_BUTTON_UP))
+            if (flyingCameraEvents.Contains(FlyingCameraEvents::MOUSE_RIGHT_BUTTON_UP))
             {
                 FINJIN_DEBUG_LOG_INFO("MouseRightButtonUp");
             }
-            if (headsetFlyingCameraActions.Contains(FlyingCameraEvents::LOCATOR))
+            if (headsetFlyingCameraEvents.Contains(FlyingCameraEvents::LOCATOR))
             {
                 //This handler must come before others that depend on updating the camera
                 if (!this->allowRelativeMove)
                 {
-                    this->camera.SetPosition(headsetFlyingCameraActions.lookHeadset.position);
+                    this->camera.SetPosition(headsetFlyingCameraEvents.lookHeadset.position);
                     cameraChanged = true;
                 }
                 if (!this->allowRelativeLook)
                 {
-                    this->camera.SetOrientationFromColumns(headsetFlyingCameraActions.lookHeadset.orientation);
+                    this->camera.SetOrientationFromColumns(headsetFlyingCameraEvents.lookHeadset.orientation);
                     cameraChanged = true;
                 }
             }
-            if (flyingCameraActions.Contains(FlyingCameraEvents::MOVE))
+            if (flyingCameraEvents.Contains(FlyingCameraEvents::MOVE))
             {
                 if (this->allowRelativeMove)
                 {
-                    this->camera.Pan(flyingCameraActions.move[0] * updateContext.elapsedTime * this->moveUnitsPerSecond, 0);
-                    this->camera.Walk(flyingCameraActions.move[1] * updateContext.elapsedTime * this->moveUnitsPerSecond);
+                    this->camera.Pan(flyingCameraEvents.move[0] * updateContext.elapsedTime * this->moveUnitsPerSecond, 0);
+                    this->camera.Walk(flyingCameraEvents.move[1] * updateContext.elapsedTime * this->moveUnitsPerSecond);
 
                     cameraChanged = true;
 
-                    FINJIN_DEBUG_LOG_INFO("Move: %1% %2%", flyingCameraActions.move[0], flyingCameraActions.move[1]);
+                    FINJIN_DEBUG_LOG_INFO("Move: %1% %2%", flyingCameraEvents.move[0], flyingCameraEvents.move[1]);
                 }
             }
-            if (flyingCameraActions.Contains(FlyingCameraEvents::PAN_ORBIT))
+            if (flyingCameraEvents.Contains(FlyingCameraEvents::PAN_ORBIT))
             {
                 if (this->allowRelativeMove)
                 {
-                    this->camera.Pan(flyingCameraActions.panOrbit[0] * updateContext.elapsedTime * this->moveUnitsPerSecond, flyingCameraActions.panOrbit[1] * updateContext.elapsedTime * this->moveUnitsPerSecond);
+                    this->camera.Pan(flyingCameraEvents.panOrbit[0] * updateContext.elapsedTime * this->moveUnitsPerSecond, flyingCameraEvents.panOrbit[1] * updateContext.elapsedTime * this->moveUnitsPerSecond);
 
-                    FINJIN_DEBUG_LOG_INFO("PanOrbit: %1% %2%", flyingCameraActions.panOrbit[0], flyingCameraActions.panOrbit[1]);
+                    FINJIN_DEBUG_LOG_INFO("PanOrbit: %1% %2%", flyingCameraEvents.panOrbit[0], flyingCameraEvents.panOrbit[1]);
                 }
             }
-            if (flyingCameraActions.Contains(FlyingCameraEvents::LOOK))
+            if (flyingCameraEvents.Contains(FlyingCameraEvents::LOOK))
             {
                 if (this->allowRelativeLook)
                 {
-                    this->camera.RotateY(Radians(flyingCameraActions.look[0] * updateContext.elapsedTime * this->rotateUnitsPerSecond * -1.0f)); //Negate since a left 'look' is negative but represents a positive rotation about Y
-                    this->camera.Pitch(Radians(flyingCameraActions.look[1] * updateContext.elapsedTime * this->rotateUnitsPerSecond));
+                    this->camera.RotateY(Radians(flyingCameraEvents.look[0] * updateContext.elapsedTime * this->rotateUnitsPerSecond * -1.0f)); //Negate since a left 'look' is negative but represents a positive rotation about Y
+                    this->camera.Pitch(Radians(flyingCameraEvents.look[1] * updateContext.elapsedTime * this->rotateUnitsPerSecond));
 
                     cameraChanged = true;
 
-                    FINJIN_DEBUG_LOG_INFO("Look: %1% %2%", flyingCameraActions.look[0], flyingCameraActions.look[1]);
+                    FINJIN_DEBUG_LOG_INFO("Look: %1% %2%", flyingCameraEvents.look[0], flyingCameraEvents.look[1]);
                 }
             }
-            if (flyingCameraActions.Contains(FlyingCameraEvents::SELECT_OBJECT))
+            if (flyingCameraEvents.Contains(FlyingCameraEvents::SELECT_OBJECT))
             {
                 FINJIN_DEBUG_LOG_INFO("SelectObject");
             }
-            if (flyingCameraActions.Contains(FlyingCameraEvents::DESELECT_OBJECT))
+            if (flyingCameraEvents.Contains(FlyingCameraEvents::DESELECT_OBJECT))
             {
                 FINJIN_DEBUG_LOG_INFO("DeselectObject");
             }
-            if (flyingCameraActions.Contains(FlyingCameraEvents::CHANGE_CAMERA))
+            if (flyingCameraEvents.Contains(FlyingCameraEvents::CHANGE_CAMERA))
             {
                 FINJIN_DEBUG_LOG_INFO("ChangeCamera");
             }
-            if (flyingCameraActions.Contains(FlyingCameraEvents::TOGGLE_VIEW_CAMERA_LOCK))
+            if (flyingCameraEvents.Contains(FlyingCameraEvents::TOGGLE_VIEW_CAMERA_LOCK))
             {
                 FINJIN_DEBUG_LOG_INFO("ToggleViewCameraLock");
             }
-            if (flyingCameraActions.Contains(FlyingCameraEvents::SET_DOLLY_MODE))
+            if (flyingCameraEvents.Contains(FlyingCameraEvents::SET_DOLLY_MODE))
             {
                 FINJIN_DEBUG_LOG_INFO("SetDollyMode");
             }
-            if (flyingCameraActions.Contains(FlyingCameraEvents::POP_DOLLY))
+            if (flyingCameraEvents.Contains(FlyingCameraEvents::POP_DOLLY))
             {
                 FINJIN_DEBUG_LOG_INFO("PopDolly");
             }
-            if (flyingCameraActions.Contains(FlyingCameraEvents::SET_PAN_OR_ORBIT_MODE))
+            if (flyingCameraEvents.Contains(FlyingCameraEvents::SET_PAN_OR_ORBIT_MODE))
             {
                 FINJIN_DEBUG_LOG_INFO("SetPanOrOrbitMode");
             }
-            if (flyingCameraActions.Contains(FlyingCameraEvents::POP_PAN_OR_ORBIT))
+            if (flyingCameraEvents.Contains(FlyingCameraEvents::POP_PAN_OR_ORBIT))
             {
                 FINJIN_DEBUG_LOG_INFO("PopPanOrOrbit");
             }
-            if (flyingCameraActions.Contains(FlyingCameraEvents::SET_FREE_LOOK_MODE))
+            if (flyingCameraEvents.Contains(FlyingCameraEvents::SET_FREE_LOOK_MODE))
             {
                 FINJIN_DEBUG_LOG_INFO("SetFreeLookMode");
             }
-            if (flyingCameraActions.Contains(FlyingCameraEvents::POP_FREE_LOOK))
+            if (flyingCameraEvents.Contains(FlyingCameraEvents::POP_FREE_LOOK))
             {
                 FINJIN_DEBUG_LOG_INFO("PopFreeLook");
             }
-            if (flyingCameraActions.Contains(FlyingCameraEvents::ZOOM_TO_FIT))
+            if (flyingCameraEvents.Contains(FlyingCameraEvents::ZOOM_TO_FIT))
             {
                 FINJIN_DEBUG_LOG_INFO("ZoomToFit");
             }
-            if (flyingCameraActions.Contains(FlyingCameraEvents::SCREENSHOT))
+            if (flyingCameraEvents.Contains(FlyingCameraEvents::SCREENSHOT))
             {
                 FINJIN_DEBUG_LOG_INFO("Screenshot");
                 updateContext.gpuCommands.CaptureScreen();
             }
-            if (flyingCameraActions.Contains(FlyingCameraEvents::ESCAPE))
+            if (flyingCameraEvents.Contains(FlyingCameraEvents::ESCAPE))
             {
                 FINJIN_DEBUG_LOG_INFO("Escape");
                 //updateContext.RequestClose();
                 //updateContext.RequestApplicationExit();
             }
-            if (flyingCameraActions.Contains(FlyingCameraEvents::MENU))
+            if (flyingCameraEvents.Contains(FlyingCameraEvents::MENU))
             {
                 FINJIN_DEBUG_LOG_INFO("Menu");
             }
@@ -675,28 +674,22 @@ void FinjinViewerApplicationViewportDelegate::StartFrame(ApplicationViewportUpda
             else
                 updateContext.gpuContext->FinishFrameStage(frameStage);
         }
-    });
+    }));
 }
 
 void FinjinViewerApplicationViewportDelegate::FinishFrame(ApplicationViewportRenderContext& renderContext, Error& error)
 {
     FINJIN_ERROR_METHOD_START(error);
 
-    auto& frameStage = renderContext.gpuContext->GetFrameStage(renderContext.jobPipelineStage->index);
-
-    if (renderContext.jobPipelineStage->simulateAndRenderFuture.valid()) //Will fail during the final iteration of waiting for pipeline to run out for full screen toggle
+    if (renderContext.jobPipelineStage->IsStarted())
     {
-        try
-        {
-            renderContext.jobPipelineStage->simulateAndRenderFuture.get();
-        }
-        catch (...)
-        {
-            FINJIN_SET_ERROR(error, "An exception was thrown while getting simulation/render future.");
-        }
+        renderContext.jobPipelineStage->Finish(error);
+        if (error)
+            FINJIN_SET_ERROR(error, "Failed to finish stage job.");
 
         if (!error)
         {
+            auto& frameStage = renderContext.gpuContext->GetFrameStage(renderContext.jobPipelineStage->GetIndex());
             renderContext.gpuContext->PresentFrameStage(frameStage, renderContext.renderStatus, renderContext.presentSyncIntervalOverride, error);
             if (error)
             {
@@ -707,7 +700,7 @@ void FinjinViewerApplicationViewportDelegate::FinishFrame(ApplicationViewportRen
     }
 }
 
-void FinjinViewerApplicationViewportDelegate::HandleEventsAndInputs(ApplicationViewportUpdateContext& updateContext, FlyingCameraEvents& flyingCameraActions, FlyingCameraEvents& headsetFlyingCameraActions)
+void FinjinViewerApplicationViewportDelegate::HandleEventsAndInputs(ApplicationViewportUpdateContext& updateContext, FlyingCameraEvents& flyingCameraEvents, FlyingCameraEvents& headsetFlyingCameraEvents)
 {
 #if FINJIN_TARGET_VR_SYSTEM != FINJIN_TARGET_VR_SYSTEM_NONE
     //VR events
@@ -767,9 +760,9 @@ void FinjinViewerApplicationViewportDelegate::HandleEventsAndInputs(ApplicationV
     }
 #endif
 
-    //Update input
-    updateContext.inputContext->GetActions(flyingCameraActions, this->flyingCameraInputBindings, updateContext.elapsedTime);
-    updateContext.inputContext->GetActions(headsetFlyingCameraActions, this->headsetFlyingCameraInputBindings, updateContext.elapsedTime);
+    //Get input events from the input system using the bindings
+    updateContext.inputContext->GetActions(flyingCameraEvents, this->flyingCameraInputBindings, updateContext.elapsedTime);
+    updateContext.inputContext->GetActions(headsetFlyingCameraEvents, this->headsetFlyingCameraInputBindings, updateContext.elapsedTime);
 
     updateContext.FinishPoll();
 }

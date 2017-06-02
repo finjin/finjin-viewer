@@ -36,9 +36,9 @@ namespace Finjin { namespace Viewer {
         void FinishFrame(ApplicationViewportRenderContext& renderContext, Error& error) override;
 
     private:
-        void HandleEventsAndInputs(ApplicationViewportUpdateContext& updateContext, FlyingCameraEvents& flyingCameraActions, FlyingCameraEvents& headsetFlyingCameraActions);
+        void HandleEventsAndInputs(ApplicationViewportUpdateContext& updateContext, FlyingCameraEvents& flyingCameraEvents, FlyingCameraEvents& headsetFlyingCameraEvents);
         void HandleNewAssets(ApplicationViewportUpdateContext& updateContext, Error& error);
-        void StartFrame(ApplicationViewportUpdateContext& updateContext, FlyingCameraEvents& flyingCameraActions, FlyingCameraEvents& headsetFlyingCameraActions);
+        void StartFrame(ApplicationViewportUpdateContext& updateContext, FlyingCameraEvents& flyingCameraEvents, FlyingCameraEvents& headsetFlyingCameraEvents);
 
     private:
         Utf8String loadFileName;

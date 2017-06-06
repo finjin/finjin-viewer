@@ -52,7 +52,7 @@
     <ClCompile>
       <CppLanguageStandard>
       </CppLanguageStandard>
-      <AdditionalIncludeDirectories>C:\finjin-3rd-party\cpp\boost;C:\finjin-3rd-party\cpp\eigen;C:\VulkanSDK\1.0.42.1\Include;C:\git\nedelman\finjin-common\cpp\library\include;C:\git\nedelman\finjin-engine\cpp\library\src;C:\git\nedelman\finjin-engine\cpp\library\src\finjin\engine\internal\app\android\cpp;..\..\src</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>C:\finjin-3rd-party\cpp\boost;C:\finjin-3rd-party\cpp\eigen;C:\git\nedelman\finjin-common\cpp\library\include;C:\git\nedelman\finjin-engine\cpp\library\src;C:\git\nedelman\finjin-engine\cpp\library\src\finjin\engine\internal\app\android;..\..\src</AdditionalIncludeDirectories>
       <GccExceptionHandling>true</GccExceptionHandling>
       <RuntimeTypeInfo>true</RuntimeTypeInfo>
       <AdditionalOptions>-std=c++14 %(AdditionalOptions)</AdditionalOptions>
@@ -64,14 +64,14 @@
     </Link>
     <AntBuild>
       <SkipAntStep>False</SkipAntStep>
-      <JavaSourceDir>src;C:\git\nedelman\finjin-engine\cpp\library\src\finjin\engine\internal\app\android\java</JavaSourceDir>
+      <JavaSourceDir>src;C:\git\nedelman\finjin-engine\java\library\src</JavaSourceDir>
     </AntBuild>
   </ItemDefinitionGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|Tegra-Android'">
     <ClCompile>
       <CppLanguageStandard>
       </CppLanguageStandard>
-      <AdditionalIncludeDirectories>C:\finjin-3rd-party\cpp\boost;C:\finjin-3rd-party\cpp\eigen;C:\VulkanSDK\1.0.42.1\Include;C:\git\nedelman\finjin-common\cpp\library\include;C:\git\nedelman\finjin-engine\cpp\library\src;C:\git\nedelman\finjin-engine\cpp\library\src\finjin\engine\internal\app\android\cpp;..\..\src</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>C:\finjin-3rd-party\cpp\boost;C:\finjin-3rd-party\cpp\eigen;C:\git\nedelman\finjin-common\cpp\library\include;C:\git\nedelman\finjin-engine\cpp\library\src;C:\git\nedelman\finjin-engine\cpp\library\src\finjin\engine\internal\app\android;..\..\src</AdditionalIncludeDirectories>
       <GccExceptionHandling>true</GccExceptionHandling>
       <RuntimeTypeInfo>true</RuntimeTypeInfo>
       <AdditionalOptions>-std=c++14 %(AdditionalOptions)</AdditionalOptions>
@@ -83,14 +83,14 @@
     </Link>
     <AntBuild>
       <SkipAntStep>False</SkipAntStep>
-      <JavaSourceDir>src;C:\git\nedelman\finjin-engine\cpp\library\src\finjin\engine\internal\app\android\java</JavaSourceDir>
+      <JavaSourceDir>src;C:\git\nedelman\finjin-engine\java\library\src</JavaSourceDir>
     </AntBuild>
   </ItemDefinitionGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Shipping|Tegra-Android'">
     <ClCompile>
       <CppLanguageStandard>
       </CppLanguageStandard>
-      <AdditionalIncludeDirectories>C:\finjin-3rd-party\cpp\boost;C:\finjin-3rd-party\cpp\eigen;C:\VulkanSDK\1.0.42.1\Include;C:\git\nedelman\finjin-common\cpp\library\include;C:\git\nedelman\finjin-engine\cpp\library\src;C:\git\nedelman\finjin-engine\cpp\library\src\finjin\engine\internal\app\android\cpp;..\..\src</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>C:\finjin-3rd-party\cpp\boost;C:\finjin-3rd-party\cpp\eigen;C:\git\nedelman\finjin-common\cpp\library\include;C:\git\nedelman\finjin-engine\cpp\library\src;C:\git\nedelman\finjin-engine\cpp\library\src\finjin\engine\internal\app\android;..\..\src</AdditionalIncludeDirectories>
       <GccExceptionHandling>true</GccExceptionHandling>
       <RuntimeTypeInfo>true</RuntimeTypeInfo>
       <AdditionalOptions>-std=c++14 %(AdditionalOptions)</AdditionalOptions>
@@ -102,7 +102,7 @@
     </Link>
     <AntBuild>
       <SkipAntStep>False</SkipAntStep>
-      <JavaSourceDir>src;C:\git\nedelman\finjin-engine\cpp\library\src\finjin\engine\internal\app\android\java</JavaSourceDir>
+      <JavaSourceDir>src;C:\git\nedelman\finjin-engine\java\library\src</JavaSourceDir>
     </AntBuild>
   </ItemDefinitionGroup>
   <ItemGroup>
@@ -128,7 +128,7 @@
     </None>
   </ItemGroup>
   <ItemGroup>
-    <JCompile Include="..\..\..\finjin-engine\cpp\library\src\finjin\engine\internal\app\android\java\com\finjin\engine\FinjinNativeActivity.java" />
+    <JCompile Include="..\..\..\finjin-engine\java\library\src\com\finjin\engine\FinjinNativeActivity.java" />
     <JCompile Include="src\java\com\finjin\viewer\FinjinViewer.java" />
   </ItemGroup>
   <ItemGroup>

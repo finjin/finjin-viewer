@@ -545,6 +545,7 @@ void FinjinViewerApplicationViewportDelegate::StartFrame(ApplicationViewportUpda
                 FINJIN_DEBUG_LOG_INFO("Escape");
                 //updateContext.RequestClose();
                 //updateContext.RequestApplicationExit();
+                //updateContext.RequestFullScreenToggle();
             }
             if (flyingCameraEvents.Contains(FlyingCameraEvents::MENU))
             {

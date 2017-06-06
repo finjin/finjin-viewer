@@ -64,7 +64,7 @@
     </Link>
     <AntBuild>
       <SkipAntStep>False</SkipAntStep>
-      <JavaSourceDir>src;C:\git\nedelman\finjin-engine\java\android\library\src</JavaSourceDir>
+      <JavaSourceDir>src;C:\git\nedelman\finjin-engine\java-android\library\src</JavaSourceDir>
     </AntBuild>
   </ItemDefinitionGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|Tegra-Android'">
@@ -83,7 +83,7 @@
     </Link>
     <AntBuild>
       <SkipAntStep>False</SkipAntStep>
-      <JavaSourceDir>src;C:\git\nedelman\finjin-engine\java\android\library\src</JavaSourceDir>
+      <JavaSourceDir>src;C:\git\nedelman\finjin-engine\java-android\library\src</JavaSourceDir>
     </AntBuild>
   </ItemDefinitionGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Shipping|Tegra-Android'">
@@ -102,7 +102,7 @@
     </Link>
     <AntBuild>
       <SkipAntStep>False</SkipAntStep>
-      <JavaSourceDir>src;C:\git\nedelman\finjin-engine\java\android\library\src</JavaSourceDir>
+      <JavaSourceDir>src;C:\git\nedelman\finjin-engine\java-android\library\src</JavaSourceDir>
     </AntBuild>
   </ItemDefinitionGroup>
   <ItemGroup>
@@ -128,7 +128,7 @@
     </None>
   </ItemGroup>
   <ItemGroup>
-    <JCompile Include="..\..\..\finjin-engine\java\android\library\src\com\finjin\engine\FinjinNativeActivity.java" />
+    <JCompile Include="..\..\..\finjin-engine\java-android\library\src\com\finjin\engine\FinjinNativeActivity.java" />
     <JCompile Include="src\java\com\finjin\viewer\FinjinViewer.java" />
   </ItemGroup>
   <ItemGroup>

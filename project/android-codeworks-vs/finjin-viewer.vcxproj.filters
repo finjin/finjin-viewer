@@ -50,7 +50,7 @@
     <JCompile Include="src\java\com\finjin\viewer\FinjinViewer.java">
       <Filter>Source Files\java\com\finjin\viewer</Filter>
     </JCompile>
-    <JCompile Include="..\..\..\finjin-engine\java\android\library\src\com\finjin\engine\FinjinNativeActivity.java">
+    <JCompile Include="..\..\..\finjin-engine\java-android\library\src\com\finjin\engine\FinjinNativeActivity.java">
       <Filter>Source Files\java\com\finjin\engine</Filter>
     </JCompile>
   </ItemGroup>
